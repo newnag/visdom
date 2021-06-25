@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.482" height="18.971" viewBox="0 0 34.482 18.971">
+  <g id="Group_189" data-name="Group 189" transform="translate(-311 -23.5)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-725.399 -128.75)">
+      <path id="Icon_awesome-columns" data-name="Icon awesome-columns" d="M19.649,2.25H2.033A2.033,2.033,0,0,0,0,4.283V19.188a2.033,2.033,0,0,0,2.033,2.033H19.649a2.033,2.033,0,0,0,2.033-2.033V4.283A2.033,2.033,0,0,0,19.649,2.25ZM7.072,18.511H2.71V7.67H7.072Zm11.9,0H9.782V7.67h9.189Z" transform="translate(1049.2 150)" fill="#64748b"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="11" height="7" transform="translate(1058 157)" fill="#64748b"/>
+    </g>
+    <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M13.307,12.157l4.514-4.51a.853.853,0,0,0-1.208-1.2L11.5,11.553a.851.851,0,0,0-.025,1.176l5.135,5.146a.853.853,0,0,0,1.208-1.2Z" transform="translate(299.749 20.827)" fill="#64748b"/>
+  </g>
+</svg>
