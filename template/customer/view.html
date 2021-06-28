@@ -57,13 +57,13 @@
       <div class="import-export">
         <p class="mg-data"><img src="/img/icon/file-csv-01.svg" alt=""> โหลดCSV</p>
         <p class="mg-data"><img src="/img/icon/file-x-01.svg" alt=""> โหลดExcel</p>
-        <p class="mg-data"><img src="/img/icon/file-import-01.svg" alt=""> นำเข้าข้อมูลลูกค้า</p>
+        <p class="mg-data" onclick="open_import()"><img src="/img/icon/file-import-01.svg" alt=""> นำเข้าข้อมูลลูกค้า</p>
         <p class="mg-data"><img src="/img/icon/file-export-01.svg" alt=""> นำออกข้อมูลลูกค้า</p>
       </div>
 
       <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
 
-      <div class="add-customer"><button class="form-component button yellow">เพิ่มลูกค้าใหม่</button></div>
+      <div class="add-customer"><button class="form-component button yellow" onclick="open_addCustomer()">เพิ่มลูกค้าใหม่</button></div>
     </div>
 
     <div class="content">
@@ -438,12 +438,39 @@
 
       <div class="submit-zone">
         <div class="group-button">
-          <button class="form-component button gray">ยกเลิก</button>
+          <button class="form-component button gray" onclick="close_addCustomer()">ยกเลิก</button>
           <button class="form-component button primary">สร้าง</button>
         </div>
 
         <!-- มีปุ่มนี้เฉพาะตอน edit -->
         <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
+      </div>
+    </div>
+
+    <div class="modal-import">
+      <h2 class="title"><i class="fas fa-file-import"></i> นำเข้าข้อมูล</h2>
+      <p class="desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Distinctio nemo aperiam veniam velit, 
+        debitis labore molestias officiis incidunt eveniet id quisquam tempora sit iusto beatae ratione consequatur laboriosam rem! Quam.
+      </p>
+
+      <div class="box-import">
+        <div class="file">
+          <p>ไฟล์</p>
+          <div class="box-file">
+            <i class="fas fa-file-import"></i>
+            <input type="file" id="file" accept=".csv">
+            <label for="file"><i class="fas fa-plus"></i></label>
+          </div>
+        </div>
+
+        <div class="group-button">
+          <button class="form-component button gray">ล้าง</button>
+          <button class="form-component button sky">นำเข้า</button>
+        </div>
+
+        <div class="close"><i class="fas fa-times" onclick="close_import()"></i></div>
       </div>
     </div>
   </main>
@@ -624,7 +651,7 @@
   <script>
     function clone(){
       const ele = document.querySelector('.content .body-table .box-item')
-    for(i=0;i<10;i++){
+      for(i=0;i<10;i++){
         const clone = ele.cloneNode(true)
         document.querySelector('.content .body-table').appendChild(clone)
       }
