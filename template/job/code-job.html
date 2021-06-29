@@ -13,7 +13,7 @@
 
   <!-- style -->
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/customer.min.css">
+  <link rel="stylesheet" href="/css/job.min.css">
 </head>
 <body>
   <main>
@@ -38,8 +38,8 @@
     </header>
     <div class="head-page">
       <div class="left">
-        <p>ประเภทลูกค้า</p>
-        <p>50 ประเภทลูกค้าทั้งหมด</p>
+        <p>รหัสงาน</p>
+        <p>50 รหัสงานทั้งหมด</p>
       </div>
     </div>
     <div class="search-type">
@@ -56,76 +56,90 @@
 
       <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
 
-      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCustomer()">เพิ่มประเภทลูกค้า</button></div>
+      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCode()">เพิ่มรหัสงานใหม่</button></div>
     </div>
 
-    <div class="content-type">
-      <div class="head-table">
-        <div class="td"><input type="checkbox"></div>
-        <div class="td">ประเภทลูกค้า</div>
-        <div class="td">วันที่สร้าง</div>
-        <div class="td">ผู้สร้าง</div>
-        <div class="td">วันที่แก้ไข</div>
-        <div class="td">ผู้แก้ไข</div>
-        <div class="td">สถานะ</div>
-        <div class="td">แก้ไข</div>
-      </div>
-
-      <div class="body-table">
-        <div class="box-item">
-          <div class="list">
-            <div class="td"><input type="checkbox" name="" id=""></div>
-            <div class="td">ในประเทศ</div>
-            <div class="td">25/05/2021 15:20:20</div>
-            <div class="td">Hanakawa Tsubasa</div>
-            <div class="td">25/05/2021 15:20:20</div>
-            <div class="td">Hanakawa Tsubasa</div>
-            <div class="td status">
-              <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
-              <p>Enable</p>
+    <div class="content-code">
+      <div class="data-table">
+        <div class="head-table">
+          <div class="td"><input type="checkbox"></div>
+          <div class="td">รหัสงาน</div>
+          <div class="td">ชื่อรหัสงาน</div>
+          <div class="td">สร้างโดย</div>
+          <div class="td">วันที่สร้าง</div>
+          <div class="td">แก้ไขโดย</div>
+          <div class="td">วันที่แก้ไข</div>
+          <div class="td">Status</div>
+          <div class="td">แก้ไข</div>
+        </div>
+  
+        <div class="body-table">
+          <div class="box-item">
+            <div class="list">
+              <div class="td"><input type="checkbox" name="" id=""></div>
+              <div class="td">BK-001</div>
+              <div class="td">Wynnsoft-Solution</div>
+              <div class="td">Admin2</div>
+              <div class="td">25/05/2021</div>
+              <div class="td">Admin3</div>
+              <div class="td">25/05/2021</div>
+              <div class="td status">
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Enable</p>
+              </div>
+              <div class="td"><i class="far fa-edit"></i></div>
             </div>
-            <div class="td"><i class="far fa-edit"></i></div>
           </div>
         </div>
-      </div>
-
-      <div class="pagination">
-        <p>list per page</p>
-
-        <div class="select-page">
-          <select name="" id="" class="form-component select">
-            <option value="">1</option>
-            <option value="">1</option>
-            <option value="">1</option>
-            <option value="">1</option>
-            <option value="">1</option>
-          </select>
-        </div>
-
-        <p>1 - 10 of 50</p>
-
-        <div class="page">
-          <a href="" class="disable"><i class="fas fa-angle-double-left"></i></a>
-          <a href="" class="disable"><i class="fas fa-angle-left"></i></a>
-          <a href=""><i class="fas fa-angle-right"></i></a>
-          <a href=""><i class="fas fa-angle-double-right"></i></a>
+  
+        <div class="pagination">
+          <p>list per page</p>
+  
+          <div class="select-page">
+            <select name="" id="" class="form-component select">
+              <option value="">1</option>
+              <option value="">1</option>
+              <option value="">1</option>
+              <option value="">1</option>
+              <option value="">1</option>
+            </select>
+          </div>
+  
+          <p>1 - 10 of 50</p>
+  
+          <div class="page">
+            <a href="" class="disable"><i class="fas fa-angle-double-left"></i></a>
+            <a href="" class="disable"><i class="fas fa-angle-left"></i></a>
+            <a href=""><i class="fas fa-angle-right"></i></a>
+            <a href=""><i class="fas fa-angle-double-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="modal-add-type">
-      <div class="head-modal"><p>เพิ่มประเภทลูกค้า</p></div>
+      <div class="head-modal"><p>เพิ่มรหัสงาน</p></div>
 
       <div class="form">
-        <div class="input-box">
-          <label for="">ประเภทลูกค้า</label>
-          <div class="group-input">
-            <i class="fas fa-users"></i>
-            <input type="text" class="form-component input">
-          </div>
-        </div>
-
         <div class="row">
+          <div class="input-box">
+            <label for="">รหัสงาน</label>
+            <div class="group-input">
+              <i class="fas fa-users"></i>
+              <input type="text" class="form-component input">
+            </div>
+          </div>
+
+          <div class="input-box">
+            <label for="">ชื่อรหัส</label>
+            <div class="group-input">
+              <i class="fas fa-users"></i>
+              <input type="text" class="form-component input">
+            </div>
+          </div>
+        </div> 
+
+        <div class="row three">
           <div class="input-box">
             <label for="">วันที่สร้าง</label>
             <div class="group-input">
@@ -152,7 +166,7 @@
 
       <div class="submit-zone">
         <div class="group-button">
-          <button class="form-component button gray" onclick="close_addCustomer()">ยกเลิก</button>
+          <button class="form-component button gray" onclick="close_addCode()">ยกเลิก</button>
           <button class="form-component button primary">สร้าง</button>
         </div>
 
@@ -337,15 +351,15 @@
 
   <script>
     function clone(){
-      const ele = document.querySelector('.content-type .body-table .box-item')
+      const ele = document.querySelector('.content-code .body-table .box-item')
       for(i=0;i<10;i++){
         const clone = ele.cloneNode(true)
-        document.querySelector('.content-type .body-table').appendChild(clone)
+        document.querySelector('.content-code .body-table').appendChild(clone)
       }
     }
     clone()
   </script>
 
-  <script src="/js/customer.js"></script>
+  <script src="/js/job.js"></script>
 </body>
 </html>

@@ -128,7 +128,7 @@
   }
 }
 
-.content{
+.content,.content-code{
   display: flex;
 
   .user{
@@ -260,6 +260,7 @@
           padding: 1em 0;
           border-bottom: 1px solid $gray;
           transition: .1s ease-in-out;
+          cursor: pointer;
 
           @media screen and (min-width:$xxl){
             grid-template-columns: 3% 8% 11% 12% 12% 12% 10% 7% 13% 5% 7%;
@@ -520,7 +521,7 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 890px;
+    width: 990px;
     height: 100%;
     background: $white;
     z-index: 10;
@@ -732,6 +733,27 @@
           }
         }
       }
+
+      .picture{
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(2,47%);
+        grid-column-gap: 6%;
+
+        figure{
+          display: flex;
+          justify-content: center;
+          border: 1px solid $darkblue;
+          border-radius: 5px;
+          padding: .25em;
+
+          img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+          }
+        }
+      }
     }
 
     .close{
@@ -744,6 +766,552 @@
         color: $black;
         font-size: 2em;
       }
+    }
+  }
+}
+.content-code{
+  .data-table{
+    width: 100%;
+
+    .head-table{
+      grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+  
+      @media screen and (min-width:$wide){
+        grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+      }
+  
+      .td{
+        &:nth-child(7){
+          justify-content: flex-start;
+        }
+        &:nth-child(8){
+          text-align: center;
+        }
+      }
+    }
+    .body-table{
+      .box-item{
+        .list{
+          grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+          align-items: center;
+          cursor: default;
+  
+          @media screen and (min-width:$wide){
+            grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+          }
+  
+          .td{
+            &:nth-child(5),&:nth-child(6){
+              height: 1.4em;
+            }
+            &:nth-child(7){
+              justify-content: flex-start;
+            }
+            &:nth-child(8){
+              text-align: center;
+            }
+            &:nth-child(9){
+              text-align: center;
+            }
+          }
+          .status{
+            display: flex;
+            align-items: center;
+            margin: unset;
+            height: 3.4em;
+  
+            .button{
+              width: 50px;
+              height: 15px;
+              background: $gray;
+              border-radius: 20px;
+              position: relative;
+              cursor: pointer;
+  
+              .circle{
+                width: 20px;
+                height: 20px;
+                background: $green;
+                border-radius: 50%;
+                position: absolute;
+                top: -3px;
+                left: 0;
+                transition: .3s ease-in-out;
+  
+                &.disable{
+                  background: $red;
+                  left: 60%;
+                }
+              }
+            }
+            >p{
+              color: $lightgray;
+              font-size: .8em;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.modal-add-member{
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  width: calc(100% - 280px);
+  height: 100%;
+  background: $white;
+  display: none;
+
+  &.show{
+    display: block;
+  }
+
+  .head-modal{
+    height: 64px;
+    background: $lightsky;
+    padding: 1em;
+
+    p{
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+  }
+
+  .form{
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2,48%);
+    grid-column-gap: 4%;
+
+    .left{
+      position: relative;
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -4%;
+        border-right: 1px solid $lightgray;
+        width: max-content;
+        height: 100%;
+      }
+    }
+    .left,.right{
+      .box{
+        margin-bottom: 4em;
+
+        p.title{
+          color: $yellow;
+          font-size: 1.4em;
+          font-weight: 600;
+          margin-bottom: .5em;
+        }
+
+        .row{
+          display: grid;
+          grid-template-columns: repeat(2,48%);
+          grid-column-gap: 4%;
+          margin-bottom: 2em;
+          align-items: flex-end;
+  
+          &.three{
+            grid-template-columns: 79% 19%;
+            grid-column-gap: 2%;
+          }
+
+          &.full{
+            grid-template-columns: 100%;
+          }
+
+          .group-box{
+            display: grid;
+            grid-template-columns: 69% 29%;
+            grid-column-gap: 2%;
+            align-items: flex-end;
+          }
+  
+          .input-box{
+            label{
+              color: $darkblue;
+            }
+    
+            .group-input{
+              position: relative;
+              display: flex;
+    
+              input,select{
+                height: 50px;
+                border: 1px solid $lightgray;
+                padding-left: 40px;
+              }
+
+              input[type="file"]{
+                display: none;
+              }
+    
+              i{
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                color: $lightgray;
+              }
+            }
+          }
+  
+          button{
+            height: 50px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid $darkblue;
+          }
+
+          .add{
+            margin-top: 1em;
+            color: $lightgray;
+            font-size: .8em;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .miles{
+      grid-column: 1/3;
+      padding: 1em;
+      border-radius: 10px;
+      background-color: $littleblue;
+      display: grid;
+      grid-template-columns: repeat(2,45%);
+      grid-column-gap: 10%;
+      margin-bottom: 4em;
+
+      p.title{
+        grid-column: 1/3;
+        color: $yellow;
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 2em;
+      }
+
+      .input-box{
+        margin-bottom: 2em;
+
+        &.full{
+          grid-column: 1/3;
+        }
+
+        label{
+          color: $darkblue;
+        }
+
+        .group-input{
+          position: relative;
+          display: flex;
+
+          input,select{
+            height: 50px;
+            border: 1px solid $lightgray;
+            padding-left: 40px;
+          }
+
+          input[type="file"]{
+            display: none;
+          }
+
+          i{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: $lightgray;
+          }
+        }
+
+        .toggle{
+          display: flex;
+          align-items: center;
+          margin-top: 2em;
+
+          p{
+            margin-right: 1em;
+            font-size: .8em;
+          }
+          label{
+            font-size: .6em;
+            font-weight: 300;
+            color: $lightgray;
+            margin-left: 2em;
+          }
+
+          .button{
+            width: 70px;
+            height: 20px;
+            background: $gray;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+
+            .circle{
+              width: 30px;
+              height: 30px;
+              background: $green;
+              border-radius: 50%;
+              position: absolute;
+              top: -5px;
+              left: 0;
+              transition: .3s ease-in-out;
+
+              &.close{
+                left: 65%;
+                background: $red;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .product{
+      grid-column: 1/3;
+
+      p.title{
+        font-size: 1.4em;
+        font-weight: 600;
+        color: $yellow;
+        margin-bottom: 2em;
+      }
+
+      .table-product{
+        .head-table{
+          background: $darkblue;
+          border-radius: 5px 5px 0 0;
+          display: grid;
+          grid-template-columns: 12% 12% 11% 8% 8% 8% 11% 11% 8% 8% 3%;
+
+          .td{
+            color: $white;
+            padding: 5px;
+          }
+        }
+
+        .body-table{
+          background: $littleblue;
+          display: grid;
+          grid-template-columns: 100%;
+          grid-row-gap: 1em;
+
+          .list{
+            display: grid;
+            grid-template-columns: 12% 12% 11% 8% 8% 8% 11% 11% 8% 8% 3%;
+
+            .td{
+              padding: 20px 5px;
+
+              input,select{
+                height: 50px;
+                border: 1px solid $lightgray;
+              }
+            }
+
+            .icon{
+              .copy{
+                i{
+                  color: $green;
+                  cursor: pointer;
+                }
+              }
+              .delete{
+                i{
+                  color: $red;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
+          .add{
+            width: max-content;
+            color: $lightgray;
+            font-size: .8em;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+
+            i{
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .submit-zone{
+    margin-top: 2em;
+    padding: 1em;
+    background: #f9fafc;
+    height: 64px;
+    position: relative;
+    
+    .group-button{
+      text-align: center;
+
+      button{
+        width: 150px;
+
+        &:nth-child(2){
+          border: 1px solid $darkblue;
+        }
+      }
+    }
+
+    .delete{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}
+
+.modal-add-type{
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  width: calc(100% - 280px);
+  height: 100%;
+  background: $white;
+  display: none;
+
+  &.show{
+    display: block;
+  }
+
+  .head-modal{
+    height: 64px;
+    background: $lightsky;
+    padding: 1em;
+
+    p{
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+  }
+
+  .form{
+    padding: 1em;
+
+    .row{
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      grid-column-gap: 2em;
+      margin-bottom: 2em;
+
+      &.three{
+        grid-template-columns: 300px 300px 1fr;
+      }
+
+      .input-box{
+        label{
+          color: $darkblue;
+        }
+  
+        .group-input{
+          position: relative;
+          display: flex;
+  
+          input,select{
+            height: 50px;
+            border: 1px solid $lightgray;
+            padding-left: 40px;
+          }
+  
+          i{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: $lightgray;
+          }
+        }
+      }
+
+      .status{
+        display: flex;
+        align-items: center;
+        padding-top: 22px;
+
+        label{
+          margin-right: 15px;
+        }
+
+        .button{
+          width: 50px;
+          height: 15px;
+          background: $gray;
+          border-radius: 20px;
+          position: relative;
+          cursor: pointer;
+
+          .circle{
+            width: 20px;
+            height: 20px;
+            background: $green;
+            border-radius: 50%;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            transition: .3s ease-in-out;
+
+            &.disable{
+              background: $red;
+              left: 60%;
+            }
+          }
+        }
+        >p{
+          color: $lightgray;
+          font-size: .8em;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .submit-zone{
+    margin-top: 2em;
+    padding: 1em;
+    background: #f9fafc;
+    height: 64px;
+    position: relative;
+    
+    .group-button{
+      text-align: center;
+
+      button{
+        width: 150px;
+
+        &:nth-child(2){
+          border: 1px solid $darkblue;
+        }
+      }
+    }
+
+    .delete{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: $red;
+      cursor: pointer;
     }
   }
 }
