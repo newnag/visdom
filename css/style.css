@@ -185,6 +185,12 @@ main header {
   height: 64px;
   width: 100%;
   background: #fff;
+  position: fixed;
+  right: 0;
+  width: calc(100% - 280px);
+  z-index: 6;
+  -webkit-box-shadow: 1px 1px 5px #8c8b8b;
+          box-shadow: 1px 1px 5px #8c8b8b;
 }
 
 main header .collap-aside img {
@@ -218,6 +224,10 @@ main header .group .search-icon img {
 
 main header .group .search-icon .input-search {
   display: none;
+}
+
+main .head-page {
+  margin-top: 64px;
 }
 
 aside {
