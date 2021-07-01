@@ -311,4 +311,222 @@
   color: #9A9A9A;
   cursor: default;
 }
+
+.modal-add-drive {
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  width: calc(100% - 280px);
+  height: 100%;
+  background: #fff;
+  display: none;
+}
+
+.modal-add-drive.show {
+  display: block;
+}
+
+.modal-add-drive .head-modal {
+  height: 64px;
+  background: #EEF2FF;
+  padding: 1em;
+}
+
+.modal-add-drive .head-modal p {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.modal-add-drive .form {
+  padding: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 380px 1fr;
+      grid-template-columns: 380px 1fr;
+  grid-column-gap: 1em;
+}
+
+.modal-add-drive .form .avatar-zone {
+  background-color: #0F172A;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.modal-add-drive .form .avatar-zone figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-add-drive .form .avatar-zone figure img {
+  width: 219px;
+  height: 219px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal-add-drive .form .avatar-zone .upload-button {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.modal-add-drive .form .avatar-zone .upload-button button {
+  background: #fff;
+  width: 150px;
+}
+
+.modal-add-drive .form .form-zone .bg-group {
+  background: #F1F5F9;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.modal-add-drive .form .form-zone .input-box label {
+  color: #0F172A;
+}
+
+.modal-add-drive .form .form-zone .input-box .group-input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-add-drive .form .form-zone .input-box .group-input input, .modal-add-drive .form .form-zone .input-box .group-input select {
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  padding-left: 40px;
+}
+
+.modal-add-drive .form .form-zone .input-box .group-input i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.modal-add-drive .form .form-zone .input-box.btn-create {
+  position: relative;
+}
+
+.modal-add-drive .form .form-zone .input-box.btn-create:first-child .group-input {
+  width: 85%;
+}
+
+.modal-add-drive .form .form-zone .input-box.btn-create .group-input {
+  width: 70%;
+}
+
+.modal-add-drive .form .form-zone .input-box.btn-create button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.modal-add-drive .form .form-zone .row {
+  margin-top: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  margin-bottom: 1em;
+}
+
+.modal-add-drive .form .form-zone .row.two .input-box:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.modal-add-drive .form .form-zone .row.two .input-box:nth-child(2) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.modal-add-drive .form .form-zone .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 22px;
+}
+
+.modal-add-drive .form .form-zone .status label {
+  margin-right: 15px;
+}
+
+.modal-add-drive .form .form-zone .status .button {
+  width: 50px;
+  height: 15px;
+  background: #DCDCDC;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.modal-add-drive .form .form-zone .status .button .circle {
+  width: 20px;
+  height: 20px;
+  background: #14D214;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.modal-add-drive .form .form-zone .status .button .circle.disable {
+  background: #C80000;
+  left: 60%;
+}
+
+.modal-add-drive .form .form-zone .status > p {
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-left: 20px;
+}
+
+.modal-add-drive .submit-zone {
+  margin-top: 2em;
+  padding: 1em;
+  background: #f9fafc;
+  height: 64px;
+  position: relative;
+}
+
+.modal-add-drive .submit-zone .group-button {
+  text-align: center;
+}
+
+.modal-add-drive .submit-zone .group-button button {
+  width: 150px;
+}
+
+.modal-add-drive .submit-zone .group-button button:nth-child(2) {
+  border: 1px solid #0F172A;
+}
+
+.modal-add-drive .submit-zone .delete {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #C80000;
+  cursor: pointer;
+}
 /*# sourceMappingURL=driver.css.map */

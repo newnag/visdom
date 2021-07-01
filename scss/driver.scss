@@ -274,3 +274,208 @@
     }
   }
 }
+
+.modal-add-drive{
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  width: calc(100% - 280px);
+  height: 100%;
+  background: $white;
+  display: none;
+
+  &.show{
+    display: block;
+  }
+
+  .head-modal{
+    height: 64px;
+    background: $lightsky;
+    padding: 1em;
+
+    p{
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+  }
+
+  .form{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    grid-column-gap: 1em;
+
+    .avatar-zone{
+      background-color: $darkblue;
+      border-radius: 10px;
+      padding: 2em;
+
+      figure{
+        display: flex;
+        justify-content: center;
+
+        img{
+          width: 219px;
+          height: 219px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .upload-button{
+        margin-top: 2em;
+        text-align: center;
+
+        button{
+          background: $white;
+          width: 150px;
+        }
+      }
+    }
+
+    .form-zone{
+      .bg-group{
+        background: $littleblue;
+        padding: 1em;
+        border-radius: 10px;
+      }
+
+      .input-box{
+        label{
+          color: $darkblue;
+        }
+  
+        .group-input{
+          position: relative;
+          display: flex;
+  
+          input,select{
+            height: 50px;
+            border: 1px solid $lightgray;
+            padding-left: 40px;
+          }
+  
+          i{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: $lightgray;
+          }
+        }
+
+        &.btn-create{
+          position: relative;
+
+          &:first-child{
+            .group-input{
+              width: 85%;
+            }
+          }
+
+          .group-input{
+            width: 70%;
+          }
+
+          button{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+          }
+        }
+      }
+  
+      .row{
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 1em;
+        margin-bottom: 1em;
+
+        &.two{
+          .input-box{
+            &:nth-child(1){
+              grid-column: 1/3;
+            }
+            &:nth-child(2){
+              grid-column: 3/4;
+            }
+          }
+        }
+
+      }
+
+      .status{
+        display: flex;
+        align-items: center;
+        padding-top: 22px;
+
+        label{
+          margin-right: 15px;
+        }
+
+        .button{
+          width: 50px;
+          height: 15px;
+          background: $gray;
+          border-radius: 20px;
+          position: relative;
+          cursor: pointer;
+
+          .circle{
+            width: 20px;
+            height: 20px;
+            background: $green;
+            border-radius: 50%;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            transition: .3s ease-in-out;
+
+            &.disable{
+              background: $red;
+              left: 60%;
+            }
+          }
+        }
+        >p{
+          color: $lightgray;
+          font-size: .8em;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .submit-zone{
+    margin-top: 2em;
+    padding: 1em;
+    background: #f9fafc;
+    height: 64px;
+    position: relative;
+    
+    .group-button{
+      text-align: center;
+
+      button{
+        width: 150px;
+
+        &:nth-child(2){
+          border: 1px solid $darkblue;
+        }
+      }
+    }
+
+    .delete{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}

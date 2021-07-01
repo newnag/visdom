@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+ 
 
   <!-- style -->
   <link rel="stylesheet" href="/css/style.min.css">
@@ -119,12 +120,114 @@
       </div>
     </div>
 
-    <div class="modal-add-drive">
+    <div class="modal-add-drive show">
       <div class="head-modal"><p>เพิ่มคนขับใหม่</p></div>
 
       <div class="form">
-        <div class="avatar-zone"></div>
-        <div class="form-zone"></div>
+        <div class="avatar-zone">
+          <figure><img src="/img/avatar1.jpg" alt=""></figure>
+          <div class="upload-button"><button class="form-component button"><i class="far fa-image"></i> อัพโหลดรูป</button></div>
+        </div>
+        <div class="form-zone">
+          <div class="bg-group">
+            <div class="row">
+              <div class="input-box">
+                <label for="">ชื่อผู้ใช้</label>
+                <div class="group-input">
+                  <input type="text" class="form-component input">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+
+              <div class="input-box">
+                <label for="">รหัสผ่าน</label>
+                <div class="group-input">
+                  <input type="password" class="form-component input">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+
+              <div class="input-box">
+                <label for="">ยืนยันรหัสผ่าน</label>
+                <div class="group-input">
+                  <input type="password" class="form-component input">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label for="">ชื่อ</label>
+              <div class="group-input">
+                <input type="text" class="form-component input">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <label for="">นามสกุล</label>
+              <div class="group-input">
+                <input type="text" class="form-component input">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <label for="">เบอร์โทร</label>
+              <div class="group-input">
+                <input type="text" class="form-component input">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="row two">
+            <div class="input-box">
+              <label for="">ชื่อ</label>
+              <div class="group-input">
+                <input type="text" class="form-component input">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <label for="">นามสกุล</label>
+              <div class="group-input">
+                <input type="text" class="form-component input">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="row two">
+            <div class="input-box btn-create">
+              <label for="">ชื่อ</label>
+              <div class="group-input">
+                <input type="text" class="form-component input">
+                <i class="fas fa-user"></i>
+              </div>
+              <button class="form-component button primary">สร้างใหม่</button>
+            </div>
+
+            <div class="input-box btn-create">
+              <label for="">นามสกุล</label>
+              <div class="group-input">
+                <input type="text" class="form-component input">
+                <i class="fas fa-user"></i>
+              </div>
+              <button class="form-component button primary">สร้างใหม่</button>
+            </div>
+          </div>
+
+          <div class="bg-group">
+            <div class="input-box">
+              <label for="">พาหนะ</label>
+              <span class="multiselect"></span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="submit-zone">
@@ -323,6 +426,7 @@
     clone()
   </script>
 
+  <script src="/plugin/multiselect.min.js"></script>
   <script src="/js/driver.js"></script>
 </body>
 </html>
