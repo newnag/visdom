@@ -166,6 +166,28 @@
   right: 50px;
 }
 
+.content, .content-type {
+  height: calc(100vh - 64px - 93px - 46px);
+  overflow-y: auto;
+}
+
+.content::-webkit-scrollbar, .content-type::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content::-webkit-scrollbar-track, .content-type::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.content::-webkit-scrollbar-thumb, .content-type::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.content::-webkit-scrollbar-thumb:hover, .content-type::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .content .head-table, .content-type .head-table {
   display: -ms-grid;
   display: grid;

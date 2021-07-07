@@ -108,6 +108,11 @@ a{
     border: 1px solid $black;
   }
 
+  &.textarea{
+    border: 1px solid $black;
+    height: 100%;
+  }
+
   &.select{
     border: 1px solid $black;
   }
@@ -247,7 +252,7 @@ a{
 main{
   max-width: 1640px;
   float: right;
-  width: calc(100vw - 298px);
+  width: calc(100vw - 280px);
 
   header{
     display: flex;

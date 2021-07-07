@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WynnTrack</title>
+  <title>Visdom ชั่วคราว</title>
 
   <!-- plugin -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
- 
 
   <!-- style -->
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/driver.min.css">
+  <link rel="stylesheet" href="/css/device.min.css">
 </head>
 <body>
   <main>
@@ -39,8 +38,8 @@
     </header>
     <div class="head-page">
       <div class="left">
-        <p>คนขับ</p>
-        <p>50 คนขับทั้งหมด</p>
+        <p>อุปกรณ์</p>
+        <p>50 อุปกรณ์ทั้งหมด</p>
       </div>
     </div>
     <div class="search">
@@ -58,41 +57,37 @@
       <div class="import-export">
         <p class="mg-data"><img src="/img/icon/file-csv-01.svg" alt=""> โหลดCSV</p>
         <p class="mg-data"><img src="/img/icon/file-x-01.svg" alt=""> โหลดExcel</p>
-        <p class="mg-data" onclick="open_import()"><img src="/img/icon/file-import-01.svg" alt=""> นำเข้าข้อมูลคนขับ</p>
+        <p class="mg-data" onclick="open_import()"><img src="/img/icon/file-import-01.svg" alt=""> นำเข้าข้อมูลอุปกรณ์</p>
+        <p class="mg-data"><img src="/img/icon/file-export-01.svg" alt=""> นำออกข้อมูลอุปกรณ์</p>
       </div>
 
       <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
 
-      <div class="add-customer"><button class="form-component button yellow" onclick="open_addCustomer()">เพิ่มคนขับใหม่</button></div>
+      <div class="add-customer"><button class="form-component button yellow" onclick="open_addCustomer()">เพิ่มอุปกรณ์ใหม่</button></div>
     </div>
 
     <div class="content">
       <div class="head-table">
         <div class="td"><input type="checkbox"></div>
-        <div class="td">ชื่อ</div>
-        <div class="td">เบอร์โทร</div>
-        <div class="td">กลุ่ม</div>
-        <div class="td">สถานะ</div>
+        <div class="td">รหัสอุปกรณ์</div>
+        <div class="td">ชื่ออุปกรณ์</div>
+        <div class="td">ยี่ห้ออุปกรณ์</div>
+        <div class="td">เวอร์ชั่น</div>
+        <div class="td">ผู้ใช้งานล่าสุด</div>
+        <div class="td">เข้าใช้งานล่าสุด</div>
         <div class="td">ตั้งค่า</div>
       </div>
 
       <div class="body-table">
         <div class="list">
           <div class="td"><input type="checkbox" name="" id=""></div>
-          <div class="td name">
-            <div class="avatar"><img src="/img/avatar1.jpg" alt=""></div>
-            <div class="name">
-              <p>Alice Harding</p>
-              <p>รหัสพนักงาน: D-0001</p>
-            </div>
-          </div>
-          <div class="td">123-456-7890</div>
-          <div class="td">กรุงเทพ</div>
-          <div class="td status">
-            <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
-            <p>Enable</p>
-          </div>
-          <div class="td settting"><i class="fas fa-cog"></i></div>
+          <div class="td">BK-0001</div>
+          <div class="td">Iphone 99 XS ProMax</div>
+          <div class="td">Iphone 99 XS ProMax</div>
+          <div class="td">99.1</div>
+          <div class="td">Hanakawa Tsubasa</div>
+          <div class="td">ขอนแก่น</div>
+          <div class="td"><i class="fas fa-cog"></i></div>
         </div>
       </div>
 
@@ -120,154 +115,50 @@
       </div>
     </div>
 
-    <div class="modal-add-drive show">
-      <div class="head-modal"><p>เพิ่มคนขับใหม่</p></div>
+    <div class="modal-add-device show">
+      <div class="head-modal"><p>เพิ่มลูกค้าใหม่</p></div>
 
       <div class="form">
-        <div class="avatar-zone">
-          <figure><img draggable="false" src="/img/avatar1.jpg" alt=""></figure>
-          <div class="upload-button"><button class="form-component button"><i class="far fa-image"></i> อัพโหลดรูป</button></div>
-
-          <!-- โซนนี้เปิดใช้งานเฉพาะตอนแก้ไขข้อมูล -->
-          <div class="upload-button"><button class="form-component button"><i class="far fa-image"></i> ประวัติงาน</button></div>
-          <div class="upload-button"><button class="form-component button"><i class="far fa-image"></i> กำหนดการ</button></div>
-
-          <p class="name">Alice Harding</p>
-
-          <div class="detail">
-            <div class="ls">
+        <div class="row">
+          <div class="input-box">
+            <label for="">รหัสอุปกรณ์</label>
+            <div class="group-input">
               <i class="far fa-id-card"></i>
-              <p>รหัสพนักงาน : D-0001</p>
+              <input type="text" class="form-component input">
             </div>
-            <div class="ls">
-              <i class="fas fa-award"></i>
-              <p>บทบาทผู้ใช้ : คนขับ</p>
-            </div>
-            <div class="ls">
-              <i class="far fa-calendar"></i>
-              <p>วันที่สร้าง : 07/06/2021 (08:25:22)</p>
+          </div>
+
+          <div class="input-box">
+            <label for="">ยี่ห้ออุปกรณ์</label>
+            <div class="group-input">
+              <i class="fas fa-laptop-house"></i>
+              <input type="text" class="form-component input">
             </div>
           </div>
         </div>
-        <div class="form-zone">
-          <div class="bg-group">
-            <div class="row">
-              <div class="input-box">
-                <label for="">ชื่อผู้ใช้</label>
-                <div class="group-input">
-                  <input type="text" class="form-component input">
-                  <i class="fas fa-user"></i>
-                </div>
-              </div>
 
-              <div class="input-box">
-                <label for="">รหัสผ่าน</label>
-                <div class="group-input">
-                  <input type="password" class="form-component input">
-                  <i class="fas fa-key"></i>
-                </div>
-              </div>
-
-              <div class="input-box">
-                <label for="">ยืนยันรหัสผ่าน</label>
-                <div class="group-input">
-                  <input type="password" class="form-component input">
-                  <i class="fas fa-key"></i>
-                </div>
-              </div>
+        <div class="row">
+          <div class="input-box">
+            <label for="">ชื่ออุปกรณ์</label>
+            <div class="group-input">
+              <i class="fas fa-laptop-house"></i>
+              <input type="text" class="form-component input">
             </div>
           </div>
 
-          <div class="row">
-            <div class="input-box">
-              <label for="">ชื่อ</label>
-              <div class="group-input">
-                <input type="text" class="form-component input">
-                <i class="fas fa-user"></i>
-              </div>
+          <div class="input-box">
+            <label for="">ชื่อผู้ใช้ล่าสุด</label>
+            <div class="group-input">
+              <i class="fas fa-user"></i>
+              <input type="text" class="form-component input">
             </div>
-
-            <div class="input-box">
-              <label for="">นามสกุล</label>
-              <div class="group-input">
-                <input type="text" class="form-component input">
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
-
-            <div class="input-box">
-              <label for="">เบอร์โทร</label>
-              <div class="group-input">
-                <input type="text" class="form-component input">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="row two">
-            <div class="input-box">
-              <label for="">อีเมล์</label>
-              <div class="group-input">
-                <input type="text" class="form-component input">
-                <i class="far fa-envelope"></i>
-              </div>
-            </div>
-
-            <div class="input-box">
-              <label for="">รหัสพนักงาน</label>
-              <div class="group-input">
-                <input type="text" class="form-component input">
-                <i class="far fa-id-card"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="row two">
-            <div class="input-box btn-create">
-              <label for="">บทบาทผู้ใช้</label>
-              <div class="group-input">
-                <select name="" id="" class="form-component select">
-                  <option value="">1</option>
-                  <option value="">1</option>
-                  <option value="">1</option>
-                </select>
-                <i class="fas fa-award"></i>
-              </div>
-              <button class="form-component button primary">สร้างใหม่</button>
-            </div>
-
-            <div class="input-box btn-create">
-              <label for="">กลุ่ม</label>
-              <div class="group-input">
-                <select name="" id="" class="form-component select">
-                  <option value="">1</option>
-                  <option value="">1</option>
-                  <option value="">1</option>
-                </select>
-                <i class="fas fa-users"></i>
-              </div>
-              <button class="form-component button primary">สร้างใหม่</button>
-            </div>
-          </div>
-
-          <div class="bg-group">
-            <div class="input-box">
-              <label for="">พาหนะ</label>
-              <span class="multiselect"></span>
-            </div>
-          </div>
-
-          <div class="td status">
-            <label>สถานะ</label>
-            <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
-            <p>Enable</p>
           </div>
         </div>
       </div>
 
       <div class="submit-zone">
         <div class="group-button">
-          <button class="form-component button gray" onclick="close_addCode()">ยกเลิก</button>
+          <button class="form-component button gray" onclick="close_addCustomer()">ยกเลิก</button>
           <button class="form-component button primary">สร้าง</button>
         </div>
 
@@ -450,8 +341,7 @@
     </div>
   </aside>
 
-  <script src="/plugin/multiselect.min.js"></script>
-  <script src="/js/driver.js"></script>
+  <script src="/js/customer.js"></script>
 
   <script>
     function clone(){
@@ -461,9 +351,7 @@
         document.querySelector('.content .body-table').appendChild(clone)
       }
     }
-    clone()
 
-    multiselect()
   </script>
 </body>
 </html>

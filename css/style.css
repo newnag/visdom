@@ -129,6 +129,11 @@ a {
   border: 1px solid #000;
 }
 
+.form-component.textarea {
+  border: 1px solid #000;
+  height: 100%;
+}
+
 .form-component.select {
   border: 1px solid #000;
 }
@@ -283,7 +288,7 @@ a {
 main {
   max-width: 1640px;
   float: right;
-  width: calc(100vw - 298px);
+  width: calc(100vw - 280px);
 }
 
 main header {

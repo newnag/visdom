@@ -1,0 +1,247 @@
+@import 'variable';
+
+.head-page{
+  background: $littleblue;
+  padding: 1em 2em;
+
+  h1{
+    color: $darkblue;
+    font-size: 1.4em;
+  }
+  p{
+    font-size: .8em;
+    color: $lightgray;
+    font-weight: 300;
+  }
+
+  .search{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+
+    .input-box{
+      position: relative;
+
+      input{
+        width: 300px;
+      }
+
+      i{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: $lightgray;
+      }
+    }
+
+    .button-group{
+      margin-left: 1em;
+      width: calc(100vw - 300px - 380px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button{
+        width: 120px;
+
+        &:nth-child(1){
+          border: 1px solid $black;
+        }
+      }
+    }
+  }
+}
+
+.calendar-maintain{
+  height: calc(100vh - 64px - 146px);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $gray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .box-calendar{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    .aside-calendar{
+      padding: 1em 2em;
+      background: $white;
+      border-right: 1px solid $darkblue;
+      border-top: 1px solid $darkblue;
+
+      >p{
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 2em;
+      }
+      label{
+        font-size: .8em;
+      }
+
+      .list{
+        li{
+          display: flex;
+          align-items: center;
+
+          input{
+            width: 15px;
+            height: 15px;
+          }
+
+          .circle{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0 .5em;
+
+            &.green{
+              background: $green;
+            }
+            &.sky{
+              background: $sky;
+            }
+            &.yellow{
+              background: $yellow;
+            }
+            &.red{
+              background: $red;
+            }
+          }
+        }
+      }
+    }
+
+    #calendar{
+      border-top: 1px solid $darkblue;
+
+      .fc-header-toolbar{
+        background: $white;
+        padding-left: 10px;
+        margin: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+        .fc-toolbar-chunk{
+          .fc-today-button{
+            font-size: .8em;
+          }
+          .fc-button-group{
+            button{
+              font-size: .8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-add-device{
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  width: calc(100% - 280px);
+  height: 100%;
+  background: $white;
+  display: none;
+  z-index: 6;
+
+  &.show{
+    display: block;
+  }
+
+  .head-modal{
+    height: 64px;
+    background: $lightsky;
+    padding: 1em;
+
+    p{
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+  }
+
+  .form{
+    padding: 1em;
+    
+    .row{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 2em;
+      margin-bottom: 2em;
+
+      &.full{
+        grid-template-columns: 100%;
+      }
+
+      .input-box{
+        label{
+          color: $darkblue;
+        }
+  
+        .group-input{
+          position: relative;
+          display: flex;
+  
+          input,select{
+            height: 50px;
+            border: 1px solid $lightgray;
+            padding-left: 40px;
+          }
+          textarea{
+            border: 1px solid $lightgray;
+          }
+  
+          i{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: $lightgray;
+          }
+        }
+      }
+    }
+  }
+
+  .submit-zone{
+    margin-top: 2em;
+    padding: 1em;
+    background: #f9fafc;
+    height: 64px;
+    position: relative;
+    
+    .group-button{
+      text-align: center;
+
+      button{
+        width: 150px;
+
+        &:nth-child(2){
+          border: 1px solid $darkblue;
+        }
+      }
+    }
+
+    .delete{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}

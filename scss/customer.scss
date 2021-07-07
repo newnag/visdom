@@ -143,6 +143,23 @@
 }
 
 .content,.content-type{
+  height: calc(100vh - 64px - 93px - 46px);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $gray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   .head-table{
     display: grid;
     grid-template-columns: 3% 8% 10% 20% 9% 11% 6% 10% 10% 8% 5%;
