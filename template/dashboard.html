@@ -18,10 +18,10 @@
 <body>
   <main>
     <header>
-      <div class="collap-aside"><img src="/img/icon/column-head.svg" alt=""></div>
+      <div class="collap-aside" onclick="collap_aside()"><img src="/img/icon/column-head.svg" alt=""></div>
       <div class="group">
         <div class="lang">
-          <img src="/img/icon/thailand.svg" alt="">
+          <img src="/img/icon/thailand.svg" alt="" onclick="header_lang()">
 
           <ul class="lang-menu">
             <li><a href="">TH</a></li>
@@ -29,7 +29,7 @@
           </ul>
         </div>
         <div class="search-icon">
-          <img src="/img/icon/search.svg" alt="">
+          <img src="/img/icon/search.svg" alt="" onclick="header_search()">
           <div class="input-search">
             <input type="text">
           </div>
@@ -345,6 +345,7 @@
     clone()
   </script>
 
+  <script src="/js/app.js"></script>
   <script src="/js/dashboard.js"></script>
 </body>
 </html>

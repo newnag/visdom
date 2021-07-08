@@ -253,6 +253,12 @@ main{
   max-width: 1640px;
   float: right;
   width: calc(100vw - 280px);
+  transition: .3s ease-in-out;
+
+  &.collap{
+    width: calc(100vw - 100px);
+    max-width: calc(100vw - 100px);
+  }
 
   header{
     display: flex;
@@ -267,6 +273,11 @@ main{
     width: calc(100% - 280px);
     z-index: 6;
     box-shadow: 1px 1px 5px #8c8b8b;
+    transition: .3s ease-in-out;
+
+    &.collap{
+      width: calc(100vw - 100px);
+    }
 
     .collap-aside{
       img{
@@ -287,6 +298,28 @@ main{
 
         .lang-menu{
           display: none;
+          position: fixed;
+          top: 64px;
+          right: 30px;
+          width: 60px;
+          height: max-content;
+          background-color: $white;
+          border: 1px solid $black;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: .5em;
+          
+          &.show{
+            display: flex;
+          }
+
+          li{
+            transition: .1s ease-in-out;
+            &:hover{
+              color: $yellow;
+            }
+          }
         }
       }
 
@@ -296,7 +329,20 @@ main{
         }
 
         .input-search{
+          position: fixed;
+          top: 64px;
+          right: 3px;
+          width: max-content;
+          height: max-content;
           display: none;
+
+          &.show{
+            display: block;
+          }
+
+          input{
+            border: 1px solid $black;
+          }
         }
       }
     }
@@ -312,6 +358,53 @@ aside{
   height: 100vh;
   overflow-y: auto;
   position: fixed;
+  transition: .3s ease-in-out;
+
+  &.collap{
+    width: 100px;
+
+    .aside-head{
+      .group{
+        display: none;
+      }
+    }
+
+    .my-profile{
+      figure{
+        display: block;
+
+        img{
+          width: 90px;
+          height: 90px;
+        }
+      }
+      .name{
+        display: none;
+      }
+      .email{
+        display: none;
+      }
+    }
+
+    .group-menu{
+      .title-group,.desc-group{
+        display: none;
+      }
+
+      .menu{
+        .menu-level1{
+          .name,.other{
+            display: none;
+          }
+        }
+        .submenu{
+          span{
+            display: none;
+          }
+        }
+      }
+    }
+  }
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -370,6 +463,7 @@ aside{
         height: 99px;
         border-radius: 50%;
         object-fit: cover;
+        transition: .3s ease-in-out;
       }
     }
     .name{

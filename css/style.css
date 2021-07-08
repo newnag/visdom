@@ -289,6 +289,13 @@ main {
   max-width: 1640px;
   float: right;
   width: calc(100vw - 280px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+main.collap {
+  width: calc(100vw - 100px);
+  max-width: calc(100vw - 100px);
 }
 
 main header {
@@ -311,6 +318,12 @@ main header {
   z-index: 6;
   -webkit-box-shadow: 1px 1px 5px #8c8b8b;
           box-shadow: 1px 1px 5px #8c8b8b;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+main header.collap {
+  width: calc(100vw - 100px);
 }
 
 main header .collap-aside img {
@@ -336,6 +349,41 @@ main header .group .lang img {
 
 main header .group .lang .lang-menu {
   display: none;
+  position: fixed;
+  top: 64px;
+  right: 30px;
+  width: 60px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #fff;
+  border: 1px solid #000;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5em;
+}
+
+main header .group .lang .lang-menu.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main header .group .lang .lang-menu li {
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+main header .group .lang .lang-menu li:hover {
+  color: #FFBF2A;
 }
 
 main header .group .search-icon img {
@@ -343,7 +391,24 @@ main header .group .search-icon img {
 }
 
 main header .group .search-icon .input-search {
+  position: fixed;
+  top: 64px;
+  right: 3px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   display: none;
+}
+
+main header .group .search-icon .input-search.show {
+  display: block;
+}
+
+main header .group .search-icon .input-search input {
+  border: 1px solid #000;
 }
 
 main .head-page {
@@ -356,6 +421,45 @@ aside {
   height: 100vh;
   overflow-y: auto;
   position: fixed;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+aside.collap {
+  width: 100px;
+}
+
+aside.collap .aside-head .group {
+  display: none;
+}
+
+aside.collap .my-profile figure {
+  display: block;
+}
+
+aside.collap .my-profile figure img {
+  width: 90px;
+  height: 90px;
+}
+
+aside.collap .my-profile .name {
+  display: none;
+}
+
+aside.collap .my-profile .email {
+  display: none;
+}
+
+aside.collap .group-menu .title-group, aside.collap .group-menu .desc-group {
+  display: none;
+}
+
+aside.collap .group-menu .menu .menu-level1 .name, aside.collap .group-menu .menu .menu-level1 .other {
+  display: none;
+}
+
+aside.collap .group-menu .menu .submenu span {
+  display: none;
 }
 
 aside::-webkit-scrollbar {
@@ -432,6 +536,8 @@ aside .my-profile figure img {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 aside .my-profile .name p {
