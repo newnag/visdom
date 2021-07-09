@@ -14,3 +14,7 @@ function header_search(){
 function header_lang(){
   document.querySelector('.lang .lang-menu').classList.toggle('show')
 }
+
+function submenu(that){
+  that.closest('.menu').querySelector('.submenu').classList.toggle('hide')
+}

@@ -30,6 +30,7 @@ button{
   width: max-content;
   height: 30px;
   cursor: pointer;
+  font-family: 'Prompt', sans-serif;
 
   &:focus{
     outline: none;
@@ -42,6 +43,7 @@ input,select{
   width: 100%;
   height: 30px;
   padding: 5px 10px;
+  font-family: 'Prompt', sans-serif;
 }
 textarea{
   border: unset;
@@ -49,6 +51,7 @@ textarea{
   width: 100%;
   height: 100%;
   padding: 5px 10px;
+  font-family: 'Prompt', sans-serif;
 }
 
 li{
@@ -515,18 +518,19 @@ aside{
         .icon{
           width: 25px;
           height: 25px;
-          margin-right: 1em;
+          margin-right: .5em;
           display: flex;
           align-items: center;
   
           img{
-            max-height: 25px;
-            max-width: 25px;
+            max-height: 22px;
+            max-width: 22px;
           }
         }
   
         .name{
           color: $white;
+          font-size: 15px;
         }
   
         .other{
@@ -554,18 +558,23 @@ aside{
       .submenu{
         margin-left: 2em;
 
+        &.hide{
+          display: none;
+        }
+
         a{
           display: flex;
           align-items: center;
           margin: 1em 0;
 
           img{
-            width: 25px;
-            height: 25px;
+            width: 22px;
+            height: 22px;
             margin-right: 1em;
           }
           span{
             color: $white;
+            font-size: 15px;
           }
         }
       }

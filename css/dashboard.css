@@ -221,7 +221,7 @@
   width: calc(100% - 280px);
 }
 
-.content .map iframe {
+.content .map .mapper {
   width: 100%;
   height: 100%;
 }
