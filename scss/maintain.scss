@@ -584,10 +584,31 @@
   top: 64px;
   left: 280px;
   width: calc(100% - 280px);
-  height: 100%;
+  height: calc(100vh - 64px);
   background: $white;
   display: none;
-  z-index: 6;
+  z-index: 5;
+  transition: .3s ease-in-out;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $gray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  &.collap{
+    width: calc(100vw - 100px);
+    max-width: calc(100vw - 100px);
+    left: 100px;
+  }
 
   &.show{
     display: block;

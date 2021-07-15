@@ -515,9 +515,35 @@
   top: 64px;
   left: 280px;
   width: calc(100% - 280px);
-  height: 100%;
+  height: calc(100vh - 64px);
   background: #fff;
   display: none;
+  z-index: 5;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.modal-add-vehicle::-webkit-scrollbar, .modal-edit-vehicle::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-add-vehicle::-webkit-scrollbar-track, .modal-edit-vehicle::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.modal-add-vehicle::-webkit-scrollbar-thumb, .modal-edit-vehicle::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.modal-add-vehicle::-webkit-scrollbar-thumb:hover, .modal-edit-vehicle::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.modal-add-vehicle.collap, .modal-edit-vehicle.collap {
+  width: calc(100vw - 100px);
+  max-width: calc(100vw - 100px);
+  left: 100px;
 }
 
 .modal-add-vehicle.show, .modal-edit-vehicle.show {
@@ -690,9 +716,35 @@
   top: 64px;
   left: 280px;
   width: calc(100% - 280px);
-  height: 100%;
+  height: calc(100vh - 64px);
   background: #fff;
   display: none;
+  z-index: 5;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.modal-add-type::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-add-type::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.modal-add-type::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.modal-add-type::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.modal-add-type.collap {
+  width: calc(100vw - 100px);
+  max-width: calc(100vw - 100px);
+  left: 100px;
 }
 
 .modal-add-type.show {

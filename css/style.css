@@ -497,8 +497,8 @@ aside .aside-head {
 }
 
 aside .aside-head .logo img {
-  max-width: 30px;
-  max-height: 30px;
+  width: 70px;
+  height: auto;
 }
 
 aside .aside-head .group {

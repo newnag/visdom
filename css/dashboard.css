@@ -154,6 +154,10 @@
   background: #F1F5F9;
 }
 
+.content .user .list.active .name p:first-child {
+  color: #FFBF2A;
+}
+
 .content .user .list figure {
   display: -webkit-box;
   display: -ms-flexbox;

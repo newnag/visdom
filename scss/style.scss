@@ -432,8 +432,10 @@ aside{
 
     .logo{
       img{
-        max-width: 30px;
-        max-height: 30px;
+        width: 70px;
+        height: auto;
+        // max-width: 30px;
+        // max-height: 30px;
       }
     }
 

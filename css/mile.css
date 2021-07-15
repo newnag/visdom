@@ -264,10 +264,35 @@
   top: 64px;
   left: 280px;
   width: calc(100% - 280px);
-  height: 100%;
+  height: calc(100vh - 64px);
   background: #fff;
   display: none;
   z-index: 6;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.modal-add-type::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-add-type::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.modal-add-type::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.modal-add-type::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.modal-add-type.collap {
+  width: calc(100vw - 100px);
+  max-width: calc(100vw - 100px);
+  left: 100px;
 }
 
 .modal-add-type.show {

@@ -132,6 +132,12 @@
 
       &.active{
         background: $littleblue;
+
+        .name{
+          p:first-child{
+            color: $yellow;
+          }
+        }
       }
 
       figure{
