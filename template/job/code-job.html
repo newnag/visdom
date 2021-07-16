@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visdom ชั่วคราว</title>
+  <title>Wynntrack</title>
 
   <!-- plugin -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,11 +64,15 @@
         <div class="head-table">
           <div class="td"><input type="checkbox"></div>
           <div class="td">รหัสงาน</div>
-          <div class="td">ชื่อรหัสงาน</div>
-          <div class="td">สร้างโดย</div>
-          <div class="td">วันที่สร้าง</div>
-          <div class="td">แก้ไขโดย</div>
-          <div class="td">วันที่แก้ไข</div>
+          <div class="td">คำนำหน้า</div>
+          <div class="td">รูปแบบวันที่</div>
+          <div class="td">รหัสอย่างน้อย</div>
+          <div class="td">คัน</div>
+          <div class="td">รูปแบบ</div>
+          <div class="td">ตัวอย่าง</div>
+          <div class="td">หมายเหตุ</div>
+          <div class="td">ประเภท</div>
+          <div class="td">ค่าเริ่มต้น</div>
           <div class="td">Status</div>
           <div class="td">แก้ไข</div>
         </div>
@@ -78,11 +82,15 @@
             <div class="list">
               <div class="td"><input type="checkbox" name="" id=""></div>
               <div class="td">BK-001</div>
-              <div class="td">Wynnsoft-Solution</div>
-              <div class="td">Admin2</div>
-              <div class="td">25/05/2021</div>
-              <div class="td">Admin3</div>
-              <div class="td">25/05/2021</div>
+              <div class="td">DNS</div>
+              <div class="td">YYYY-MM-DD</div>
+              <div class="td">25/06/2021</div>
+              <div class="td">-</div>
+              <div class="td">Prefix,MinlengthRunning</div>
+              <div class="td">DNS20200100000</div>
+              <div class="td">-</div>
+              <div class="td">Job info</div>
+              <div class="td">Job info</div>
               <div class="td status">
                 <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
                 <p>Enable</p>
@@ -117,47 +125,108 @@
       </div>
     </div>
 
-    <div class="modal-add-type show">
+    <div class="modal-add-type">
       <div class="head-modal"><p>เพิ่มรหัสงาน</p></div>
 
       <div class="form">
         <div class="row">
           <div class="input-box">
-            <label for="">รหัสงาน</label>
-            <div class="group-input">
-              <i class="far fa-id-card"></i>
-              <input type="text" class="form-component input">
-            </div>
-          </div>
-
-          <div class="input-box">
-            <label for="">ชื่อรหัส</label>
+            <label for="">คำนำหน้า</label>
             <div class="group-input">
               <i class="fas fa-briefcase"></i>
               <input type="text" class="form-component input">
             </div>
           </div>
+
+          <div class="input-box">
+            <label for="">รูปแบบ</label>
+            <div class="group-input">
+              <i class="fas fa-briefcase"></i>
+              <select name="" id="" class="form-component select">
+                <option value="">Test</option>
+                <option value="">Test</option>
+                <option value="">Test</option>
+              </select>
+            </div>
+          </div>
         </div> 
 
-        <div class="row three">
+        <div class="row four">
           <div class="input-box">
-            <label for="">วันที่สร้าง</label>
+            <label for="">รูปแบบวันที่</label>
             <div class="group-input">
               <i class="fas fa-calendar-week"></i>
-              <input type="date" class="form-component input">
+              <select name="" id="" class="form-component select">
+                <option value="">Test</option>
+                <option value="">Test</option>
+                <option value="">Test</option>
+              </select>
             </div>
           </div>
   
           <div class="input-box">
-            <label for="">สร้างโดย</label>
+            <label for="">หลักเลขอย่างน้อย</label>
             <div class="group-input">
-              <i class="fas fa-user"></i>
-              <input type="text" class="form-component input" value="Admin" disabled>
+              <i class="fas fa-sort-numeric-up-alt"></i>
+              <select name="" id="" class="form-component select">
+                <option value="">Test</option>
+                <option value="">Test</option>
+                <option value="">Test</option>
+              </select>
             </div>
           </div>
 
+          <div class="input-box">
+            <label for="">คัน</label>
+            <div class="group-input">
+              <i class="fas fa-list-ol"></i>
+              <select name="" id="" class="form-component select">
+                <option value="">Test</option>
+                <option value="">Test</option>
+                <option value="">Test</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <label for="">ตัวอย่าง</label>
+            <div class="group-input">
+              <i class="fas fa-eye"></i>
+              <input type="text" class="form-component input" value="DNS20200100000" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="row two">
+          <div class="input-box">
+            <label for="">ประเภท</label>
+            <div class="group-input">
+              <select name="" id="" class="form-component select">
+                <option value="">Test</option>
+                <option value="">Test</option>
+                <option value="">Test</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="input-box">
+            <label for="">หมายเหตุ</label>
+            <div class="group-input">
+              <input type="text" class="form-component input" value="">
+            </div>
+          </div>
+        </div>
+
+        <!-- แสดง Element นี้เเฉพาะตอนแก้ไข -->
+        <div class="row three">
           <div class="status">
             <label>status</label>
+            <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+            <p>Enable</p>
+          </div>
+  
+          <div class="status">
+            <label>default</label>
             <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
             <p>Enable</p>
           </div>
@@ -259,10 +328,18 @@
         
         <ul class="submenu">
           <a href=""><img src="/img/icon/driver-01.svg" alt=""> <span>ดูคนขับ</span></a>
-          <a href=""><img src="/img/icon/award-01.svg" alt=""> <span>บทบาทผู้ใช้</span></a>
           <a href=""><img src="/img/icon/group-01.svg" alt=""> <span>กลุ่ม</span></a>
         </ul>
       </div>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/award-01.svg" alt=""></div>
+            <div class="name">บทบาทผู้ใช้</div>
+          </div>
+        </div>
+      </a>
       
       <div class="menu">
         <div class="menu-level1">

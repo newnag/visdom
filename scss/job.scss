@@ -774,17 +774,16 @@
     width: 100%;
 
     .head-table{
-      grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+      grid-template-columns: 3% 7% 6% 9% 9% 4% 14% 15% 7% 7% 7% 9% 3%;
   
       @media screen and (min-width:$wide){
-        grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+        grid-template-columns: 3% 7% 6% 9% 9% 4% 14% 15% 7% 7% 7% 9% 3%;
       }
   
       .td{
-        &:nth-child(7){
-          justify-content: flex-start;
-        }
-        &:nth-child(8){
+        justify-content: flex-start!important;
+
+        &:nth-child(12){
           text-align: center;
         }
       }
@@ -792,26 +791,22 @@
     .body-table{
       .box-item{
         .list{
-          grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+          grid-template-columns: 3% 7% 6% 9% 9% 4% 14% 15% 7% 7% 7% 9% 3%;
           align-items: center;
           cursor: default;
   
           @media screen and (min-width:$wide){
-            grid-template-columns: 3% 10% 10% 10% 12% 12% 23% 15% 5%;
+            grid-template-columns: 3% 7% 6% 9% 9% 4% 14% 15% 7% 7% 7% 9% 3%;
           }
   
           .td{
+            text-align: left!important;
+
             &:nth-child(5),&:nth-child(6){
               height: 1.4em;
             }
-            &:nth-child(7){
-              justify-content: flex-start;
-            }
-            &:nth-child(8){
-              text-align: center;
-            }
-            &:nth-child(9){
-              text-align: center;
+            &:nth-child(13){
+              text-align: center!important;
             }
           }
           .status{
@@ -1483,8 +1478,14 @@
       &.full{
         grid-template-columns: 100%;
       }
+      &.two{
+        grid-template-columns: repeat(2,1fr);
+      }
       &.three{
         grid-template-columns: 300px 300px 1fr;
+      }
+      &.four{
+        grid-template-columns: repeat(4,1fr);
       }
 
       .input-box{
