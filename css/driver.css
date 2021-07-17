@@ -1782,4 +1782,257 @@
 .profile .box-calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group button {
   font-size: .8em;
 }
+
+.detail {
+  margin-top: 64px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  padding: 0 1em;
+}
+
+.detail::-webkit-scrollbar {
+  width: 5px;
+}
+
+.detail::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.detail::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.detail::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.detail .more {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 47% 47%;
+      grid-template-columns: 47% 47%;
+  grid-column-gap: 6%;
+}
+
+.detail .more .left, .detail .more .right {
+  position: relative;
+}
+
+.detail .more .left .group, .detail .more .right .group {
+  margin-bottom: 3em;
+}
+
+.detail .more .left .group .head-group, .detail .more .right .group .head-group {
+  color: #FFBF2A;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+.detail .more .left .group .row, .detail .more .right .group .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  margin-bottom: 1em;
+}
+
+.detail .more .left .group .row.half, .detail .more .right .group .row.half {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+}
+
+.detail .more .left .group .row.half .box, .detail .more .right .group .row.half .box {
+  -ms-grid-columns: .7fr .3fr;
+      grid-template-columns: .7fr .3fr;
+}
+
+.detail .more .left .group .row .box, .detail .more .right .group .row .box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .8fr .2fr;
+      grid-template-columns: .8fr .2fr;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.detail .more .left .group .row .box.full, .detail .more .right .group .row .box.full {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.detail .more .left .group .row .box .input-box, .detail .more .right .group .row .box .input-box {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.detail .more .left .group .row .box .input-box label, .detail .more .right .group .row .box .input-box label {
+  color: #0F172A;
+}
+
+.detail .more .left .group .row .box .input-box .input-group, .detail .more .right .group .row .box .input-box .input-group {
+  position: relative;
+  margin-top: .25em;
+}
+
+.detail .more .left .group .row .box .input-box .input-group input, .detail .more .left .group .row .box .input-box .input-group select, .detail .more .right .group .row .box .input-box .input-group input, .detail .more .right .group .row .box .input-box .input-group select {
+  padding-left: 40px;
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  font-size: 1.2em;
+}
+
+.detail .more .left .group .row .box .input-box .input-group i, .detail .more .right .group .row .box .input-box .input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.detail .more .left .group .row .box .button-new button, .detail .more .right .group .row .box .button-new button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #0F172A;
+}
+
+.detail .more .left .group .row .box .add, .detail .more .right .group .row .box .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+.detail .more .left:after {
+  content: '';
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 0;
+  right: -2.5em;
+  height: 100%;
+  border-right: 2px solid #DCDCDC;
+}
+
+.detail .more .full-group {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  margin-top: 2em;
+  padding: 1em;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.detail .more .full-group.bg {
+  background: #F1F5F9;
+}
+
+.detail .more .full-group .head-group {
+  color: #FFBF2A;
+  font-size: 1.1em;
+}
+
+.detail .more .full-group .input-box {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.detail .more .full-group .input-box label {
+  color: #0F172A;
+}
+
+.detail .more .full-group .input-box .input-group {
+  position: relative;
+  margin-top: .25em;
+}
+
+.detail .more .full-group .input-box .input-group input, .detail .more .full-group .input-box .input-group select {
+  padding-left: 40px;
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  font-size: 1.2em;
+}
+
+.detail .more .full-group .input-box .input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.detail .more .full-group .status {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 2em;
+}
+
+.detail .more .full-group .status p {
+  margin-right: 1em;
+  font-size: .8em;
+}
+
+.detail .more .full-group .status label {
+  font-size: .6em;
+  font-weight: 300;
+  color: #9A9A9A;
+  margin-left: 2em;
+}
+
+.detail .more .full-group .status .button {
+  width: 70px;
+  height: 20px;
+  background: #DCDCDC;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.detail .more .full-group .status .button .circle {
+  width: 30px;
+  height: 30px;
+  background: #14D214;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.detail .more .full-group .status .button .circle.close {
+  left: 65%;
+  background: #C80000;
+}
 /*# sourceMappingURL=driver.css.map */
