@@ -54,3 +54,8 @@ function toggle_status(that){
     that.nextElementSibling.innerHTML = "Enable"
   }
 }
+
+// ปุ่มเปิดข้อมูลเพิ่มเติมหน้า สถานที่รับส่ง
+function more_destination(that){
+  that.closest('.tr').querySelector('.more').classList.toggle('show')
+}
