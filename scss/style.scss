@@ -10,6 +10,20 @@ body{
   font-size: $font;
   background: $white;
   color: $black;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $gray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 p,span,label{
@@ -260,6 +274,16 @@ a{
 .swal2-confirm,.swal2-cancel{
   height: 100%;
 }
+
+// class color
+.txt-red{color: $red;}
+.txt-yellow{color: $yellow;}
+.txt-black{color: $black;}
+.txt-white{color: $white;}
+.txt-sky{color: $sky;}
+.txt-green{color: $green;}
+.txt-gray{color: $lightgray;}
+.txt-darkblue{color: $darkblue;}
 
 //////////////////////////////////////////////////////////////////////////////////
 //@ normal class

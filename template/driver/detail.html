@@ -273,58 +273,102 @@
         <div class="full-group bg">
           <p class="head-group">จุดบันทึกเลขไมล์</p>
 
-          <div class="input-box">
-            <label for="">วันที่สร้าง</label>
-            <div class="input-group">
-              <input type="text" class="form-component input">
-              <i class="fas fa-users"></i>
+          <div class="group">
+            <div class="row full">
+              <div class="input-box">
+                <label for="">รูปแบบ</label>
+                <div class="input-group">
+                  <select name="" id="" class="form-component select">
+                    <option value="">new</option>
+                    <option value="">new</option>
+                    <option value="">new</option>
+                  </select>
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="g">
+                <div class="input-box">
+                  <label for="">สร้างโดย</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input">
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+
+                <div class="status">
+                  <p>บังคับกรอก</p>
+                  <div class="button" onclick="toggle_required(this)"><div class="circle"></div></div>
+                  <label for="">Yes</label>
+                </div>
+              </div>
+
+              <div class="g">
+                <div class="input-box">
+                  <label for="">สร้างโดย</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input">
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+
+                <div class="status">
+                  <p>บังคับกรอก</p>
+                  <div class="button" onclick="toggle_required(this)"><div class="circle"></div></div>
+                  <label for="">Yes</label>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="input-box">
-            <label for="">สร้างโดย</label>
-            <div class="input-group">
-              <input type="text" class="form-component input">
-              <i class="fas fa-users"></i>
+        <div class="product-table">
+          <p class="head-group">รายการสินค้า</p>
+
+          <div class="table">
+            <div class="head">
+              <div class="th">สินค้า</div>
+              <div class="th">รหัส</div>
+              <div class="th">ลักษณะ</div>
+              <div class="th">กว้าง</div>
+              <div class="th">ยาว</div>
+              <div class="th">สูง</div>
+              <div class="th">น้ำหนักสุทธิ</div>
+              <div class="th">น้ำหนักรวม</div>
+              <div class="th">จำนวน</div>
+              <div class="th">หน่วย</div>
+              <div class="th"></div>
             </div>
-          </div>
 
-          <div class="input-box">
-            <label for="">วันที่แก้ไข</label>
-            <div class="input-group">
-              <input type="text" class="form-component input">
-              <i class="fas fa-users"></i>
+            <div class="body">
+              <div class="tr">
+                <div class="td">
+                  <select name="" id="" class="form-component select">
+                    <option value="">nerw</option>
+                    <option value="">nerw</option>
+                    <option value="">nerw</option>
+                    <option value="">nerw</option>
+                  </select>
+                </div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td"><input type="text" class="form-component input"></div>
+                <div class="td bt">
+                  <div class="copy"><i class="far fa-copy"></i></div>
+                  <div class="delete"><i class="far fa-trash-alt"></i></div>
+                </div>
+              </div>
+
+              <div class="add"><i class="fas fa-plus-circle"></i> Add Product</div>
             </div>
-          </div>
-
-          <div class="input-box">
-            <label for="">แก้ไขโดย</label>
-            <div class="input-group">
-              <input type="text" class="form-component input">
-              <i class="fas fa-users"></i>
-            </div>
-          </div>
-
-          <div class="input-box">
-            <label for="">วันที่ตรวจสอบ</label>
-            <div class="input-group">
-              <input type="date" class="form-component input" value="2021-06-22" disabled>
-              <i class="fas fa-users"></i>
-            </div>
-          </div>
-
-          <div class="input-box">
-            <label for="">ตรวจสอบโดย</label>
-            <div class="input-group">
-              <input type="text" class="form-component input" disabled>
-              <i class="fas fa-users"></i>
-            </div>
-          </div>
-
-          <div class="status">
-            <p>Job status</p>
-            <div class="button" onclick="toggle_active(this)"><div class="circle"></div></div>
-            <label for="">Verified</label>
           </div>
         </div>
       </div>
@@ -508,17 +552,5 @@
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="/js/driver.js"></script>
 
-  <script>
-    graph()
-    clone()
-
-    function clone(){
-      const ele = document.querySelector('.table .body-table .box-item')
-      for(i=0;i<10;i++){
-        const clone = ele.cloneNode(true)
-        document.querySelector('.table .body-table').appendChild(clone)
-      }
-    }
-  </script>
 </body>
 </html>

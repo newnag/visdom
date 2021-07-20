@@ -1070,3 +1070,160 @@
     }
   }
 }
+
+.selectpage{
+  display: flex;
+  align-items: center;
+  padding: 1em;
+
+  button{
+    margin-right: 10px;
+    width: 200px;
+
+    &.active{
+      background: $lightblue;
+      color: $white;
+    }
+  }
+}
+
+.detail-page{
+  padding: 1em;
+
+  .form{
+    .row{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 4em;
+      margin-bottom: 2em;
+
+      &.full{
+        grid-template-columns: 100%;
+      }
+
+      &.bg{
+        padding: 1em;
+        border-radius: 10px;
+        background: $littleblue;
+      }
+
+      .group{
+        &.btn{
+          display: grid;
+          grid-template-columns: 0.8fr 0.2fr;
+          column-gap: 1em;
+          align-items: flex-end;
+        }
+
+        .input-box{
+          label{
+            color: $darkblue;
+          }
+    
+          .group-input{
+            position: relative;
+            display: flex;
+    
+            input,select{
+              height: 50px;
+              border: 1px solid $lightgray;
+              padding-left: 40px;
+            }
+    
+            i{
+              position: absolute;
+              top: 50%;
+              left: 10px;
+              transform: translateY(-50%);
+              color: $lightgray;
+            }
+          }
+        }
+
+        button{
+          border-radius: 5px;
+          border: 1px solid $darkblue;
+          height: 50px;
+          width: 100%;
+        }
+
+        .add{
+          font-size: .8em;
+          color: $lightgray;
+          margin-top: 1em;
+          width: max-content;
+          cursor: pointer;
+        }
+      }
+
+      .status{
+        display: flex;
+        align-items: center;
+        padding-top: 22px;
+
+        label{
+          margin-right: 15px;
+        }
+
+        .button{
+          width: 50px;
+          height: 15px;
+          background: $gray;
+          border-radius: 20px;
+          position: relative;
+          cursor: pointer;
+
+          .circle{
+            width: 20px;
+            height: 20px;
+            background: $green;
+            border-radius: 50%;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            transition: .3s ease-in-out;
+
+            &.disable{
+              background: $red;
+              left: 60%;
+            }
+          }
+        }
+        >p{
+          color: $lightgray;
+          font-size: .8em;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .submit-zone{
+    margin-top: 2em;
+    padding: 1em;
+    background: #f9fafc;
+    height: 64px;
+    position: relative;
+    
+    .group-button{
+      text-align: center;
+
+      button{
+        width: 150px;
+
+        &:nth-child(2){
+          border: 1px solid $darkblue;
+        }
+      }
+    }
+
+    .delete{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}

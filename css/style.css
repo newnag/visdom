@@ -12,6 +12,23 @@ body {
   color: #000;
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 p, span, label {
   font-size: 1em;
 }
@@ -300,6 +317,38 @@ a {
 
 .swal2-confirm, .swal2-cancel {
   height: 100%;
+}
+
+.txt-red {
+  color: #C80000;
+}
+
+.txt-yellow {
+  color: #FFBF2A;
+}
+
+.txt-black {
+  color: #000;
+}
+
+.txt-white {
+  color: #fff;
+}
+
+.txt-sky {
+  color: #71CDFF;
+}
+
+.txt-green {
+  color: #14D214;
+}
+
+.txt-gray {
+  color: #9A9A9A;
+}
+
+.txt-darkblue {
+  color: #0F172A;
 }
 
 main {
