@@ -154,16 +154,9 @@
 
   .head-table{
     display: grid;
-    grid-template-columns: 3% 7% 20% 8% 9% 9% 16% 11% 9% 3% 5%;
+    grid-template-columns: 3% 7% 20% 8% 9% 9% 12% 15% 9% 3% 5%;
     padding: .5em 0;
     border-bottom: 1px solid $gray;
-
-    @media screen and (min-width:$xxl){
-      grid-template-columns: 3% 7% 20% 8% 9% 9% 16% 11% 9% 3% 5%;
-    }
-    @media screen and (min-width:$wide){
-      grid-template-columns: 3% 7% 20% 8% 9% 9% 16% 11% 9% 3% 5%;
-    }
 
     .td{
       padding: 0 5px;
@@ -186,19 +179,12 @@
     .box-item{
       .list{
         display: grid;
-        grid-template-columns: 3% 7% 20% 8% 9% 9% 16% 11% 9% 3% 5%;
+        grid-template-columns: 3% 7% 20% 8% 9% 9% 12% 15% 9% 3% 5%;
         padding: 1em 0;
         border-bottom: 1px solid $gray;
         transition: .1s ease-in-out;
         cursor: pointer;
 
-        @media screen and (min-width:$xxl){
-          grid-template-columns: 3% 7% 20% 8% 9% 9% 16% 11% 9% 3% 5%;
-        }
-        @media screen and (min-width:$wide){
-          grid-template-columns: 3% 7% 20% 8% 9% 9% 16% 11% 9% 3% 5%;
-        }
-  
         &:hover{
           background-color: $lightsky;
         }
@@ -365,13 +351,13 @@
     width: 100%;
 
     .head-table{
-      grid-template-columns: 3% 12% 12% 12% 12% 32% 12% 5%;
+      grid-template-columns: 3% 8% 12% 10% 10% 10% 30% 12% 5%;
   
       .td{
         &:nth-child(7){
           justify-content: flex-start;
         }
-        &:nth-child(8){
+        &:nth-child(9){
           text-align: center;
         }
       }
@@ -379,7 +365,7 @@
     .body-table{
       .box-item{
         .list{
-          grid-template-columns: 3% 12% 12% 12% 12% 32% 12% 5%;
+          grid-template-columns: 3% 8% 12% 10% 10% 10% 30% 12% 5%;
           align-items: center;
           cursor: default;
 
@@ -680,6 +666,10 @@
 
       &.full{
         grid-template-columns: 100%;
+      }
+      &.two{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 4em;
       }
       &.three{
         grid-template-columns: 300px 300px 1fr;

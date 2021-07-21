@@ -36,8 +36,56 @@
         </div>
       </div>
     </header>
-    <div class="head-page">
+    <div class="head-page hidden">
       <p>ตั้งค่าลูกค้า</p>
+    </div>
+
+    <div class="head-page-destination hidden">
+      <p>ตั้งค่าข้อมูลสถานที่รับส่ง</p>
+      <label for="">50 ข้อมูลสถานทีรับ-ส่ง</label>
+
+      <div class="row">
+        <div class="search-des">
+          <div class="input-box date">
+            <input type="text" class="form-component input" onfocus="this.type='date'" onblur="this.type='text'" placeholder="ค้นหาจากวันที่สร้าง">
+          </div>
+    
+          <div class="input-box">
+            <input type="text" class="form-component input" placeholder="พิมพ์ข้อมูลเพื่อค้นหา">
+            <img class="icon" src="/img/icon/search.svg" alt="">
+          </div>
+        </div>
+
+        <div class="button-group">
+          <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
+
+          <div class="add-customer"><button class="form-component button yellow" onclick="open_addCustomer()">เพิ่มสถานที่รับส่ง</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="head-page-contact">
+      <p>ตั้งค่าข้อมูลผู้ติดต่อ</p>
+      <label for="">50 ข้อมูลผู้ติดต่อ</label>
+
+      <div class="row">
+        <div class="search-des">
+          <div class="input-box date">
+            <input type="text" class="form-component input" onfocus="this.type='date'" onblur="this.type='text'" placeholder="ค้นหาจากวันที่สร้าง">
+          </div>
+    
+          <div class="input-box">
+            <input type="text" class="form-component input" placeholder="พิมพ์ข้อมูลเพื่อค้นหา">
+            <img class="icon" src="/img/icon/search.svg" alt="">
+          </div>
+        </div>
+
+        <div class="button-group">
+          <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
+
+          <div class="add-customer"><button class="form-component button yellow" onclick="open_addCustomer()">เพิ่มผู้ติดต่อใหม่</button></div>
+        </div>
+      </div>
     </div>
 
     <div class="selectpage">
@@ -46,7 +94,7 @@
       <button class="form-component button">ตั้งค่าข้อมูลผู้ติดต่อ</button>
     </div>
 
-    <div class="detail-page">
+    <div class="detail-page hidden">
       <div class="form">
         <div class="row">
           <div class="group">
@@ -174,6 +222,458 @@
         <!-- มีปุ่มนี้เฉพาะตอน edit -->
         <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
       </div>
+    </div>
+
+    <div class="destination">
+      <div class="table-destination">
+        <div class="head">
+          <div class="th"><input type="checkbox" name="" id=""></div>
+          <div class="th">รหัส</div>
+          <div class="th">ลูกค้า</div>
+          <div class="th">สถานที่</div>
+          <div class="th">ที่อยู่</div>
+          <div class="th">ประเภท</div>
+          <div class="th">ชื่อผู้ติดต่อ</div>
+          <div class="th">เบอร์โทร</div>
+          <div class="th">Status</div>
+          <div class="th">รายละเอียด</div>
+          <div class="th">แก้ไข</div>
+        </div>
+
+        <div class="body">
+          <div class="tr">
+            <div class="box-list">
+              <div class="td"><input type="checkbox" name="" id=""></div>
+              <div class="td">BK-0001</div>
+              <div class="td">Wynnsoft Solution</div>
+              <div class="td">Khonkaen</div>
+              <div class="td">99/99 หมู่20 ต.ในเมือง อ.เมือง จังหวัดขอนแก่น</div>
+              <div class="td">Super Pig</div>
+              <div class="td">นายปลาหยุด</div>
+              <div class="td">099-999-9999</div>
+              <div class="td status">
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Enable</p>
+              </div>
+              <div class="td"><i class="far fa-eye" onclick="more_destination(this)"></i></div>
+              <div class="td"><i class="fas fa-cog"></i></div>
+            </div>
+            <div class="more">
+              <div class="left">
+                <div class="row full">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">รหัส</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row full">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">ลูกค้า</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">สถานที่</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">ประเภท</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row full">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">ที่อยู่</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">ละติจูด</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">ลองติจูด</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="row">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">ชื่อผู้ติดต่อ</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">เบอร์โทร</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">สร้างโดย</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">วันที่สร้าง</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">แก้ไขโดย</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group">
+                    <div class="input-box">
+                      <label for="">วันที่แก้ไข</label>
+                      <div class="group-input">
+                        <i class="fas fa-calendar-week"></i>
+                        <input type="date" class="form-component input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="status">
+                    <label>status</label>
+                    <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                    <p>Enable</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-destination">
+        <div class="head-modal"><p>สถานที่รับ-ส่ง</p></div>
+  
+        <div class="form">
+          <div class="left">
+            <div class="row">
+              <div class="group">
+                <div class="input-box">
+                  <label for="">รหัส</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="group">
+                <div class="input-box">
+                  <label for="">รหัสลูกค้า</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row full">
+              <div class="group">
+                <div class="input-box">
+                  <label for="">ชื่อสถานที่*</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="group">
+                <div class="input-box">
+                  <label for="">ละติจูด*</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="group btn">
+                <div class="input-box">
+                  <label for="">ลองติจูด*</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+    
+                <button class="form-component button primary">แผนที่</button>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="status">
+                <label>status</label>
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Enable</p>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="row full">
+              <div class="group">
+                <div class="input-box">
+                  <label for="">ลูกค้า</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row full">
+              <div class="group">
+                <div class="input-box">
+                  <label for="">ที่อยู่*</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="group">
+                <div class="input-box">
+                  <label for="">เบอร์โทร*</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="group">
+                <div class="input-box">
+                  <label for="">ผู้ติดต่อ</label>
+                  <div class="group-input">
+                    <i class="fas fa-calendar-week"></i>
+                    <input type="date" class="form-component input">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="submit-zone">
+          <div class="group-button">
+            <button class="form-component button gray" onclick="close_addCustomer()">ยกเลิก</button>
+            <button class="form-component button primary">สร้าง</button>
+          </div>
+  
+          <!-- มีปุ่มนี้เฉพาะตอน edit -->
+          <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-page hidden">
+      <div class="table-contact">
+        <div class="head">
+          <div class="th"><input type="checkbox" name="" id=""></div>
+          <div class="th">รหัส</div>
+          <div class="th">ชื่อผู้ติดต่อ</div>
+          <div class="th">ตำแหน่ง</div>
+          <div class="th">เบอร์โทร</div>
+          <div class="th">อีเมล์</div>
+          <div class="th">สร้างโดย</div>
+          <div class="th">วันที่สร้าง</div>
+          <div class="th">แก้ไขโดย</div>
+          <div class="th">วันที่แก้ไข</div>
+          <div class="th">Status</div>
+          <div class="th">แก้ไข</div>
+        </div>
+
+        <div class="body">
+          <div class="tr">
+            <div class="box-list">
+              <div class="td"><input type="checkbox" name="" id=""></div>
+              <div class="td">BK-0001</div>
+              <div class="td">Wynnsoft Solution</div>
+              <div class="td">หัวหน้าคลังเก็บสินค้า</div>
+              <div class="td">099-999-9999</div>
+              <div class="td">admin@admin.com</div>
+              <div class="td">นายปลาหยุด</div>
+              <div class="td">20-10-2021</div>
+              <div class="td">นายปลาหยุด</div>
+              <div class="td">20-10-2021</div>
+              <div class="td status">
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Enable</p>
+              </div>
+              <div class="td"><i class="fas fa-cog"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-contact">
+        <div class="head-modal"><p>ผู้ติดต่อ</p></div>
+
+        <div class="form">
+          <div class="row">
+            <div class="group">
+              <div class="input-box">
+                <label for="">รหัส</label>
+                <div class="group-input">
+                  <i class="fas fa-calendar-week"></i>
+                  <input type="text" class="form-component input">
+                </div>
+              </div>
+            </div>
+  
+            <div class="group">
+              <div class="input-box">
+                <label for="">ชื่อผู้ติดต่อ*</label>
+                <div class="group-input">
+                  <i class="fas fa-calendar-week"></i>
+                  <input type="text" class="form-component input">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row three">
+            <div class="group">
+              <div class="input-box">
+                <label for="">ตำแหน่ง</label>
+                <div class="group-input">
+                  <i class="fas fa-calendar-week"></i>
+                  <input type="text" class="form-component input">
+                </div>
+              </div>
+            </div>
+  
+            <div class="group">
+              <div class="input-box">
+                <label for="">เบอร์โทร*</label>
+                <div class="group-input">
+                  <i class="fas fa-calendar-week"></i>
+                  <input type="tel" class="form-component input">
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="input-box">
+                <label for="">อีเมล์</label>
+                <div class="group-input">
+                  <i class="fas fa-calendar-week"></i>
+                  <input type="text" class="form-component input">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="status">
+              <label>status</label>
+              <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+              <p>Enable</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit-zone">
+          <div class="group-button">
+            <button class="form-component button gray" onclick="close_addCustomer()">ยกเลิก</button>
+            <button class="form-component button primary">สร้าง</button>
+          </div>
+  
+          <!-- มีปุ่มนี้เฉพาะตอน edit -->
+          <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-map">
+      <div class="close" onclick="close_map()"><i class="far fa-times-circle"></i></div>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15308.97438403949!2d102.8443182814668!3d16.412450255370505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122898571d50f1f%3A0x181e273fc19dcc19!2z4LiK4Li04Lin4LmA4Lil4LmJ4LiyIOC4iuC4suC4muC4uQ!5e0!3m2!1sth!2sth!4v1626835034362!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </main>
   
@@ -351,7 +851,26 @@
   </aside>
 
   <script>
-    
+    function clone_table1(){
+      const ele = document.querySelector('.destination .table-destination .body .tr')
+      for(i=0;i<10;i++){
+        const clone = ele.cloneNode(true)
+        document.querySelector('.destination .table-destination .body').appendChild(clone)
+      }
+    }
+    function clone_table2(){
+      const ele = document.querySelector('.contact-page .table-contact .body .tr')
+      for(i=0;i<10;i++){
+        const clone = ele.cloneNode(true)
+        document.querySelector('.contact-page .table-contact .body').appendChild(clone)
+      }
+    }
+    clone_table1()
+    clone_table2()
+
+    function close_map(){
+      document.querySelector('.modal-map').classList.remove('show')
+    }
   </script>
 
   <script src="/js/customer.js"></script>

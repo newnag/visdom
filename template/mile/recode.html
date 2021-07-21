@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wynntrack</title>
+  <title>Visdom ชั่วคราว</title>
 
   <!-- plugin -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,12 @@
 
   <!-- style -->
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/mile.min.css">
+  <link rel="stylesheet" href="/css/vehicle.min.css">
 </head>
 <body>
   <main>
     <header>
-      <div class="collap-aside" onclick="collap_aside()"><img src="/img/icon/column-head.svg" alt=""></div>
+      <div class="collap-aside"><img src="/img/icon/column-head.svg" alt=""></div>
       <div class="group">
         <div class="lang">
           <img src="/img/icon/thailand.svg" alt="">
@@ -37,10 +37,12 @@
       </div>
     </header>
     <div class="head-page">
-      <h1>บันทึกไมล์</h1>
-      <p>50 บันทึกไมล์ทั้งหมด</p>
+      <div class="left">
+        <p>จุดบันทึกไมล์</p>
+        <p>50 จุดบันทึกไมล์</p>
+      </div>
     </div>
-    <div class="search">
+    <div class="search-type">
       <div class="input-box date">
         <input type="text" class="form-component input" onfocus="this.type='date'" onblur="this.type='text'" placeholder="ค้นหาจากวันที่สร้าง">
       </div>
@@ -52,52 +54,38 @@
 
       <div class="button"><button class="form-component button primary">ค้นหา</button></div>
 
-      <div class="button"><button class="form-component button gray">ค้นหาขั้นสูง</button></div>
-
-      <div class="import-export">
-        <p class="mg-data"><img src="/img/icon/file-csv-01.svg" alt=""> โหลดCSV</p>
-        <p class="mg-data"><img src="/img/icon/file-x-01.svg" alt=""> โหลดExcel</p>
-      </div>
-
       <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
 
-      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCode()">เพิ่มบันทึกไมล์</button></div>
+      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCode()">เพิ่มจุดไมล์</button></div>
     </div>
 
-    <div class="content">
+    <div class="content-type">
       <div class="data-table">
         <div class="head-table">
           <div class="td"><input type="checkbox"></div>
-          <div class="td">รหัสพาหนะ</div>
-          <div class="td">ชื่อพาหนะ</div>
-          <div class="td">เลขไมล์</div>
-          <div class="td">คนขับ</div>
+          <div class="td">รหัส</div>
           <div class="td">ชื่อจุด</div>
-          <div class="td">ละติจูด/ลองจิจูด</div>
-          <div class="td">รหัสงาน</div>
-          <div class="td">วันที่บันทึก</div>
-          <div class="td">วันสร้าง/แก้ไข</div>
-          <div class="td">ตั้งค่า</div>
+          <div class="td">สร้างโดย</div>
+          <div class="td">วันที่สร้าง</div>
+          <div class="td">แก้ไขโดย</div>
+          <div class="td">วันที่แก้ไข</div>
+          <div class="td">Status</div>
+          <div class="td">แก้ไข</div>
         </div>
   
         <div class="body-table">
           <div class="box-item">
             <div class="list">
               <div class="td"><input type="checkbox" name="" id=""></div>
-              <div class="td">Bk-0001</div>
-              <div class="td">Tiger Porche 88mm</div>
-              <div class="td">6000</div>
-              <div class="td">ศมจิต จห</div>
-              <div class="td">จุดทดสอบ</div>
-              <div class="td latlon">
-                <p>100.12345678</p>
-                <p>100.12345678</p>
-              </div>
-              <div class="td">DHL1234567890</div>
-              <div class="td">03/07/2021 09:40:10</div>
-              <div class="td date">
-                <p>03/07/2021 09:40:10</p>
-                <p>03/07/2021 09:40:10</p>
+              <div class="td">A0001</div>
+              <div class="td">จุดรับ</div>
+              <div class="td">Admin2</div>
+              <div class="td">25/05/2021</div>
+              <div class="td">Admin3</div>
+              <div class="td">25/05/2021</div>
+              <div class="td status">
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Enable</p>
               </div>
               <div class="td"><i class="far fa-edit"></i></div>
             </div>
@@ -130,61 +118,70 @@
     </div>
 
     <div class="modal-add-type">
-      <div class="head-modal"><p>เพิ่มเลขไมล์</p></div>
+      <div class="head-modal"><p>เพิ่มจุดบันทึกไมล์</p></div>
 
       <div class="form">
-        <div class="row">
+        <div class="row full">
           <div class="input-box">
-            <label for="">รหัสพาหนะ</label>
+            <label for="">รหัสจุดบันทึกไมล์</label>
             <div class="group-input">
-              <i class="fas fa-car"></i>
+              <i class="fas fa-tachometer-alt"></i>
+              <input type="text" class="form-component input">
+            </div>
+          </div>
+        </div> 
+
+        <div class="row two">
+          <div class="input-box">
+            <label for="">ประเภทงาน (EN)</label>
+            <div class="group-input">
+              <i class="fas fa-briefcase"></i>
               <input type="text" class="form-component input">
             </div>
           </div>
 
           <div class="input-box">
-            <label for="">ชื่อพาหนะ</label>
+            <label for="">ประเภทงาน (TH)</label>
             <div class="group-input">
-              <i class="fas fa-car"></i>
+              <i class="fas fa-briefcase"></i>
               <input type="text" class="form-component input">
             </div>
           </div>
-        </div>
+        </div> 
 
-        <div class="row">
-          <div class="group-form">
-            <div class="input-box">
-              <label for="">เลขไมล์ล่าสุด</label>
-              <div class="group-input">
-                <i class="fas fa-tachometer-alt"></i>
-                <input type="number" class="form-component input">
-              </div>
-            </div>
-
-            <div class="input-box">
-              <label for="">เลขไมล์</label>
-              <div class="group-input">
-                <i class="fas fa-tachometer-alt"></i>
-                <input type="number" class="form-component input">
-              </div>
-            </div>
-          </div>
-
+        <div class="row three">
           <div class="input-box">
             <label for="">วันที่สร้าง</label>
             <div class="group-input">
-              <i class="far fa-calendar"></i>
+              <i class="fas fa-calendar-week"></i>
               <input type="date" class="form-component input">
             </div>
+          </div>
+  
+          <div class="input-box">
+            <label for="">สร้างโดย</label>
+            <div class="group-input">
+              <i class="fas fa-user"></i>
+              <input type="text" class="form-component input" value="Admin" disabled>
+            </div>
+          </div>
+
+          <div class="status">
+            <label>status</label>
+            <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+            <p>Enable</p>
           </div>
         </div>
       </div>
 
       <div class="submit-zone">
         <div class="group-button">
-          <button class="form-component button gray" onclick="close_addJob()">ยกเลิก</button>
+          <button class="form-component button gray" onclick="close_addCode()">ยกเลิก</button>
           <button class="form-component button primary">สร้าง</button>
         </div>
+
+        <!-- มีปุ่มนี้เฉพาะตอน edit -->
+        <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
       </div>
     </div>
   </main>
@@ -364,16 +361,15 @@
 
   <script>
     function clone(){
-      const ele = document.querySelector('.content .body-table .box-item')
+      const ele = document.querySelector('.content-type .body-table .box-item')
       for(i=0;i<10;i++){
         const clone = ele.cloneNode(true)
-        document.querySelector('.content .body-table').appendChild(clone)
+        document.querySelector('.content-type .body-table').appendChild(clone)
       }
     }
     clone()
   </script>
 
-  <script src="/js/app.js"></script>
-  <script src="/js/mile.js"></script>
+  <script src="/js/vehicle.js"></script>
 </body>
 </html>

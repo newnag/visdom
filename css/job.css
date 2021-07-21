@@ -150,36 +150,36 @@
   width: 100%;
 }
 
-.content, .content-code, .content-type {
+.content, .content-code, .content-type, .content-des {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content .user, .content-code .user, .content-type .user {
+.content .user, .content-code .user, .content-type .user, .content-des .user {
   width: 280px;
   height: calc(100vh - 64px - 93px - 46px);
   overflow-y: auto;
 }
 
-.content .user::-webkit-scrollbar, .content-code .user::-webkit-scrollbar, .content-type .user::-webkit-scrollbar {
+.content .user::-webkit-scrollbar, .content-code .user::-webkit-scrollbar, .content-type .user::-webkit-scrollbar, .content-des .user::-webkit-scrollbar {
   width: 5px;
 }
 
-.content .user::-webkit-scrollbar-track, .content-code .user::-webkit-scrollbar-track, .content-type .user::-webkit-scrollbar-track {
+.content .user::-webkit-scrollbar-track, .content-code .user::-webkit-scrollbar-track, .content-type .user::-webkit-scrollbar-track, .content-des .user::-webkit-scrollbar-track {
   background: #DCDCDC;
 }
 
-.content .user::-webkit-scrollbar-thumb, .content-code .user::-webkit-scrollbar-thumb, .content-type .user::-webkit-scrollbar-thumb {
+.content .user::-webkit-scrollbar-thumb, .content-code .user::-webkit-scrollbar-thumb, .content-type .user::-webkit-scrollbar-thumb, .content-des .user::-webkit-scrollbar-thumb {
   background: gray;
   border-radius: 5px;
 }
 
-.content .user::-webkit-scrollbar-thumb:hover, .content-code .user::-webkit-scrollbar-thumb:hover, .content-type .user::-webkit-scrollbar-thumb:hover {
+.content .user::-webkit-scrollbar-thumb:hover, .content-code .user::-webkit-scrollbar-thumb:hover, .content-type .user::-webkit-scrollbar-thumb:hover, .content-des .user::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.content .user .list, .content-code .user .list, .content-type .user .list {
+.content .user .list, .content-code .user .list, .content-type .user .list, .content-des .user .list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 42px 1fr 30px;
@@ -196,17 +196,17 @@
   cursor: pointer;
 }
 
-.content .user .list.active, .content-code .user .list.active, .content-type .user .list.active {
+.content .user .list.active, .content-code .user .list.active, .content-type .user .list.active, .content-des .user .list.active {
   background: #F1F5F9;
 }
 
-.content .user .list figure, .content-code .user .list figure, .content-type .user .list figure {
+.content .user .list figure, .content-code .user .list figure, .content-type .user .list figure, .content-des .user .list figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content .user .list figure img, .content-code .user .list figure img, .content-type .user .list figure img {
+.content .user .list figure img, .content-code .user .list figure img, .content-type .user .list figure img, .content-des .user .list figure img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -214,12 +214,12 @@
      object-fit: cover;
 }
 
-.content .user .list .name, .content-code .user .list .name, .content-type .user .list .name {
+.content .user .list .name, .content-code .user .list .name, .content-type .user .list .name, .content-des .user .list .name {
   position: relative;
   margin-left: .5em;
 }
 
-.content .user .list .name p:nth-child(2), .content-code .user .list .name p:nth-child(2), .content-type .user .list .name p:nth-child(2) {
+.content .user .list .name p:nth-child(2), .content-code .user .list .name p:nth-child(2), .content-type .user .list .name p:nth-child(2), .content-des .user .list .name p:nth-child(2) {
   font-size: .8em;
   color: #9A9A9A;
   width: 90%;
@@ -227,42 +227,42 @@
   overflow: hidden;
 }
 
-.content .user .list .status-bar, .content-code .user .list .status-bar, .content-type .user .list .status-bar {
+.content .user .list .status-bar, .content-code .user .list .status-bar, .content-type .user .list .status-bar, .content-des .user .list .status-bar {
   background: #000;
   border-radius: 10px;
   padding: 1px;
   text-align: center;
 }
 
-.content .user .list .status-bar p, .content-code .user .list .status-bar p, .content-type .user .list .status-bar p {
+.content .user .list .status-bar p, .content-code .user .list .status-bar p, .content-type .user .list .status-bar p, .content-des .user .list .status-bar p {
   color: #fff;
   font-size: .5em;
 }
 
-.content .data-table, .content-code .data-table, .content-type .data-table {
+.content .data-table, .content-code .data-table, .content-type .data-table, .content-des .data-table {
   width: calc(100% - 280px);
   height: calc(100vh - 64px - 93px - 46px);
   overflow-y: auto;
 }
 
-.content .data-table::-webkit-scrollbar, .content-code .data-table::-webkit-scrollbar, .content-type .data-table::-webkit-scrollbar {
+.content .data-table::-webkit-scrollbar, .content-code .data-table::-webkit-scrollbar, .content-type .data-table::-webkit-scrollbar, .content-des .data-table::-webkit-scrollbar {
   width: 5px;
 }
 
-.content .data-table::-webkit-scrollbar-track, .content-code .data-table::-webkit-scrollbar-track, .content-type .data-table::-webkit-scrollbar-track {
+.content .data-table::-webkit-scrollbar-track, .content-code .data-table::-webkit-scrollbar-track, .content-type .data-table::-webkit-scrollbar-track, .content-des .data-table::-webkit-scrollbar-track {
   background: #DCDCDC;
 }
 
-.content .data-table::-webkit-scrollbar-thumb, .content-code .data-table::-webkit-scrollbar-thumb, .content-type .data-table::-webkit-scrollbar-thumb {
+.content .data-table::-webkit-scrollbar-thumb, .content-code .data-table::-webkit-scrollbar-thumb, .content-type .data-table::-webkit-scrollbar-thumb, .content-des .data-table::-webkit-scrollbar-thumb {
   background: gray;
   border-radius: 5px;
 }
 
-.content .data-table::-webkit-scrollbar-thumb:hover, .content-code .data-table::-webkit-scrollbar-thumb:hover, .content-type .data-table::-webkit-scrollbar-thumb:hover {
+.content .data-table::-webkit-scrollbar-thumb:hover, .content-code .data-table::-webkit-scrollbar-thumb:hover, .content-type .data-table::-webkit-scrollbar-thumb:hover, .content-des .data-table::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.content .data-table .head-table, .content-code .data-table .head-table, .content-type .data-table .head-table {
+.content .data-table .head-table, .content-code .data-table .head-table, .content-type .data-table .head-table, .content-des .data-table .head-table {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3% 8% 8% 9% 10% 12% 12% 10% 16% 5% 7%;
@@ -272,29 +272,29 @@
 }
 
 @media screen and (min-width: 1563px) {
-  .content .data-table .head-table, .content-code .data-table .head-table, .content-type .data-table .head-table {
+  .content .data-table .head-table, .content-code .data-table .head-table, .content-type .data-table .head-table, .content-des .data-table .head-table {
     -ms-grid-columns: 3% 8% 11% 12% 12% 12% 10% 7% 13% 5% 7%;
         grid-template-columns: 3% 8% 11% 12% 12% 12% 10% 7% 13% 5% 7%;
   }
 }
 
 @media screen and (min-width: 1900px) {
-  .content .data-table .head-table, .content-code .data-table .head-table, .content-type .data-table .head-table {
+  .content .data-table .head-table, .content-code .data-table .head-table, .content-type .data-table .head-table, .content-des .data-table .head-table {
     -ms-grid-columns: 3% 9% 14% 14% 14% 14% 8% 5% 9% 5% 5%;
         grid-template-columns: 3% 9% 14% 14% 14% 14% 8% 5% 9% 5% 5%;
   }
 }
 
-.content .data-table .head-table .td, .content-code .data-table .head-table .td, .content-type .data-table .head-table .td {
+.content .data-table .head-table .td, .content-code .data-table .head-table .td, .content-type .data-table .head-table .td, .content-des .data-table .head-table .td {
   padding: 0 5px;
 }
 
-.content .data-table .head-table .td:nth-child(1) input, .content-code .data-table .head-table .td:nth-child(1) input, .content-type .data-table .head-table .td:nth-child(1) input {
+.content .data-table .head-table .td:nth-child(1) input, .content-code .data-table .head-table .td:nth-child(1) input, .content-type .data-table .head-table .td:nth-child(1) input, .content-des .data-table .head-table .td:nth-child(1) input {
   width: 15px;
   height: 15px;
 }
 
-.content .data-table .head-table .td:nth-child(7), .content .data-table .head-table .td:nth-child(8), .content .data-table .head-table .td:nth-child(9), .content .data-table .head-table .td:nth-child(10), .content .data-table .head-table .td:nth-child(11), .content-code .data-table .head-table .td:nth-child(7), .content-code .data-table .head-table .td:nth-child(8), .content-code .data-table .head-table .td:nth-child(9), .content-code .data-table .head-table .td:nth-child(10), .content-code .data-table .head-table .td:nth-child(11), .content-type .data-table .head-table .td:nth-child(7), .content-type .data-table .head-table .td:nth-child(8), .content-type .data-table .head-table .td:nth-child(9), .content-type .data-table .head-table .td:nth-child(10), .content-type .data-table .head-table .td:nth-child(11) {
+.content .data-table .head-table .td:nth-child(7), .content .data-table .head-table .td:nth-child(8), .content .data-table .head-table .td:nth-child(9), .content .data-table .head-table .td:nth-child(10), .content .data-table .head-table .td:nth-child(11), .content-code .data-table .head-table .td:nth-child(7), .content-code .data-table .head-table .td:nth-child(8), .content-code .data-table .head-table .td:nth-child(9), .content-code .data-table .head-table .td:nth-child(10), .content-code .data-table .head-table .td:nth-child(11), .content-type .data-table .head-table .td:nth-child(7), .content-type .data-table .head-table .td:nth-child(8), .content-type .data-table .head-table .td:nth-child(9), .content-type .data-table .head-table .td:nth-child(10), .content-type .data-table .head-table .td:nth-child(11), .content-des .data-table .head-table .td:nth-child(7), .content-des .data-table .head-table .td:nth-child(8), .content-des .data-table .head-table .td:nth-child(9), .content-des .data-table .head-table .td:nth-child(10), .content-des .data-table .head-table .td:nth-child(11) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,7 +306,7 @@
           justify-content: center;
 }
 
-.content .data-table .body-table .box-item .list, .content-code .data-table .body-table .box-item .list, .content-type .data-table .body-table .box-item .list {
+.content .data-table .body-table .box-item .list, .content-code .data-table .body-table .box-item .list, .content-type .data-table .body-table .box-item .list, .content-des .data-table .body-table .box-item .list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3% 8% 8% 9% 10% 12% 12% 10% 16% 5% 7%;
@@ -319,24 +319,24 @@
 }
 
 @media screen and (min-width: 1563px) {
-  .content .data-table .body-table .box-item .list, .content-code .data-table .body-table .box-item .list, .content-type .data-table .body-table .box-item .list {
+  .content .data-table .body-table .box-item .list, .content-code .data-table .body-table .box-item .list, .content-type .data-table .body-table .box-item .list, .content-des .data-table .body-table .box-item .list {
     -ms-grid-columns: 3% 8% 11% 12% 12% 12% 10% 7% 13% 5% 7%;
         grid-template-columns: 3% 8% 11% 12% 12% 12% 10% 7% 13% 5% 7%;
   }
 }
 
 @media screen and (min-width: 1900px) {
-  .content .data-table .body-table .box-item .list, .content-code .data-table .body-table .box-item .list, .content-type .data-table .body-table .box-item .list {
+  .content .data-table .body-table .box-item .list, .content-code .data-table .body-table .box-item .list, .content-type .data-table .body-table .box-item .list, .content-des .data-table .body-table .box-item .list {
     -ms-grid-columns: 3% 9% 14% 14% 14% 14% 8% 5% 9% 5% 5%;
         grid-template-columns: 3% 9% 14% 14% 14% 14% 8% 5% 9% 5% 5%;
   }
 }
 
-.content .data-table .body-table .box-item .list:hover, .content-code .data-table .body-table .box-item .list:hover, .content-type .data-table .body-table .box-item .list:hover {
+.content .data-table .body-table .box-item .list:hover, .content-code .data-table .body-table .box-item .list:hover, .content-type .data-table .body-table .box-item .list:hover, .content-des .data-table .body-table .box-item .list:hover {
   background-color: #EEF2FF;
 }
 
-.content .data-table .body-table .box-item .list .td, .content-code .data-table .body-table .box-item .list .td, .content-type .data-table .body-table .box-item .list .td {
+.content .data-table .body-table .box-item .list .td, .content-code .data-table .body-table .box-item .list .td, .content-type .data-table .body-table .box-item .list .td, .content-des .data-table .body-table .box-item .list .td {
   height: 1.4em;
   overflow: hidden;
   display: -webkit-box;
@@ -345,37 +345,37 @@
   padding: 0 5px;
 }
 
-.content .data-table .body-table .box-item .list .td input, .content-code .data-table .body-table .box-item .list .td input, .content-type .data-table .body-table .box-item .list .td input {
+.content .data-table .body-table .box-item .list .td input, .content-code .data-table .body-table .box-item .list .td input, .content-type .data-table .body-table .box-item .list .td input, .content-des .data-table .body-table .box-item .list .td input {
   width: 15px;
   height: 15px;
 }
 
-.content .data-table .body-table .box-item .list .td i, .content-code .data-table .body-table .box-item .list .td i, .content-type .data-table .body-table .box-item .list .td i {
+.content .data-table .body-table .box-item .list .td i, .content-code .data-table .body-table .box-item .list .td i, .content-type .data-table .body-table .box-item .list .td i, .content-des .data-table .body-table .box-item .list .td i {
   cursor: pointer;
   font-size: 1.4em;
 }
 
-.content .data-table .body-table .box-item .list .td:nth-child(10), .content .data-table .body-table .box-item .list .td:nth-child(11), .content-code .data-table .body-table .box-item .list .td:nth-child(10), .content-code .data-table .body-table .box-item .list .td:nth-child(11), .content-type .data-table .body-table .box-item .list .td:nth-child(10), .content-type .data-table .body-table .box-item .list .td:nth-child(11) {
+.content .data-table .body-table .box-item .list .td:nth-child(10), .content .data-table .body-table .box-item .list .td:nth-child(11), .content-code .data-table .body-table .box-item .list .td:nth-child(10), .content-code .data-table .body-table .box-item .list .td:nth-child(11), .content-type .data-table .body-table .box-item .list .td:nth-child(10), .content-type .data-table .body-table .box-item .list .td:nth-child(11), .content-des .data-table .body-table .box-item .list .td:nth-child(10), .content-des .data-table .body-table .box-item .list .td:nth-child(11) {
   text-align: center;
 }
 
-.content .data-table .body-table .box-item .list .td:nth-child(5), .content .data-table .body-table .box-item .list .td:nth-child(6), .content-code .data-table .body-table .box-item .list .td:nth-child(5), .content-code .data-table .body-table .box-item .list .td:nth-child(6), .content-type .data-table .body-table .box-item .list .td:nth-child(5), .content-type .data-table .body-table .box-item .list .td:nth-child(6) {
+.content .data-table .body-table .box-item .list .td:nth-child(5), .content .data-table .body-table .box-item .list .td:nth-child(6), .content-code .data-table .body-table .box-item .list .td:nth-child(5), .content-code .data-table .body-table .box-item .list .td:nth-child(6), .content-type .data-table .body-table .box-item .list .td:nth-child(5), .content-type .data-table .body-table .box-item .list .td:nth-child(6), .content-des .data-table .body-table .box-item .list .td:nth-child(5), .content-des .data-table .body-table .box-item .list .td:nth-child(6) {
   height: 3.4em;
 }
 
-.content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3) {
+.content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-des .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-des .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-des .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-des .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3) {
   font-size: .6em;
 }
 
-.content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2) {
+.content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2), .content-des .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(2), .content-des .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(2) {
   color: #9A9A9A;
 }
 
-.content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3) {
+.content .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-code .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-type .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3), .content-des .data-table .body-table .box-item .list .td:nth-child(5) p:nth-child(3), .content-des .data-table .body-table .box-item .list .td:nth-child(6) p:nth-child(3) {
   color: #C80000;
 }
 
-.content .data-table .body-table .box-item .list .mobile-status, .content .data-table .body-table .box-item .list .status, .content .data-table .body-table .box-item .list .status-check, .content-code .data-table .body-table .box-item .list .mobile-status, .content-code .data-table .body-table .box-item .list .status, .content-code .data-table .body-table .box-item .list .status-check, .content-type .data-table .body-table .box-item .list .mobile-status, .content-type .data-table .body-table .box-item .list .status, .content-type .data-table .body-table .box-item .list .status-check {
+.content .data-table .body-table .box-item .list .mobile-status, .content .data-table .body-table .box-item .list .status, .content .data-table .body-table .box-item .list .status-check, .content-code .data-table .body-table .box-item .list .mobile-status, .content-code .data-table .body-table .box-item .list .status, .content-code .data-table .body-table .box-item .list .status-check, .content-type .data-table .body-table .box-item .list .mobile-status, .content-type .data-table .body-table .box-item .list .status, .content-type .data-table .body-table .box-item .list .status-check, .content-des .data-table .body-table .box-item .list .mobile-status, .content-des .data-table .body-table .box-item .list .status, .content-des .data-table .body-table .box-item .list .status-check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,32 +390,32 @@
   margin: auto 1em;
 }
 
-.content .data-table .body-table .box-item .list .mobile-status.green, .content .data-table .body-table .box-item .list .status.green, .content .data-table .body-table .box-item .list .status-check.green, .content-code .data-table .body-table .box-item .list .mobile-status.green, .content-code .data-table .body-table .box-item .list .status.green, .content-code .data-table .body-table .box-item .list .status-check.green, .content-type .data-table .body-table .box-item .list .mobile-status.green, .content-type .data-table .body-table .box-item .list .status.green, .content-type .data-table .body-table .box-item .list .status-check.green {
+.content .data-table .body-table .box-item .list .mobile-status.green, .content .data-table .body-table .box-item .list .status.green, .content .data-table .body-table .box-item .list .status-check.green, .content-code .data-table .body-table .box-item .list .mobile-status.green, .content-code .data-table .body-table .box-item .list .status.green, .content-code .data-table .body-table .box-item .list .status-check.green, .content-type .data-table .body-table .box-item .list .mobile-status.green, .content-type .data-table .body-table .box-item .list .status.green, .content-type .data-table .body-table .box-item .list .status-check.green, .content-des .data-table .body-table .box-item .list .mobile-status.green, .content-des .data-table .body-table .box-item .list .status.green, .content-des .data-table .body-table .box-item .list .status-check.green {
   background: #14D214;
 }
 
-.content .data-table .body-table .box-item .list .mobile-status.black, .content .data-table .body-table .box-item .list .status.black, .content .data-table .body-table .box-item .list .status-check.black, .content-code .data-table .body-table .box-item .list .mobile-status.black, .content-code .data-table .body-table .box-item .list .status.black, .content-code .data-table .body-table .box-item .list .status-check.black, .content-type .data-table .body-table .box-item .list .mobile-status.black, .content-type .data-table .body-table .box-item .list .status.black, .content-type .data-table .body-table .box-item .list .status-check.black {
+.content .data-table .body-table .box-item .list .mobile-status.black, .content .data-table .body-table .box-item .list .status.black, .content .data-table .body-table .box-item .list .status-check.black, .content-code .data-table .body-table .box-item .list .mobile-status.black, .content-code .data-table .body-table .box-item .list .status.black, .content-code .data-table .body-table .box-item .list .status-check.black, .content-type .data-table .body-table .box-item .list .mobile-status.black, .content-type .data-table .body-table .box-item .list .status.black, .content-type .data-table .body-table .box-item .list .status-check.black, .content-des .data-table .body-table .box-item .list .mobile-status.black, .content-des .data-table .body-table .box-item .list .status.black, .content-des .data-table .body-table .box-item .list .status-check.black {
   background: #0F172A;
 }
 
-.content .data-table .body-table .box-item .list .mobile-status.sky, .content .data-table .body-table .box-item .list .status.sky, .content .data-table .body-table .box-item .list .status-check.sky, .content-code .data-table .body-table .box-item .list .mobile-status.sky, .content-code .data-table .body-table .box-item .list .status.sky, .content-code .data-table .body-table .box-item .list .status-check.sky, .content-type .data-table .body-table .box-item .list .mobile-status.sky, .content-type .data-table .body-table .box-item .list .status.sky, .content-type .data-table .body-table .box-item .list .status-check.sky {
+.content .data-table .body-table .box-item .list .mobile-status.sky, .content .data-table .body-table .box-item .list .status.sky, .content .data-table .body-table .box-item .list .status-check.sky, .content-code .data-table .body-table .box-item .list .mobile-status.sky, .content-code .data-table .body-table .box-item .list .status.sky, .content-code .data-table .body-table .box-item .list .status-check.sky, .content-type .data-table .body-table .box-item .list .mobile-status.sky, .content-type .data-table .body-table .box-item .list .status.sky, .content-type .data-table .body-table .box-item .list .status-check.sky, .content-des .data-table .body-table .box-item .list .mobile-status.sky, .content-des .data-table .body-table .box-item .list .status.sky, .content-des .data-table .body-table .box-item .list .status-check.sky {
   background: #14D214;
 }
 
-.content .data-table .body-table .box-item .list .mobile-status.red, .content .data-table .body-table .box-item .list .status.red, .content .data-table .body-table .box-item .list .status-check.red, .content-code .data-table .body-table .box-item .list .mobile-status.red, .content-code .data-table .body-table .box-item .list .status.red, .content-code .data-table .body-table .box-item .list .status-check.red, .content-type .data-table .body-table .box-item .list .mobile-status.red, .content-type .data-table .body-table .box-item .list .status.red, .content-type .data-table .body-table .box-item .list .status-check.red {
+.content .data-table .body-table .box-item .list .mobile-status.red, .content .data-table .body-table .box-item .list .status.red, .content .data-table .body-table .box-item .list .status-check.red, .content-code .data-table .body-table .box-item .list .mobile-status.red, .content-code .data-table .body-table .box-item .list .status.red, .content-code .data-table .body-table .box-item .list .status-check.red, .content-type .data-table .body-table .box-item .list .mobile-status.red, .content-type .data-table .body-table .box-item .list .status.red, .content-type .data-table .body-table .box-item .list .status-check.red, .content-des .data-table .body-table .box-item .list .mobile-status.red, .content-des .data-table .body-table .box-item .list .status.red, .content-des .data-table .body-table .box-item .list .status-check.red {
   background: #14D214;
 }
 
-.content .data-table .body-table .box-item .list .mobile-status.gray, .content .data-table .body-table .box-item .list .status.gray, .content .data-table .body-table .box-item .list .status-check.gray, .content-code .data-table .body-table .box-item .list .mobile-status.gray, .content-code .data-table .body-table .box-item .list .status.gray, .content-code .data-table .body-table .box-item .list .status-check.gray, .content-type .data-table .body-table .box-item .list .mobile-status.gray, .content-type .data-table .body-table .box-item .list .status.gray, .content-type .data-table .body-table .box-item .list .status-check.gray {
+.content .data-table .body-table .box-item .list .mobile-status.gray, .content .data-table .body-table .box-item .list .status.gray, .content .data-table .body-table .box-item .list .status-check.gray, .content-code .data-table .body-table .box-item .list .mobile-status.gray, .content-code .data-table .body-table .box-item .list .status.gray, .content-code .data-table .body-table .box-item .list .status-check.gray, .content-type .data-table .body-table .box-item .list .mobile-status.gray, .content-type .data-table .body-table .box-item .list .status.gray, .content-type .data-table .body-table .box-item .list .status-check.gray, .content-des .data-table .body-table .box-item .list .mobile-status.gray, .content-des .data-table .body-table .box-item .list .status.gray, .content-des .data-table .body-table .box-item .list .status-check.gray {
   background: #14D214;
 }
 
-.content .data-table .body-table .box-item .list .mobile-status p, .content .data-table .body-table .box-item .list .status p, .content .data-table .body-table .box-item .list .status-check p, .content-code .data-table .body-table .box-item .list .mobile-status p, .content-code .data-table .body-table .box-item .list .status p, .content-code .data-table .body-table .box-item .list .status-check p, .content-type .data-table .body-table .box-item .list .mobile-status p, .content-type .data-table .body-table .box-item .list .status p, .content-type .data-table .body-table .box-item .list .status-check p {
+.content .data-table .body-table .box-item .list .mobile-status p, .content .data-table .body-table .box-item .list .status p, .content .data-table .body-table .box-item .list .status-check p, .content-code .data-table .body-table .box-item .list .mobile-status p, .content-code .data-table .body-table .box-item .list .status p, .content-code .data-table .body-table .box-item .list .status-check p, .content-type .data-table .body-table .box-item .list .mobile-status p, .content-type .data-table .body-table .box-item .list .status p, .content-type .data-table .body-table .box-item .list .status-check p, .content-des .data-table .body-table .box-item .list .mobile-status p, .content-des .data-table .body-table .box-item .list .status p, .content-des .data-table .body-table .box-item .list .status-check p {
   color: #fff;
   font-size: .7em;
 }
 
-.content .data-table .body-table .box-item .more, .content-code .data-table .body-table .box-item .more, .content-type .data-table .body-table .box-item .more {
+.content .data-table .body-table .box-item .more, .content-code .data-table .body-table .box-item .more, .content-type .data-table .body-table .box-item .more, .content-des .data-table .body-table .box-item .more {
   width: 100%;
   -ms-grid-column: 1;
   -ms-grid-column-span: 11;
@@ -432,12 +432,12 @@
   grid-column-gap: 6%;
 }
 
-.content .data-table .body-table .box-item .more.show, .content-code .data-table .body-table .box-item .more.show, .content-type .data-table .body-table .box-item .more.show {
+.content .data-table .body-table .box-item .more.show, .content-code .data-table .body-table .box-item .more.show, .content-type .data-table .body-table .box-item .more.show, .content-des .data-table .body-table .box-item .more.show {
   display: -ms-grid;
   display: grid;
 }
 
-.content .data-table .body-table .box-item .more .left, .content .data-table .body-table .box-item .more .right, .content-code .data-table .body-table .box-item .more .left, .content-code .data-table .body-table .box-item .more .right, .content-type .data-table .body-table .box-item .more .left, .content-type .data-table .body-table .box-item .more .right {
+.content .data-table .body-table .box-item .more .left, .content .data-table .body-table .box-item .more .right, .content-code .data-table .body-table .box-item .more .left, .content-code .data-table .body-table .box-item .more .right, .content-type .data-table .body-table .box-item .more .left, .content-type .data-table .body-table .box-item .more .right, .content-des .data-table .body-table .box-item .more .left, .content-des .data-table .body-table .box-item .more .right {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -446,29 +446,29 @@
   grid-row-gap: 1em;
 }
 
-.content .data-table .body-table .box-item .more .left .input-box, .content .data-table .body-table .box-item .more .right .input-box, .content-code .data-table .body-table .box-item .more .left .input-box, .content-code .data-table .body-table .box-item .more .right .input-box, .content-type .data-table .body-table .box-item .more .left .input-box, .content-type .data-table .body-table .box-item .more .right .input-box {
+.content .data-table .body-table .box-item .more .left .input-box, .content .data-table .body-table .box-item .more .right .input-box, .content-code .data-table .body-table .box-item .more .left .input-box, .content-code .data-table .body-table .box-item .more .right .input-box, .content-type .data-table .body-table .box-item .more .left .input-box, .content-type .data-table .body-table .box-item .more .right .input-box, .content-des .data-table .body-table .box-item .more .left .input-box, .content-des .data-table .body-table .box-item .more .right .input-box {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
 
-.content .data-table .body-table .box-item .more .left .input-box label, .content .data-table .body-table .box-item .more .right .input-box label, .content-code .data-table .body-table .box-item .more .left .input-box label, .content-code .data-table .body-table .box-item .more .right .input-box label, .content-type .data-table .body-table .box-item .more .left .input-box label, .content-type .data-table .body-table .box-item .more .right .input-box label {
+.content .data-table .body-table .box-item .more .left .input-box label, .content .data-table .body-table .box-item .more .right .input-box label, .content-code .data-table .body-table .box-item .more .left .input-box label, .content-code .data-table .body-table .box-item .more .right .input-box label, .content-type .data-table .body-table .box-item .more .left .input-box label, .content-type .data-table .body-table .box-item .more .right .input-box label, .content-des .data-table .body-table .box-item .more .left .input-box label, .content-des .data-table .body-table .box-item .more .right .input-box label {
   color: #0F172A;
 }
 
-.content .data-table .body-table .box-item .more .left .input-box .input-group, .content .data-table .body-table .box-item .more .right .input-box .input-group, .content-code .data-table .body-table .box-item .more .left .input-box .input-group, .content-code .data-table .body-table .box-item .more .right .input-box .input-group, .content-type .data-table .body-table .box-item .more .left .input-box .input-group, .content-type .data-table .body-table .box-item .more .right .input-box .input-group {
+.content .data-table .body-table .box-item .more .left .input-box .input-group, .content .data-table .body-table .box-item .more .right .input-box .input-group, .content-code .data-table .body-table .box-item .more .left .input-box .input-group, .content-code .data-table .body-table .box-item .more .right .input-box .input-group, .content-type .data-table .body-table .box-item .more .left .input-box .input-group, .content-type .data-table .body-table .box-item .more .right .input-box .input-group, .content-des .data-table .body-table .box-item .more .left .input-box .input-group, .content-des .data-table .body-table .box-item .more .right .input-box .input-group {
   position: relative;
   margin-top: .25em;
 }
 
-.content .data-table .body-table .box-item .more .left .input-box .input-group input, .content .data-table .body-table .box-item .more .left .input-box .input-group select, .content .data-table .body-table .box-item .more .right .input-box .input-group input, .content .data-table .body-table .box-item .more .right .input-box .input-group select, .content-code .data-table .body-table .box-item .more .left .input-box .input-group input, .content-code .data-table .body-table .box-item .more .left .input-box .input-group select, .content-code .data-table .body-table .box-item .more .right .input-box .input-group input, .content-code .data-table .body-table .box-item .more .right .input-box .input-group select, .content-type .data-table .body-table .box-item .more .left .input-box .input-group input, .content-type .data-table .body-table .box-item .more .left .input-box .input-group select, .content-type .data-table .body-table .box-item .more .right .input-box .input-group input, .content-type .data-table .body-table .box-item .more .right .input-box .input-group select {
+.content .data-table .body-table .box-item .more .left .input-box .input-group input, .content .data-table .body-table .box-item .more .left .input-box .input-group select, .content .data-table .body-table .box-item .more .right .input-box .input-group input, .content .data-table .body-table .box-item .more .right .input-box .input-group select, .content-code .data-table .body-table .box-item .more .left .input-box .input-group input, .content-code .data-table .body-table .box-item .more .left .input-box .input-group select, .content-code .data-table .body-table .box-item .more .right .input-box .input-group input, .content-code .data-table .body-table .box-item .more .right .input-box .input-group select, .content-type .data-table .body-table .box-item .more .left .input-box .input-group input, .content-type .data-table .body-table .box-item .more .left .input-box .input-group select, .content-type .data-table .body-table .box-item .more .right .input-box .input-group input, .content-type .data-table .body-table .box-item .more .right .input-box .input-group select, .content-des .data-table .body-table .box-item .more .left .input-box .input-group input, .content-des .data-table .body-table .box-item .more .left .input-box .input-group select, .content-des .data-table .body-table .box-item .more .right .input-box .input-group input, .content-des .data-table .body-table .box-item .more .right .input-box .input-group select {
   padding-left: 40px;
   height: 50px;
   border: 1px solid #9A9A9A;
   font-size: 1.2em;
 }
 
-.content .data-table .body-table .box-item .more .left .input-box .input-group i, .content .data-table .body-table .box-item .more .right .input-box .input-group i, .content-code .data-table .body-table .box-item .more .left .input-box .input-group i, .content-code .data-table .body-table .box-item .more .right .input-box .input-group i, .content-type .data-table .body-table .box-item .more .left .input-box .input-group i, .content-type .data-table .body-table .box-item .more .right .input-box .input-group i {
+.content .data-table .body-table .box-item .more .left .input-box .input-group i, .content .data-table .body-table .box-item .more .right .input-box .input-group i, .content-code .data-table .body-table .box-item .more .left .input-box .input-group i, .content-code .data-table .body-table .box-item .more .right .input-box .input-group i, .content-type .data-table .body-table .box-item .more .left .input-box .input-group i, .content-type .data-table .body-table .box-item .more .right .input-box .input-group i, .content-des .data-table .body-table .box-item .more .left .input-box .input-group i, .content-des .data-table .body-table .box-item .more .right .input-box .input-group i {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -477,13 +477,13 @@
   color: #9A9A9A;
 }
 
-.content .data-table .body-table .box-item .more .left .full, .content .data-table .body-table .box-item .more .right .full, .content-code .data-table .body-table .box-item .more .left .full, .content-code .data-table .body-table .box-item .more .right .full, .content-type .data-table .body-table .box-item .more .left .full, .content-type .data-table .body-table .box-item .more .right .full {
+.content .data-table .body-table .box-item .more .left .full, .content .data-table .body-table .box-item .more .right .full, .content-code .data-table .body-table .box-item .more .left .full, .content-code .data-table .body-table .box-item .more .right .full, .content-type .data-table .body-table .box-item .more .left .full, .content-type .data-table .body-table .box-item .more .right .full, .content-des .data-table .body-table .box-item .more .left .full, .content-des .data-table .body-table .box-item .more .right .full {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
 }
 
-.content .data-table .body-table .box-item .more .full-group, .content-code .data-table .body-table .box-item .more .full-group, .content-type .data-table .body-table .box-item .more .full-group {
+.content .data-table .body-table .box-item .more .full-group, .content-code .data-table .body-table .box-item .more .full-group, .content-type .data-table .body-table .box-item .more .full-group, .content-des .data-table .body-table .box-item .more .full-group {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
@@ -499,29 +499,29 @@
   grid-row-gap: 1em;
 }
 
-.content .data-table .body-table .box-item .more .full-group .input-box, .content-code .data-table .body-table .box-item .more .full-group .input-box, .content-type .data-table .body-table .box-item .more .full-group .input-box {
+.content .data-table .body-table .box-item .more .full-group .input-box, .content-code .data-table .body-table .box-item .more .full-group .input-box, .content-type .data-table .body-table .box-item .more .full-group .input-box, .content-des .data-table .body-table .box-item .more .full-group .input-box {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
 
-.content .data-table .body-table .box-item .more .full-group .input-box label, .content-code .data-table .body-table .box-item .more .full-group .input-box label, .content-type .data-table .body-table .box-item .more .full-group .input-box label {
+.content .data-table .body-table .box-item .more .full-group .input-box label, .content-code .data-table .body-table .box-item .more .full-group .input-box label, .content-type .data-table .body-table .box-item .more .full-group .input-box label, .content-des .data-table .body-table .box-item .more .full-group .input-box label {
   color: #0F172A;
 }
 
-.content .data-table .body-table .box-item .more .full-group .input-box .input-group, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group {
+.content .data-table .body-table .box-item .more .full-group .input-box .input-group, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group, .content-des .data-table .body-table .box-item .more .full-group .input-box .input-group {
   position: relative;
   margin-top: .25em;
 }
 
-.content .data-table .body-table .box-item .more .full-group .input-box .input-group input, .content .data-table .body-table .box-item .more .full-group .input-box .input-group select, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group input, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group select, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group input, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group select {
+.content .data-table .body-table .box-item .more .full-group .input-box .input-group input, .content .data-table .body-table .box-item .more .full-group .input-box .input-group select, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group input, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group select, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group input, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group select, .content-des .data-table .body-table .box-item .more .full-group .input-box .input-group input, .content-des .data-table .body-table .box-item .more .full-group .input-box .input-group select {
   padding-left: 40px;
   height: 50px;
   border: 1px solid #9A9A9A;
   font-size: 1.2em;
 }
 
-.content .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group i {
+.content .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-des .data-table .body-table .box-item .more .full-group .input-box .input-group i {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -530,7 +530,7 @@
   color: #9A9A9A;
 }
 
-.content .data-table .body-table .box-item .more .full-group .status, .content-code .data-table .body-table .box-item .more .full-group .status, .content-type .data-table .body-table .box-item .more .full-group .status {
+.content .data-table .body-table .box-item .more .full-group .status, .content-code .data-table .body-table .box-item .more .full-group .status, .content-type .data-table .body-table .box-item .more .full-group .status, .content-des .data-table .body-table .box-item .more .full-group .status {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-column: 3/5;
@@ -546,19 +546,19 @@
   margin-top: 2em;
 }
 
-.content .data-table .body-table .box-item .more .full-group .status p, .content-code .data-table .body-table .box-item .more .full-group .status p, .content-type .data-table .body-table .box-item .more .full-group .status p {
+.content .data-table .body-table .box-item .more .full-group .status p, .content-code .data-table .body-table .box-item .more .full-group .status p, .content-type .data-table .body-table .box-item .more .full-group .status p, .content-des .data-table .body-table .box-item .more .full-group .status p {
   margin-right: 1em;
   font-size: .8em;
 }
 
-.content .data-table .body-table .box-item .more .full-group .status label, .content-code .data-table .body-table .box-item .more .full-group .status label, .content-type .data-table .body-table .box-item .more .full-group .status label {
+.content .data-table .body-table .box-item .more .full-group .status label, .content-code .data-table .body-table .box-item .more .full-group .status label, .content-type .data-table .body-table .box-item .more .full-group .status label, .content-des .data-table .body-table .box-item .more .full-group .status label {
   font-size: .6em;
   font-weight: 300;
   color: #9A9A9A;
   margin-left: 2em;
 }
 
-.content .data-table .body-table .box-item .more .full-group .status .button, .content-code .data-table .body-table .box-item .more .full-group .status .button, .content-type .data-table .body-table .box-item .more .full-group .status .button {
+.content .data-table .body-table .box-item .more .full-group .status .button, .content-code .data-table .body-table .box-item .more .full-group .status .button, .content-type .data-table .body-table .box-item .more .full-group .status .button, .content-des .data-table .body-table .box-item .more .full-group .status .button {
   width: 70px;
   height: 20px;
   background: #DCDCDC;
@@ -567,7 +567,7 @@
   cursor: pointer;
 }
 
-.content .data-table .body-table .box-item .more .full-group .status .button .circle, .content-code .data-table .body-table .box-item .more .full-group .status .button .circle, .content-type .data-table .body-table .box-item .more .full-group .status .button .circle {
+.content .data-table .body-table .box-item .more .full-group .status .button .circle, .content-code .data-table .body-table .box-item .more .full-group .status .button .circle, .content-type .data-table .body-table .box-item .more .full-group .status .button .circle, .content-des .data-table .body-table .box-item .more .full-group .status .button .circle {
   width: 30px;
   height: 30px;
   background: #14D214;
@@ -579,12 +579,12 @@
   transition: .3s ease-in-out;
 }
 
-.content .data-table .body-table .box-item .more .full-group .status .button .circle.close, .content-code .data-table .body-table .box-item .more .full-group .status .button .circle.close, .content-type .data-table .body-table .box-item .more .full-group .status .button .circle.close {
+.content .data-table .body-table .box-item .more .full-group .status .button .circle.close, .content-code .data-table .body-table .box-item .more .full-group .status .button .circle.close, .content-type .data-table .body-table .box-item .more .full-group .status .button .circle.close, .content-des .data-table .body-table .box-item .more .full-group .status .button .circle.close {
   left: 65%;
   background: #C80000;
 }
 
-.content .data-table .pagination, .content-code .data-table .pagination, .content-type .data-table .pagination {
+.content .data-table .pagination, .content-code .data-table .pagination, .content-type .data-table .pagination, .content-des .data-table .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -594,30 +594,30 @@
   padding: 1em;
 }
 
-.content .data-table .pagination p, .content-code .data-table .pagination p, .content-type .data-table .pagination p {
+.content .data-table .pagination p, .content-code .data-table .pagination p, .content-type .data-table .pagination p, .content-des .data-table .pagination p {
   color: #9A9A9A;
   margin-right: 2em;
 }
 
-.content .data-table .pagination .select-page, .content-code .data-table .pagination .select-page, .content-type .data-table .pagination .select-page {
+.content .data-table .pagination .select-page, .content-code .data-table .pagination .select-page, .content-type .data-table .pagination .select-page, .content-des .data-table .pagination .select-page {
   margin-right: 2em;
 }
 
-.content .data-table .pagination .select-page select, .content-code .data-table .pagination .select-page select, .content-type .data-table .pagination .select-page select {
+.content .data-table .pagination .select-page select, .content-code .data-table .pagination .select-page select, .content-type .data-table .pagination .select-page select, .content-des .data-table .pagination .select-page select {
   border: 1px solid #9A9A9A;
   color: #9A9A9A;
 }
 
-.content .data-table .pagination .page a, .content-code .data-table .pagination .page a, .content-type .data-table .pagination .page a {
+.content .data-table .pagination .page a, .content-code .data-table .pagination .page a, .content-type .data-table .pagination .page a, .content-des .data-table .pagination .page a {
   margin-right: 1em;
 }
 
-.content .data-table .pagination .page a.disable i, .content-code .data-table .pagination .page a.disable i, .content-type .data-table .pagination .page a.disable i {
+.content .data-table .pagination .page a.disable i, .content-code .data-table .pagination .page a.disable i, .content-type .data-table .pagination .page a.disable i, .content-des .data-table .pagination .page a.disable i {
   color: #9A9A9A;
   cursor: default;
 }
 
-.content .detail-more, .content-code .detail-more, .content-type .detail-more {
+.content .detail-more, .content-code .detail-more, .content-type .detail-more, .content-des .detail-more {
   position: fixed;
   top: 0;
   right: -100%;
@@ -633,71 +633,71 @@
           box-shadow: -10px 0px 12px #565656;
 }
 
-.content .detail-more::-webkit-scrollbar, .content-code .detail-more::-webkit-scrollbar, .content-type .detail-more::-webkit-scrollbar {
+.content .detail-more::-webkit-scrollbar, .content-code .detail-more::-webkit-scrollbar, .content-type .detail-more::-webkit-scrollbar, .content-des .detail-more::-webkit-scrollbar {
   width: 5px;
 }
 
-.content .detail-more::-webkit-scrollbar-track, .content-code .detail-more::-webkit-scrollbar-track, .content-type .detail-more::-webkit-scrollbar-track {
+.content .detail-more::-webkit-scrollbar-track, .content-code .detail-more::-webkit-scrollbar-track, .content-type .detail-more::-webkit-scrollbar-track, .content-des .detail-more::-webkit-scrollbar-track {
   background: #DCDCDC;
 }
 
-.content .detail-more::-webkit-scrollbar-thumb, .content-code .detail-more::-webkit-scrollbar-thumb, .content-type .detail-more::-webkit-scrollbar-thumb {
+.content .detail-more::-webkit-scrollbar-thumb, .content-code .detail-more::-webkit-scrollbar-thumb, .content-type .detail-more::-webkit-scrollbar-thumb, .content-des .detail-more::-webkit-scrollbar-thumb {
   background: gray;
   border-radius: 5px;
 }
 
-.content .detail-more::-webkit-scrollbar-thumb:hover, .content-code .detail-more::-webkit-scrollbar-thumb:hover, .content-type .detail-more::-webkit-scrollbar-thumb:hover {
+.content .detail-more::-webkit-scrollbar-thumb:hover, .content-code .detail-more::-webkit-scrollbar-thumb:hover, .content-type .detail-more::-webkit-scrollbar-thumb:hover, .content-des .detail-more::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.content .detail-more.show, .content-code .detail-more.show, .content-type .detail-more.show {
+.content .detail-more.show, .content-code .detail-more.show, .content-type .detail-more.show, .content-des .detail-more.show {
   right: 0;
 }
 
-.content .detail-more .logo, .content-code .detail-more .logo, .content-type .detail-more .logo {
+.content .detail-more .logo, .content-code .detail-more .logo, .content-type .detail-more .logo, .content-des .detail-more .logo {
   max-width: 80px;
   max-height: 80px;
 }
 
-.content .detail-more .logo img, .content-code .detail-more .logo img, .content-type .detail-more .logo img {
+.content .detail-more .logo img, .content-code .detail-more .logo img, .content-type .detail-more .logo img, .content-des .detail-more .logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.content .detail-more .company, .content-code .detail-more .company, .content-type .detail-more .company {
+.content .detail-more .company, .content-code .detail-more .company, .content-type .detail-more .company, .content-des .detail-more .company {
   margin-top: 1em;
   margin-bottom: .5em;
 }
 
-.content .detail-more .company p, .content-code .detail-more .company p, .content-type .detail-more .company p {
+.content .detail-more .company p, .content-code .detail-more .company p, .content-type .detail-more .company p, .content-des .detail-more .company p {
   font-weight: 500;
   font-size: 1.2em;
 }
 
-.content .detail-more .address, .content-code .detail-more .address, .content-type .detail-more .address {
+.content .detail-more .address, .content-code .detail-more .address, .content-type .detail-more .address, .content-des .detail-more .address {
   border-bottom: 1px solid #DCDCDC;
   padding-bottom: 1em;
 }
 
-.content .detail-more .address p, .content-code .detail-more .address p, .content-type .detail-more .address p {
+.content .detail-more .address p, .content-code .detail-more .address p, .content-type .detail-more .address p, .content-des .detail-more .address p {
   color: #0F172A;
   font-size: .6em;
   margin-bottom: .25em;
 }
 
-.content .detail-more .detail-zone, .content-code .detail-more .detail-zone, .content-type .detail-more .detail-zone {
+.content .detail-more .detail-zone, .content-code .detail-more .detail-zone, .content-type .detail-more .detail-zone, .content-des .detail-more .detail-zone {
   margin: 1em 0;
 }
 
-.content .detail-more .detail-zone h2, .content-code .detail-more .detail-zone h2, .content-type .detail-more .detail-zone h2 {
+.content .detail-more .detail-zone h2, .content-code .detail-more .detail-zone h2, .content-type .detail-more .detail-zone h2, .content-des .detail-more .detail-zone h2 {
   text-align: center;
   margin-bottom: 1em;
   color: #0F172A;
 }
 
-.content .detail-more .detail-zone .card-zone, .content-code .detail-more .detail-zone .card-zone, .content-type .detail-more .detail-zone .card-zone {
+.content .detail-more .detail-zone .card-zone, .content-code .detail-more .detail-zone .card-zone, .content-type .detail-more .detail-zone .card-zone, .content-des .detail-more .detail-zone .card-zone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,32 +709,32 @@
           justify-content: center;
 }
 
-.content .detail-more .detail-zone .card-zone .card, .content-code .detail-more .detail-zone .card-zone .card, .content-type .detail-more .detail-zone .card-zone .card {
+.content .detail-more .detail-zone .card-zone .card, .content-code .detail-more .detail-zone .card-zone .card, .content-type .detail-more .detail-zone .card-zone .card, .content-des .detail-more .detail-zone .card-zone .card {
   background: #0F172A;
   border-radius: 5px;
   margin-right: 2em;
   padding: .5em;
 }
 
-.content .detail-more .detail-zone .card-zone .card p, .content-code .detail-more .detail-zone .card-zone .card p, .content-type .detail-more .detail-zone .card-zone .card p {
+.content .detail-more .detail-zone .card-zone .card p, .content-code .detail-more .detail-zone .card-zone .card p, .content-type .detail-more .detail-zone .card-zone .card p, .content-des .detail-more .detail-zone .card-zone .card p {
   color: #fff;
   font-size: .8em;
 }
 
-.content .detail-more .detail-zone .customer, .content-code .detail-more .detail-zone .customer, .content-type .detail-more .detail-zone .customer {
+.content .detail-more .detail-zone .customer, .content-code .detail-more .detail-zone .customer, .content-type .detail-more .detail-zone .customer, .content-des .detail-more .detail-zone .customer {
   background: #F1F5F9;
   padding: .5em 2em;
   margin-top: 1em;
   border-radius: 5px;
 }
 
-.content .detail-more .detail-zone .customer p, .content-code .detail-more .detail-zone .customer p, .content-type .detail-more .detail-zone .customer p {
+.content .detail-more .detail-zone .customer p, .content-code .detail-more .detail-zone .customer p, .content-type .detail-more .detail-zone .customer p, .content-des .detail-more .detail-zone .customer p {
   font-size: .8em;
   color: #0F172A;
   margin-bottom: .25em;
 }
 
-.content .detail-more .detail-zone .delivery, .content-code .detail-more .detail-zone .delivery, .content-type .detail-more .detail-zone .delivery {
+.content .detail-more .detail-zone .delivery, .content-code .detail-more .detail-zone .delivery, .content-type .detail-more .detail-zone .delivery, .content-des .detail-more .detail-zone .delivery {
   margin-top: 1em;
   display: -ms-grid;
   display: grid;
@@ -742,7 +742,7 @@
       grid-template-columns: 47% 6% 47%;
 }
 
-.content .detail-more .detail-zone .delivery i, .content-code .detail-more .detail-zone .delivery i, .content-type .detail-more .detail-zone .delivery i {
+.content .detail-more .detail-zone .delivery i, .content-code .detail-more .detail-zone .delivery i, .content-type .detail-more .detail-zone .delivery i, .content-des .detail-more .detail-zone .delivery i {
   color: #0F172A;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -756,41 +756,41 @@
   font-size: 1.2em;
 }
 
-.content .detail-more .detail-zone .delivery .from, .content .detail-more .detail-zone .delivery .to, .content-code .detail-more .detail-zone .delivery .from, .content-code .detail-more .detail-zone .delivery .to, .content-type .detail-more .detail-zone .delivery .from, .content-type .detail-more .detail-zone .delivery .to {
+.content .detail-more .detail-zone .delivery .from, .content .detail-more .detail-zone .delivery .to, .content-code .detail-more .detail-zone .delivery .from, .content-code .detail-more .detail-zone .delivery .to, .content-type .detail-more .detail-zone .delivery .from, .content-type .detail-more .detail-zone .delivery .to, .content-des .detail-more .detail-zone .delivery .from, .content-des .detail-more .detail-zone .delivery .to {
   padding: 1em;
   border-radius: 5px;
   background: #0F172A;
 }
 
-.content .detail-more .detail-zone .delivery .from .title, .content .detail-more .detail-zone .delivery .to .title, .content-code .detail-more .detail-zone .delivery .from .title, .content-code .detail-more .detail-zone .delivery .to .title, .content-type .detail-more .detail-zone .delivery .from .title, .content-type .detail-more .detail-zone .delivery .to .title {
+.content .detail-more .detail-zone .delivery .from .title, .content .detail-more .detail-zone .delivery .to .title, .content-code .detail-more .detail-zone .delivery .from .title, .content-code .detail-more .detail-zone .delivery .to .title, .content-type .detail-more .detail-zone .delivery .from .title, .content-type .detail-more .detail-zone .delivery .to .title, .content-des .detail-more .detail-zone .delivery .from .title, .content-des .detail-more .detail-zone .delivery .to .title {
   color: #FFBF2A;
   font-size: 1.2em;
   font-weight: 600;
   margin-bottom: .25em;
 }
 
-.content .detail-more .detail-zone .delivery .from .txt, .content .detail-more .detail-zone .delivery .to .txt, .content-code .detail-more .detail-zone .delivery .from .txt, .content-code .detail-more .detail-zone .delivery .to .txt, .content-type .detail-more .detail-zone .delivery .from .txt, .content-type .detail-more .detail-zone .delivery .to .txt {
+.content .detail-more .detail-zone .delivery .from .txt, .content .detail-more .detail-zone .delivery .to .txt, .content-code .detail-more .detail-zone .delivery .from .txt, .content-code .detail-more .detail-zone .delivery .to .txt, .content-type .detail-more .detail-zone .delivery .from .txt, .content-type .detail-more .detail-zone .delivery .to .txt, .content-des .detail-more .detail-zone .delivery .from .txt, .content-des .detail-more .detail-zone .delivery .to .txt {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40px 1fr;
       grid-template-columns: 40px 1fr;
 }
 
-.content .detail-more .detail-zone .delivery .from .txt p, .content .detail-more .detail-zone .delivery .to .txt p, .content-code .detail-more .detail-zone .delivery .from .txt p, .content-code .detail-more .detail-zone .delivery .to .txt p, .content-type .detail-more .detail-zone .delivery .from .txt p, .content-type .detail-more .detail-zone .delivery .to .txt p {
+.content .detail-more .detail-zone .delivery .from .txt p, .content .detail-more .detail-zone .delivery .to .txt p, .content-code .detail-more .detail-zone .delivery .from .txt p, .content-code .detail-more .detail-zone .delivery .to .txt p, .content-type .detail-more .detail-zone .delivery .from .txt p, .content-type .detail-more .detail-zone .delivery .to .txt p, .content-des .detail-more .detail-zone .delivery .from .txt p, .content-des .detail-more .detail-zone .delivery .to .txt p {
   color: #fff;
   font-size: .8em;
 }
 
-.content .detail-more .detail-zone .delivery .from .txt p:nth-child(1), .content .detail-more .detail-zone .delivery .to .txt p:nth-child(1), .content-code .detail-more .detail-zone .delivery .from .txt p:nth-child(1), .content-code .detail-more .detail-zone .delivery .to .txt p:nth-child(1), .content-type .detail-more .detail-zone .delivery .from .txt p:nth-child(1), .content-type .detail-more .detail-zone .delivery .to .txt p:nth-child(1) {
+.content .detail-more .detail-zone .delivery .from .txt p:nth-child(1), .content .detail-more .detail-zone .delivery .to .txt p:nth-child(1), .content-code .detail-more .detail-zone .delivery .from .txt p:nth-child(1), .content-code .detail-more .detail-zone .delivery .to .txt p:nth-child(1), .content-type .detail-more .detail-zone .delivery .from .txt p:nth-child(1), .content-type .detail-more .detail-zone .delivery .to .txt p:nth-child(1), .content-des .detail-more .detail-zone .delivery .from .txt p:nth-child(1), .content-des .detail-more .detail-zone .delivery .to .txt p:nth-child(1) {
   text-align: right;
   padding-right: 10px;
 }
 
-.content .detail-more .detail-zone .table-product, .content-code .detail-more .detail-zone .table-product, .content-type .detail-more .detail-zone .table-product {
+.content .detail-more .detail-zone .table-product, .content-code .detail-more .detail-zone .table-product, .content-type .detail-more .detail-zone .table-product, .content-des .detail-more .detail-zone .table-product {
   margin-top: 1em;
 }
 
-.content .detail-more .detail-zone .table-product .head-table, .content-code .detail-more .detail-zone .table-product .head-table, .content-type .detail-more .detail-zone .table-product .head-table {
+.content .detail-more .detail-zone .table-product .head-table, .content-code .detail-more .detail-zone .table-product .head-table, .content-type .detail-more .detail-zone .table-product .head-table, .content-des .detail-more .detail-zone .table-product .head-table {
   background: #0F172A;
   display: -ms-grid;
   display: grid;
@@ -799,7 +799,7 @@
   border-radius: 5px 5px 0 0;
 }
 
-.content .detail-more .detail-zone .table-product .head-table .td, .content-code .detail-more .detail-zone .table-product .head-table .td, .content-type .detail-more .detail-zone .table-product .head-table .td {
+.content .detail-more .detail-zone .table-product .head-table .td, .content-code .detail-more .detail-zone .table-product .head-table .td, .content-type .detail-more .detail-zone .table-product .head-table .td, .content-des .detail-more .detail-zone .table-product .head-table .td {
   color: #fff;
   padding: 5px;
   font-size: .8em;
@@ -807,12 +807,12 @@
   text-align: center;
 }
 
-.content .detail-more .detail-zone .table-product .body-table, .content-code .detail-more .detail-zone .table-product .body-table, .content-type .detail-more .detail-zone .table-product .body-table {
+.content .detail-more .detail-zone .table-product .body-table, .content-code .detail-more .detail-zone .table-product .body-table, .content-type .detail-more .detail-zone .table-product .body-table, .content-des .detail-more .detail-zone .table-product .body-table {
   border-radius: 0 0 5px 5px;
   background: #DCDCDC;
 }
 
-.content .detail-more .detail-zone .table-product .body-table .list, .content-code .detail-more .detail-zone .table-product .body-table .list, .content-type .detail-more .detail-zone .table-product .body-table .list {
+.content .detail-more .detail-zone .table-product .body-table .list, .content-code .detail-more .detail-zone .table-product .body-table .list, .content-type .detail-more .detail-zone .table-product .body-table .list, .content-des .detail-more .detail-zone .table-product .body-table .list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3% 8% 10% 6% 6% 6% 7% 9% 9% 10% 10% 6% 10%;
@@ -820,7 +820,7 @@
   border-bottom: 1px solid #fff;
 }
 
-.content .detail-more .detail-zone .table-product .body-table .list .td, .content-code .detail-more .detail-zone .table-product .body-table .list .td, .content-type .detail-more .detail-zone .table-product .body-table .list .td {
+.content .detail-more .detail-zone .table-product .body-table .list .td, .content-code .detail-more .detail-zone .table-product .body-table .list .td, .content-type .detail-more .detail-zone .table-product .body-table .list .td, .content-des .detail-more .detail-zone .table-product .body-table .list .td {
   color: #0F172A;
   padding: 5px;
   font-size: .8em;
@@ -828,7 +828,7 @@
   word-break: break-all;
 }
 
-.content .detail-more .detail-zone .signature, .content-code .detail-more .detail-zone .signature, .content-type .detail-more .detail-zone .signature {
+.content .detail-more .detail-zone .signature, .content-code .detail-more .detail-zone .signature, .content-type .detail-more .detail-zone .signature, .content-des .detail-more .detail-zone .signature {
   margin-top: 1em;
   display: -ms-grid;
   display: grid;
@@ -837,35 +837,35 @@
   grid-column-gap: 6%;
 }
 
-.content .detail-more .detail-zone .signature .from, .content .detail-more .detail-zone .signature .to, .content-code .detail-more .detail-zone .signature .from, .content-code .detail-more .detail-zone .signature .to, .content-type .detail-more .detail-zone .signature .from, .content-type .detail-more .detail-zone .signature .to {
+.content .detail-more .detail-zone .signature .from, .content .detail-more .detail-zone .signature .to, .content-code .detail-more .detail-zone .signature .from, .content-code .detail-more .detail-zone .signature .to, .content-type .detail-more .detail-zone .signature .from, .content-type .detail-more .detail-zone .signature .to, .content-des .detail-more .detail-zone .signature .from, .content-des .detail-more .detail-zone .signature .to {
   border: 1px solid #0F172A;
   border-radius: 5px;
   padding: .25em;
 }
 
-.content .detail-more .detail-zone .signature .from label, .content .detail-more .detail-zone .signature .from p, .content .detail-more .detail-zone .signature .to label, .content .detail-more .detail-zone .signature .to p, .content-code .detail-more .detail-zone .signature .from label, .content-code .detail-more .detail-zone .signature .from p, .content-code .detail-more .detail-zone .signature .to label, .content-code .detail-more .detail-zone .signature .to p, .content-type .detail-more .detail-zone .signature .from label, .content-type .detail-more .detail-zone .signature .from p, .content-type .detail-more .detail-zone .signature .to label, .content-type .detail-more .detail-zone .signature .to p {
+.content .detail-more .detail-zone .signature .from label, .content .detail-more .detail-zone .signature .from p, .content .detail-more .detail-zone .signature .to label, .content .detail-more .detail-zone .signature .to p, .content-code .detail-more .detail-zone .signature .from label, .content-code .detail-more .detail-zone .signature .from p, .content-code .detail-more .detail-zone .signature .to label, .content-code .detail-more .detail-zone .signature .to p, .content-type .detail-more .detail-zone .signature .from label, .content-type .detail-more .detail-zone .signature .from p, .content-type .detail-more .detail-zone .signature .to label, .content-type .detail-more .detail-zone .signature .to p, .content-des .detail-more .detail-zone .signature .from label, .content-des .detail-more .detail-zone .signature .from p, .content-des .detail-more .detail-zone .signature .to label, .content-des .detail-more .detail-zone .signature .to p {
   color: #9A9A9A;
   font-size: .6em;
 }
 
-.content .detail-more .detail-zone .signature .from img, .content .detail-more .detail-zone .signature .to img, .content-code .detail-more .detail-zone .signature .from img, .content-code .detail-more .detail-zone .signature .to img, .content-type .detail-more .detail-zone .signature .from img, .content-type .detail-more .detail-zone .signature .to img {
+.content .detail-more .detail-zone .signature .from img, .content .detail-more .detail-zone .signature .to img, .content-code .detail-more .detail-zone .signature .from img, .content-code .detail-more .detail-zone .signature .to img, .content-type .detail-more .detail-zone .signature .from img, .content-type .detail-more .detail-zone .signature .to img, .content-des .detail-more .detail-zone .signature .from img, .content-des .detail-more .detail-zone .signature .to img {
   width: 100%;
   height: 100px;
 }
 
-.content .detail-more .detail-zone .signature .from .name, .content .detail-more .detail-zone .signature .from .date, .content .detail-more .detail-zone .signature .to .name, .content .detail-more .detail-zone .signature .to .date, .content-code .detail-more .detail-zone .signature .from .name, .content-code .detail-more .detail-zone .signature .from .date, .content-code .detail-more .detail-zone .signature .to .name, .content-code .detail-more .detail-zone .signature .to .date, .content-type .detail-more .detail-zone .signature .from .name, .content-type .detail-more .detail-zone .signature .from .date, .content-type .detail-more .detail-zone .signature .to .name, .content-type .detail-more .detail-zone .signature .to .date {
+.content .detail-more .detail-zone .signature .from .name, .content .detail-more .detail-zone .signature .from .date, .content .detail-more .detail-zone .signature .to .name, .content .detail-more .detail-zone .signature .to .date, .content-code .detail-more .detail-zone .signature .from .name, .content-code .detail-more .detail-zone .signature .from .date, .content-code .detail-more .detail-zone .signature .to .name, .content-code .detail-more .detail-zone .signature .to .date, .content-type .detail-more .detail-zone .signature .from .name, .content-type .detail-more .detail-zone .signature .from .date, .content-type .detail-more .detail-zone .signature .to .name, .content-type .detail-more .detail-zone .signature .to .date, .content-des .detail-more .detail-zone .signature .from .name, .content-des .detail-more .detail-zone .signature .from .date, .content-des .detail-more .detail-zone .signature .to .name, .content-des .detail-more .detail-zone .signature .to .date {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 45px 1fr;
       grid-template-columns: 45px 1fr;
 }
 
-.content .detail-more .detail-zone .signature .from .name p:nth-child(1), .content .detail-more .detail-zone .signature .from .date p:nth-child(1), .content .detail-more .detail-zone .signature .to .name p:nth-child(1), .content .detail-more .detail-zone .signature .to .date p:nth-child(1), .content-code .detail-more .detail-zone .signature .from .name p:nth-child(1), .content-code .detail-more .detail-zone .signature .from .date p:nth-child(1), .content-code .detail-more .detail-zone .signature .to .name p:nth-child(1), .content-code .detail-more .detail-zone .signature .to .date p:nth-child(1), .content-type .detail-more .detail-zone .signature .from .name p:nth-child(1), .content-type .detail-more .detail-zone .signature .from .date p:nth-child(1), .content-type .detail-more .detail-zone .signature .to .name p:nth-child(1), .content-type .detail-more .detail-zone .signature .to .date p:nth-child(1) {
+.content .detail-more .detail-zone .signature .from .name p:nth-child(1), .content .detail-more .detail-zone .signature .from .date p:nth-child(1), .content .detail-more .detail-zone .signature .to .name p:nth-child(1), .content .detail-more .detail-zone .signature .to .date p:nth-child(1), .content-code .detail-more .detail-zone .signature .from .name p:nth-child(1), .content-code .detail-more .detail-zone .signature .from .date p:nth-child(1), .content-code .detail-more .detail-zone .signature .to .name p:nth-child(1), .content-code .detail-more .detail-zone .signature .to .date p:nth-child(1), .content-type .detail-more .detail-zone .signature .from .name p:nth-child(1), .content-type .detail-more .detail-zone .signature .from .date p:nth-child(1), .content-type .detail-more .detail-zone .signature .to .name p:nth-child(1), .content-type .detail-more .detail-zone .signature .to .date p:nth-child(1), .content-des .detail-more .detail-zone .signature .from .name p:nth-child(1), .content-des .detail-more .detail-zone .signature .from .date p:nth-child(1), .content-des .detail-more .detail-zone .signature .to .name p:nth-child(1), .content-des .detail-more .detail-zone .signature .to .date p:nth-child(1) {
   text-align: right;
   padding-right: 10px;
 }
 
-.content .detail-more .detail-zone .picture, .content-code .detail-more .detail-zone .picture, .content-type .detail-more .detail-zone .picture {
+.content .detail-more .detail-zone .picture, .content-code .detail-more .detail-zone .picture, .content-type .detail-more .detail-zone .picture, .content-des .detail-more .detail-zone .picture {
   margin-top: 1em;
   display: -ms-grid;
   display: grid;
@@ -874,7 +874,7 @@
   grid-column-gap: 6%;
 }
 
-.content .detail-more .detail-zone .picture figure, .content-code .detail-more .detail-zone .picture figure, .content-type .detail-more .detail-zone .picture figure {
+.content .detail-more .detail-zone .picture figure, .content-code .detail-more .detail-zone .picture figure, .content-type .detail-more .detail-zone .picture figure, .content-des .detail-more .detail-zone .picture figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -886,20 +886,20 @@
   padding: .25em;
 }
 
-.content .detail-more .detail-zone .picture figure img, .content-code .detail-more .detail-zone .picture figure img, .content-type .detail-more .detail-zone .picture figure img {
+.content .detail-more .detail-zone .picture figure img, .content-code .detail-more .detail-zone .picture figure img, .content-type .detail-more .detail-zone .picture figure img, .content-des .detail-more .detail-zone .picture figure img {
   width: 150px;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.content .detail-more .close, .content-code .detail-more .close, .content-type .detail-more .close {
+.content .detail-more .close, .content-code .detail-more .close, .content-type .detail-more .close, .content-des .detail-more .close {
   position: absolute;
   top: 1em;
   right: 2em;
 }
 
-.content .detail-more .close i, .content-code .detail-more .close i, .content-type .detail-more .close i {
+.content .detail-more .close i, .content-code .detail-more .close i, .content-type .detail-more .close i, .content-des .detail-more .close i {
   cursor: pointer;
   color: #000;
   font-size: 2em;
@@ -1007,8 +1007,8 @@
 }
 
 .content-type .data-table .head-table {
-  -ms-grid-columns: 3% 12% 12% 12% 12% 32% 12% 5%;
-      grid-template-columns: 3% 12% 12% 12% 12% 32% 12% 5%;
+  -ms-grid-columns: 3% 10% 12% 12% 12% 12% 22% 12% 5%;
+      grid-template-columns: 3% 10% 12% 12% 12% 12% 22% 12% 5%;
 }
 
 .content-type .data-table .head-table .td:nth-child(7) {
@@ -1022,8 +1022,8 @@
 }
 
 .content-type .data-table .body-table .box-item .list {
-  -ms-grid-columns: 3% 12% 12% 12% 12% 32% 12% 5%;
-      grid-template-columns: 3% 12% 12% 12% 12% 32% 12% 5%;
+  -ms-grid-columns: 3% 10% 12% 12% 12% 12% 22% 12% 5%;
+      grid-template-columns: 3% 10% 12% 12% 12% 12% 22% 12% 5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1241,6 +1241,79 @@
 .content-product .data-table .pagination .page a.disable i {
   color: #9A9A9A;
   cursor: default;
+}
+
+.content-des .data-table {
+  width: 100%;
+}
+
+.content-des .data-table .head-table {
+  -ms-grid-columns: 3% 8% 10% 16% 8% 8% 8% 8% 8% 8% 10% 5%;
+      grid-template-columns: 3% 8% 10% 16% 8% 8% 8% 8% 8% 8% 10% 5%;
+}
+
+.content-des .data-table .head-table .td:nth-child(12) {
+  text-align: center;
+}
+
+.content-des .data-table .body-table .box-item .list {
+  -ms-grid-columns: 3% 8% 10% 16% 8% 8% 8% 8% 8% 8% 10% 5%;
+      grid-template-columns: 3% 8% 10% 16% 8% 8% 8% 8% 8% 8% 10% 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+}
+
+.content-des .data-table .body-table .box-item .list .td:nth-child(5), .content-des .data-table .body-table .box-item .list .td:nth-child(6) {
+  height: 1.4em;
+}
+
+.content-des .data-table .body-table .box-item .list .td:nth-child(12) {
+  text-align: center;
+}
+
+.content-des .data-table .body-table .box-item .list .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: unset;
+  height: 3.4em;
+}
+
+.content-des .data-table .body-table .box-item .list .status .button {
+  width: 50px;
+  height: 15px;
+  background: #DCDCDC;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.content-des .data-table .body-table .box-item .list .status .button .circle {
+  width: 20px;
+  height: 20px;
+  background: #14D214;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.content-des .data-table .body-table .box-item .list .status .button .circle.disable {
+  background: #C80000;
+  left: 60%;
+}
+
+.content-des .data-table .body-table .box-item .list .status > p {
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-left: 20px;
 }
 
 .modal-add-member {
@@ -1840,6 +1913,53 @@
 .modal-add-type .form .group-button-map button.save:hover {
   color: #fff;
   background: #0F172A;
+}
+
+.modal-add-type .map {
+  width: 100%;
+  height: 400px;
+}
+
+.modal-add-type .map .imap {
+  width: 100%;
+  height: 300px;
+}
+
+.modal-add-type .map .group-button {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: .5em;
+}
+
+.modal-add-type .map .group-button button {
+  margin-left: 1em;
+  width: 150px;
+  background: #fff;
+}
+
+.modal-add-type .map .group-button button.save {
+  color: #000;
+  border: 1px solid #000;
+}
+
+.modal-add-type .map .group-button button.save:hover {
+  background: #000;
+  color: #fff;
+}
+
+.modal-add-type .map .group-button button.cancel {
+  color: #9A9A9A;
+  border: 1px solid #9A9A9A;
+}
+
+.modal-add-type .map .group-button button.cancel:hover {
+  background: #9A9A9A;
+  color: #fff;
 }
 
 .modal-add-type .submit-zone {

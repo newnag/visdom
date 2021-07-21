@@ -37,8 +37,8 @@
       </div>
     </header>
     <div class="head-page">
-      <h1>บันทึกไมล์</h1>
-      <p>50 บันทึกไมล์ทั้งหมด</p>
+      <h1>รูปแบบจุดบันทึกไมล์</h1>
+      <p>50 รูปแบบจุดบันทึกไมล์</p>
     </div>
     <div class="search">
       <div class="input-box date">
@@ -52,31 +52,25 @@
 
       <div class="button"><button class="form-component button primary">ค้นหา</button></div>
 
-      <div class="button"><button class="form-component button gray">ค้นหาขั้นสูง</button></div>
-
-      <div class="import-export">
-        <p class="mg-data"><img src="/img/icon/file-csv-01.svg" alt=""> โหลดCSV</p>
-        <p class="mg-data"><img src="/img/icon/file-x-01.svg" alt=""> โหลดExcel</p>
-      </div>
-
       <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
 
-      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCode()">เพิ่มบันทึกไมล์</button></div>
+      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCode()">เพิ่มรูปแบบ</button></div>
     </div>
 
-    <div class="content">
+    <div class="content-type-recode">
       <div class="data-table">
         <div class="head-table">
           <div class="td"><input type="checkbox"></div>
-          <div class="td">รหัสพาหนะ</div>
-          <div class="td">ชื่อพาหนะ</div>
-          <div class="td">เลขไมล์</div>
-          <div class="td">คนขับ</div>
-          <div class="td">ชื่อจุด</div>
-          <div class="td">ละติจูด/ลองจิจูด</div>
-          <div class="td">รหัสงาน</div>
-          <div class="td">วันที่บันทึก</div>
-          <div class="td">วันสร้าง/แก้ไข</div>
+          <div class="td">รหัส</div>
+          <div class="td">ชื่อรูปแบบ</div>
+          <div class="td">จำนวน</div>
+          <div class="td">รายการจุด</div>
+          <div class="td">รายการกรอกบังคับ</div>
+          <div class="td">สร้างโดย</div>
+          <div class="td">วันที่สร้าง</div>
+          <div class="td">แก้ไขโดย</div>
+          <div class="td">วันที่แก้ไข</div>
+          <div class="td">Status</div>
           <div class="td">ตั้งค่า</div>
         </div>
   
@@ -85,19 +79,17 @@
             <div class="list">
               <div class="td"><input type="checkbox" name="" id=""></div>
               <div class="td">Bk-0001</div>
-              <div class="td">Tiger Porche 88mm</div>
-              <div class="td">6000</div>
-              <div class="td">ศมจิต จห</div>
-              <div class="td">จุดทดสอบ</div>
-              <div class="td latlon">
-                <p>100.12345678</p>
-                <p>100.12345678</p>
-              </div>
-              <div class="td">DHL1234567890</div>
-              <div class="td">03/07/2021 09:40:10</div>
-              <div class="td date">
-                <p>03/07/2021 09:40:10</p>
-                <p>03/07/2021 09:40:10</p>
+              <div class="td">จุดบันทึกมาตรฐาน</div>
+              <div class="td">4</div>
+              <div class="td">จุดรับ,จุดส่ง,จุดปิด,จุดเปิด</div>
+              <div class="td">YYYY</div>
+              <div class="td">Admin2</div>
+              <div class="td">03/07/2021</div>
+              <div class="td">Admin2</div>
+              <div class="td">03/07/2021</div>
+              <div class="td status">
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Enable</p>
               </div>
               <div class="td"><i class="far fa-edit"></i></div>
             </div>
@@ -129,53 +121,69 @@
       </div>
     </div>
 
-    <div class="modal-add-type">
+    <div class="modal-add-type show">
       <div class="head-modal"><p>เพิ่มเลขไมล์</p></div>
 
       <div class="form">
-        <div class="row">
+        <div class="row full">
           <div class="input-box">
-            <label for="">รหัสพาหนะ</label>
+            <label for="">รหัส</label>
             <div class="group-input">
-              <i class="fas fa-car"></i>
-              <input type="text" class="form-component input">
-            </div>
-          </div>
-
-          <div class="input-box">
-            <label for="">ชื่อพาหนะ</label>
-            <div class="group-input">
-              <i class="fas fa-car"></i>
+              <i class="fas fa-tachometer-alt"></i>
               <input type="text" class="form-component input">
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="group-form">
-            <div class="input-box">
-              <label for="">เลขไมล์ล่าสุด</label>
-              <div class="group-input">
-                <i class="fas fa-tachometer-alt"></i>
-                <input type="number" class="form-component input">
-              </div>
-            </div>
-
-            <div class="input-box">
-              <label for="">เลขไมล์</label>
-              <div class="group-input">
-                <i class="fas fa-tachometer-alt"></i>
-                <input type="number" class="form-component input">
-              </div>
+        <div class="row full">
+          <div class="input-box">
+            <label for="">ชื่อรูปแบบจุดบันทึกเลขไมล์</label>
+            <div class="group-input">
+              <i class="fas fa-tachometer-alt"></i>
+              <input type="text" class="form-component input">
             </div>
           </div>
+        </div>
 
-          <div class="input-box">
-            <label for="">วันที่สร้าง</label>
-            <div class="group-input">
-              <i class="far fa-calendar"></i>
-              <input type="date" class="form-component input">
+        <div class="groupadd">
+          <div class="grid-list">
+            <div class="head">
+              <div class="td">จุดที่</div>
+              <div class="td">ชื่อจุด</div>
+              <div class="td">บังคับกรอก</div>
+              <div class="td"></div>
             </div>
+
+            <div class="list">
+              <div class="td">1</div>
+              <div class="td">
+                <div class="input-box">
+                  <div class="group-input">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <select name="" id="" class="form-component select">
+                      <option value="">1</option>
+                      <option value="">1</option>
+                      <option value="">1</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="td status">
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Yes</p>
+              </div>
+              <div class="td delete"><i class="far fa-trash-alt"></i></div>
+            </div>
+
+            <div class="add"><i class="fas fa-plus-circle"></i> Add Ref</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="status">
+            <label>status</label>
+            <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+            <p>Enable</p>
           </div>
         </div>
       </div>
@@ -364,10 +372,10 @@
 
   <script>
     function clone(){
-      const ele = document.querySelector('.content .body-table .box-item')
+      const ele = document.querySelector('.content-type-recode .body-table .box-item')
       for(i=0;i<10;i++){
         const clone = ele.cloneNode(true)
-        document.querySelector('.content .body-table').appendChild(clone)
+        document.querySelector('.content-type-recode .body-table').appendChild(clone)
       }
     }
     clone()

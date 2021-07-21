@@ -63,6 +63,7 @@
       <div class="data-table">
         <div class="head-table">
           <div class="td"><input type="checkbox"></div>
+          <div class="td">รหัสงาน</div>
           <div class="td">ประเภทงาน</div>
           <div class="td">สร้างโดย</div>
           <div class="td">วันที่สร้าง</div>
@@ -77,6 +78,7 @@
             <div class="list">
               <div class="td"><input type="checkbox" name="" id=""></div>
               <div class="td">BK-001</div>
+              <div class="td">Service</div>
               <div class="td">Admin2</div>
               <div class="td">25/05/2021</div>
               <div class="td">Admin3</div>
@@ -115,13 +117,31 @@
       </div>
     </div>
 
-    <div class="modal-add-type show">
+    <div class="modal-add-type">
       <div class="head-modal"><p>เพิ่มประเภทงาน</p></div>
 
       <div class="form">
         <div class="row full">
           <div class="input-box">
-            <label for="">ชื่อประเภทงาน</label>
+            <label for="">รหัสงาน</label>
+            <div class="group-input">
+              <i class="fas fa-briefcase"></i>
+              <input type="text" class="form-component input">
+            </div>
+          </div>
+        </div> 
+
+        <div class="row two">
+          <div class="input-box">
+            <label for="">ประเภทงาน (EN)</label>
+            <div class="group-input">
+              <i class="fas fa-briefcase"></i>
+              <input type="text" class="form-component input">
+            </div>
+          </div>
+
+          <div class="input-box">
+            <label for="">ประเภทงาน (TH)</label>
             <div class="group-input">
               <i class="fas fa-briefcase"></i>
               <input type="text" class="form-component input">

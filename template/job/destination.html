@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wynntrack</title>
+  <title>Visdom ชั่วคราว</title>
 
   <!-- plugin -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,12 @@
 
   <!-- style -->
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/mile.min.css">
+  <link rel="stylesheet" href="/css/job.min.css">
 </head>
 <body>
   <main>
     <header>
-      <div class="collap-aside" onclick="collap_aside()"><img src="/img/icon/column-head.svg" alt=""></div>
+      <div class="collap-aside"><img src="/img/icon/column-head.svg" alt=""></div>
       <div class="group">
         <div class="lang">
           <img src="/img/icon/thailand.svg" alt="">
@@ -37,10 +37,12 @@
       </div>
     </header>
     <div class="head-page">
-      <h1>บันทึกไมล์</h1>
-      <p>50 บันทึกไมล์ทั้งหมด</p>
+      <div class="left">
+        <p>สถานที่รับส่ง</p>
+        <p>50 สถานที่รับส่ง</p>
+      </div>
     </div>
-    <div class="search">
+    <div class="search-type">
       <div class="input-box date">
         <input type="text" class="form-component input" onfocus="this.type='date'" onblur="this.type='text'" placeholder="ค้นหาจากวันที่สร้าง">
       </div>
@@ -52,52 +54,44 @@
 
       <div class="button"><button class="form-component button primary">ค้นหา</button></div>
 
-      <div class="button"><button class="form-component button gray">ค้นหาขั้นสูง</button></div>
-
-      <div class="import-export">
-        <p class="mg-data"><img src="/img/icon/file-csv-01.svg" alt=""> โหลดCSV</p>
-        <p class="mg-data"><img src="/img/icon/file-x-01.svg" alt=""> โหลดExcel</p>
-      </div>
-
       <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
 
-      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCode()">เพิ่มบันทึกไมล์</button></div>
+      <div class="add-typecustomer"><button class="form-component button yellow" onclick="open_addCode()">เพิ่มสถานที่</button></div>
     </div>
 
-    <div class="content">
+    <div class="content-des">
       <div class="data-table">
         <div class="head-table">
           <div class="td"><input type="checkbox"></div>
-          <div class="td">รหัสพาหนะ</div>
-          <div class="td">ชื่อพาหนะ</div>
-          <div class="td">เลขไมล์</div>
-          <div class="td">คนขับ</div>
-          <div class="td">ชื่อจุด</div>
-          <div class="td">ละติจูด/ลองจิจูด</div>
-          <div class="td">รหัสงาน</div>
-          <div class="td">วันที่บันทึก</div>
-          <div class="td">วันสร้าง/แก้ไข</div>
-          <div class="td">ตั้งค่า</div>
+          <div class="td">รหัส</div>
+          <div class="td">ชื่อ</div>
+          <div class="td">ที่อยู่</div>
+          <div class="td">ละติจูด</div>
+          <div class="td">ลองติจูด</div>
+          <div class="td">วันที่สร้าง</div>
+          <div class="td">สร้างโดย</div>
+          <div class="td">วันที่แก้ไข</div>
+          <div class="td">แก้ไขโดย</div>
+          <div class="td">Status</div>
+          <div class="td">แก้ไข</div>
         </div>
   
         <div class="body-table">
           <div class="box-item">
             <div class="list">
               <div class="td"><input type="checkbox" name="" id=""></div>
-              <div class="td">Bk-0001</div>
-              <div class="td">Tiger Porche 88mm</div>
-              <div class="td">6000</div>
-              <div class="td">ศมจิต จห</div>
-              <div class="td">จุดทดสอบ</div>
-              <div class="td latlon">
-                <p>100.12345678</p>
-                <p>100.12345678</p>
-              </div>
-              <div class="td">DHL1234567890</div>
-              <div class="td">03/07/2021 09:40:10</div>
-              <div class="td date">
-                <p>03/07/2021 09:40:10</p>
-                <p>03/07/2021 09:40:10</p>
+              <div class="td">BK-001</div>
+              <div class="td">ท่าเรือ</div>
+              <div class="td">500/6 หมู่20 ตำบลในเมือง อำเภอเมือง จังหวัดขอนแก่น</div>
+              <div class="td">20.2213433</div>
+              <div class="td">125.356565</div>
+              <div class="td">Admin2</div>
+              <div class="td">25/05/2021</div>
+              <div class="td">Admin3</div>
+              <div class="td">25/05/2021</div>
+              <div class="td status">
+                <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+                <p>Enable</p>
               </div>
               <div class="td"><i class="far fa-edit"></i></div>
             </div>
@@ -130,61 +124,72 @@
     </div>
 
     <div class="modal-add-type">
-      <div class="head-modal"><p>เพิ่มเลขไมล์</p></div>
+      <div class="head-modal"><p>เพิ่มสถานที่</p></div>
 
       <div class="form">
-        <div class="row">
+        <div class="row full">
           <div class="input-box">
-            <label for="">รหัสพาหนะ</label>
+            <label for="">ชื่อ</label>
             <div class="group-input">
-              <i class="fas fa-car"></i>
+              <i class="fas fa-briefcase"></i>
               <input type="text" class="form-component input">
             </div>
           </div>
+        </div> 
 
+        <div class="row full">
           <div class="input-box">
-            <label for="">ชื่อพาหนะ</label>
+            <label for="">ที่อยู่</label>
             <div class="group-input">
-              <i class="fas fa-car"></i>
+              <i class="fas fa-briefcase"></i>
               <input type="text" class="form-component input">
             </div>
+          </div>
+        </div> 
+
+        <div class="row three">
+          <div class="input-box">
+            <label for="">ละติจูด</label>
+            <div class="group-input">
+              <i class="fas fa-calendar-week"></i>
+              <input type="text" class="form-component input" disabled>
+            </div>
+          </div>
+  
+          <div class="input-box">
+            <label for="">ลองติจูด</label>
+            <div class="group-input">
+              <i class="fas fa-user"></i>
+              <input type="text" class="form-component input" disabled>
+            </div>
+          </div>
+
+          <!-- แสดงเฉพาะหน้าแก้ไข -->
+          <div class="status">
+            <label>status</label>
+            <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+            <p>Enable</p>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="group-form">
-            <div class="input-box">
-              <label for="">เลขไมล์ล่าสุด</label>
-              <div class="group-input">
-                <i class="fas fa-tachometer-alt"></i>
-                <input type="number" class="form-component input">
-              </div>
-            </div>
-
-            <div class="input-box">
-              <label for="">เลขไมล์</label>
-              <div class="group-input">
-                <i class="fas fa-tachometer-alt"></i>
-                <input type="number" class="form-component input">
-              </div>
-            </div>
-          </div>
-
-          <div class="input-box">
-            <label for="">วันที่สร้าง</label>
-            <div class="group-input">
-              <i class="far fa-calendar"></i>
-              <input type="date" class="form-component input">
-            </div>
-          </div>
+      <div class="map">
+        <iframe class="imap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15307.129093061778!2d102.8377488520996!3d16.435880555664927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31228a2fc18c3219%3A0xad5553e197e88ad!2z4Lia4Li14LiX4Li5IOC4guC4reC4meC5geC4geC5iOC4mQ!5e0!3m2!1sth!2sth!4v1626839543715!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+        <div class="group-button">
+          <button class="form-component button cancel">ยกเลิกแผนที่</button>
+          <button class="form-component button save">บันทึกแผนที่</button>
         </div>
       </div>
 
       <div class="submit-zone">
         <div class="group-button">
-          <button class="form-component button gray" onclick="close_addJob()">ยกเลิก</button>
+          <button class="form-component button gray" onclick="close_addCode()">ยกเลิก</button>
           <button class="form-component button primary">สร้าง</button>
         </div>
+
+        <!-- มีปุ่มนี้เฉพาะตอน edit -->
+        <div class="delete"><i class="fas fa-trash-alt"></i> ลบ</div>
       </div>
     </div>
   </main>
@@ -364,16 +369,15 @@
 
   <script>
     function clone(){
-      const ele = document.querySelector('.content .body-table .box-item')
+      const ele = document.querySelector('.content-des .body-table .box-item')
       for(i=0;i<10;i++){
         const clone = ele.cloneNode(true)
-        document.querySelector('.content .body-table').appendChild(clone)
+        document.querySelector('.content-des .body-table').appendChild(clone)
       }
     }
     clone()
   </script>
 
-  <script src="/js/app.js"></script>
-  <script src="/js/mile.js"></script>
+  <script src="/js/job.js"></script>
 </body>
 </html>
