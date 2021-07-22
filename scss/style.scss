@@ -94,6 +94,7 @@ a{
     &.primary{
       background: $darkblue;
       color: $white;
+      border: 1px solid $darkblue;
 
       &:hover{
         color: $darkblue;

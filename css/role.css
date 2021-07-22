@@ -1,0 +1,647 @@
+.head-page {
+  background: #F1F5F9;
+  padding: 1em 2em;
+}
+
+.head-page h1 {
+  color: #0F172A;
+  font-size: 1.4em;
+}
+
+.head-page p {
+  font-size: .8em;
+  color: #9A9A9A;
+  font-weight: 300;
+}
+
+.search, .search-type {
+  background: #F1F5F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1em;
+  padding-bottom: 1em;
+}
+
+.search .input-box, .search-type .input-box {
+  position: relative;
+}
+
+.search .input-box input, .search .input-box select, .search-type .input-box input, .search-type .input-box select {
+  padding-left: 40px;
+}
+
+.search .input-box .icon, .search-type .input-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  color: #9A9A9A;
+}
+
+.search .date, .search-type .date {
+  width: 10%;
+  margin-right: 1em;
+}
+
+.search .date input, .search-type .date input {
+  padding: 5px 10px;
+}
+
+.search > .button, .search-type > .button {
+  margin-left: 1em;
+}
+
+@media screen and (min-width: 1563px) {
+  .search > .button, .search-type > .button {
+    margin-left: 2em;
+  }
+}
+
+.search > .button button, .search-type > .button button {
+  width: 120px;
+  border: 1px solid #000;
+}
+
+.search .import-export, .search-type .import-export {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1em;
+}
+
+@media screen and (min-width: 1900px) {
+  .search .import-export, .search-type .import-export {
+    margin-left: 2em;
+  }
+}
+
+.search .import-export .mg-data, .search-type .import-export .mg-data {
+  margin-right: 1em;
+  cursor: pointer;
+  font-size: .7em;
+}
+
+@media screen and (min-width: 1563px) {
+  .search .import-export .mg-data, .search-type .import-export .mg-data {
+    margin-left: 3em;
+    font-size: .8em;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .search .import-export .mg-data, .search-type .import-export .mg-data {
+    margin-left: 3em;
+    font-size: 1em;
+  }
+}
+
+.search .import-export .mg-data img, .search-type .import-export .mg-data img {
+  width: 15px;
+  height: 15px;
+}
+
+.search .delete, .search-type .delete {
+  margin: 0 1em;
+  color: #C80000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1900px) {
+  .search .delete, .search-type .delete {
+    margin: 0 2em;
+  }
+}
+
+.search .delete i, .search-type .delete i {
+  margin-right: 5px;
+}
+
+.search .add-typecustomer, .search-type .add-typecustomer {
+  width: 150px;
+}
+
+.search .add-typecustomer button, .search-type .add-typecustomer button {
+  width: 100%;
+}
+
+.search-type .add-typecustomer {
+  width: 200px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1em;
+}
+
+.content .user {
+  width: 307px;
+}
+
+.content .user .head {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 35% 40% 15%;
+      grid-template-columns: 10% 35% 40% 15%;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.content .user .head .td input {
+  width: 10px;
+  height: 10px;
+}
+
+.content .user .grid-list {
+  overflow-y: auto;
+  height: calc(100vh - 64px - 93px - 52px);
+}
+
+.content .user .grid-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content .user .grid-list::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.content .user .grid-list::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.content .user .grid-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.content .user .grid-list .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 35% 40% 15%;
+      grid-template-columns: 10% 35% 40% 15%;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.content .user .grid-list .list:hover {
+  background: #F1F5F9;
+}
+
+.content .user .grid-list .list .td {
+  padding: 1em 0;
+}
+
+.content .user .grid-list .list .td input {
+  width: 10px;
+  height: 10px;
+}
+
+.content .user .grid-list .list .td i {
+  cursor: pointer;
+}
+
+.content .user .grid-list .list .edit {
+  text-align: center;
+}
+
+.content .user .grid-list .list .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: unset;
+  height: 3.4em;
+}
+
+.content .user .grid-list .list .status .button {
+  width: 50px;
+  height: 15px;
+  background: #DCDCDC;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.content .user .grid-list .list .status .button .circle {
+  width: 20px;
+  height: 20px;
+  background: #14D214;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.content .user .grid-list .list .status .button .circle.disable {
+  background: #C80000;
+  left: 60%;
+}
+
+.content .user .grid-list .list .status > p {
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-left: 20px;
+}
+
+.content .form {
+  padding: .5em 2em;
+  width: calc(100% - 307px);
+  height: calc(100vh - 64px - 93px - 27px);
+  overflow-y: auto;
+}
+
+.content .form::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content .form::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.content .form::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.content .form::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.content .form p.head {
+  margin-bottom: 2em;
+}
+
+.content .form .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 4em;
+          column-gap: 4em;
+  margin-bottom: 2em;
+}
+
+.content .form .row.full {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.content .form .row .group {
+  background: #F1F5F9;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.content .form .row .group .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  row-gap: 1em;
+  margin-top: 1em;
+}
+
+.content .form .row .group .list.two {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.content .form .row .group .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .form .row .group .list .item input {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.content .form .row .group .list .item p {
+  font-size: .8em;
+}
+
+.content .form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em 0;
+}
+
+.content .form .submit button {
+  width: 200px;
+  margin: 0 2em;
+}
+
+.modal-add-type {
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  width: calc(100% - 280px);
+  height: calc(100vh - 64px);
+  background: #fff;
+  display: none;
+  z-index: 5;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.modal-add-type::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-add-type::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.modal-add-type::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.modal-add-type::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.modal-add-type.collap {
+  width: calc(100vw - 100px);
+  max-width: calc(100vw - 100px);
+  left: 100px;
+}
+
+.modal-add-type.show {
+  display: block;
+}
+
+.modal-add-type .head-modal {
+  height: 64px;
+  background: #EEF2FF;
+  padding: 1em;
+}
+
+.modal-add-type .head-modal p {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.modal-add-type .form {
+  padding: 1em;
+}
+
+.modal-add-type .form .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  grid-column-gap: 2em;
+  margin-bottom: 2em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.modal-add-type .form .row.full {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.modal-add-type .form .row.two {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.modal-add-type .form .row.three {
+  -ms-grid-columns: 300px 300px 1fr;
+      grid-template-columns: 300px 300px 1fr;
+}
+
+.modal-add-type .form .row.four {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.modal-add-type .form .row .input-box label {
+  color: #0F172A;
+}
+
+.modal-add-type .form .row .input-box .group-input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-add-type .form .row .input-box .group-input input, .modal-add-type .form .row .input-box .group-input select {
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  padding-left: 40px;
+}
+
+.modal-add-type .form .row .input-box .group-input i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.modal-add-type .form .row .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 22px;
+}
+
+.modal-add-type .form .row .status label {
+  margin-right: 15px;
+}
+
+.modal-add-type .form .row .status .button {
+  width: 50px;
+  height: 15px;
+  background: #DCDCDC;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.modal-add-type .form .row .status .button .circle {
+  width: 20px;
+  height: 20px;
+  background: #14D214;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.modal-add-type .form .row .status .button .circle.disable {
+  background: #C80000;
+  left: 60%;
+}
+
+.modal-add-type .form .row .status > p {
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-left: 20px;
+}
+
+.modal-add-type .form .row > .map {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.modal-add-type .form > .map iframe {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+.modal-add-type .form .group-button-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1em;
+}
+
+.modal-add-type .form .group-button-map button {
+  margin-left: 1em;
+  width: 200px;
+  background: #fff;
+}
+
+.modal-add-type .form .group-button-map button.cancle {
+  border: 1px solid #9A9A9A;
+  color: #9A9A9A;
+}
+
+.modal-add-type .form .group-button-map button.cancle:hover {
+  color: #fff;
+  background: #9A9A9A;
+}
+
+.modal-add-type .form .group-button-map button.save {
+  border: 1px solid #0F172A;
+  color: #0F172A;
+}
+
+.modal-add-type .form .group-button-map button.save:hover {
+  color: #fff;
+  background: #0F172A;
+}
+
+.modal-add-type .map {
+  width: 100%;
+  height: 400px;
+}
+
+.modal-add-type .map .imap {
+  width: 100%;
+  height: 300px;
+}
+
+.modal-add-type .map .group-button {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: .5em;
+}
+
+.modal-add-type .map .group-button button {
+  margin-left: 1em;
+  width: 150px;
+  background: #fff;
+}
+
+.modal-add-type .map .group-button button.save {
+  color: #000;
+  border: 1px solid #000;
+}
+
+.modal-add-type .map .group-button button.save:hover {
+  background: #000;
+  color: #fff;
+}
+
+.modal-add-type .map .group-button button.cancel {
+  color: #9A9A9A;
+  border: 1px solid #9A9A9A;
+}
+
+.modal-add-type .map .group-button button.cancel:hover {
+  background: #9A9A9A;
+  color: #fff;
+}
+
+.modal-add-type .submit-zone {
+  margin-top: 2em;
+  padding: 1em;
+  background: #f9fafc;
+  height: 64px;
+  position: relative;
+}
+
+.modal-add-type .submit-zone .group-button {
+  text-align: center;
+}
+
+.modal-add-type .submit-zone .group-button button {
+  width: 150px;
+}
+
+.modal-add-type .submit-zone .group-button button:nth-child(2) {
+  border: 1px solid #0F172A;
+}
+
+.modal-add-type .submit-zone .delete {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #C80000;
+  cursor: pointer;
+}
+/*# sourceMappingURL=role.css.map */

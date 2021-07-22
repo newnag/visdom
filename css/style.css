@@ -118,6 +118,7 @@ a {
 .form-component.button.primary {
   background: #0F172A;
   color: #fff;
+  border: 1px solid #0F172A;
 }
 
 .form-component.button.primary:hover {
