@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WynnTrack</title>
+
+  <!-- plugin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.css">
+
+  <!-- style -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/setting.min.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="collap-aside"><img src="/img/icon/column-head.svg" alt=""></div>
+      <div class="group">
+        <div class="lang">
+          <img src="/img/icon/thailand.svg" alt="">
+
+          <ul class="lang-menu">
+            <li><a href="">TH</a></li>
+            <li><a href="">EN</a></li>
+          </ul>
+        </div>
+        <div class="search-icon">
+          <img src="/img/icon/search.svg" alt="">
+          <div class="input-search">
+            <input type="text">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="head-page">
+      <p>ตั้งค่าทั่วไป</p>
+    </div>
+
+    <div class="general">
+      <div class="more">
+        <div class="left">
+          <div class="group">
+            <p class="head-group">ข้อมูลลูกค้า</p>
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">รหัส</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input" disabled>
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">ชื่อ</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input" disabled>
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">ที่อยู่</label>
+                  <div class="input-group">
+                    <textarea name="" class="form-component textarea" id="" cols="30" rows="6"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">พิกัด</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input">
+                    <i class="fas fa-map-marked-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="group">
+            <p class="head-group">ผู้ติดต่อ</p>
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">ชื่อผู้ติดต่อ</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input">
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">อีเมล์</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input">
+                    <i class="far fa-envelope"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">เบอร์โทร</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="box full">
+                <div class="input-box">
+                  <label for="">เขตเวลา</label>
+                  <div class="input-group">
+                    <input type="text" class="form-component input">
+                    <i class="far fa-clock"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-group bg">
+          <p class="head-group">ภาษา</p>
+
+          <div class="group">
+            <div class="row full">
+              <div class="input-box">
+                <label for="">เลือกภาษา</label>
+                <span class="multiselect"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-group bg">
+          <p class="head-group">งาน</p>
+
+          <div class="group">
+            <div class="row full">
+              <div class="input-box">
+                <label for="">จำนวนวันที่แก้ไขเลขไมล์ได้หลังจากเสร็จงาน</label>
+                <div class="input-group">
+                  <input type="text" class="form-component input" value="10 วัน" disabled>
+                  <i class="far fa-calendar-minus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="submit-zone">
+        <div class="group-button">
+          <button class="form-component button gray">ล้างข้อมูล</button>
+          <button class="form-component button primary">บันทึก</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <aside>
+    <div class="aside-head">
+      <div class="logo"><a href=""><img src="/img/logo/logo.png" alt=""></a></div>
+      <div class="group">
+        <div class="setting"><a href=""><img src="/img/icon/setting.svg" alt=""></a></div>
+        <div class="user"><a href=""><img src="/img/icon/user.svg" alt=""></a></div>
+      </div>
+    </div>
+
+    <div class="my-profile">
+      <figure><img src="/img/avatar1.jpg" alt=""></figure>
+      <div class="name"><p>Hanekawa Tsubasa</p></div>
+      <div class="email"><p>Hanekawa505.cat@company.com</p></div>
+    </div>
+
+    <div class="dashboard group-menu">
+      <div class="title-group">Dashboard</div>
+      <div class="desc-group">ติดตามพาหนะและประวัติการเดินทาง</div>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/car-01.svg" alt=""></div>
+            <div class="name">ติดตามพาหนะ</div>
+            <div class="other count">
+              <p>5,290</p> <!-- จำนวนงานของทุกคน -->
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/map-01.svg" alt=""></div>
+            <div class="name">ประวัติการเดินทาง</div>
+          </div>
+        </div>
+      </a>
+      
+    </div>
+
+    <div class="customer group-menu">
+      <div class="title-group">จัดการ งาน,ลูกค้า,พาหนะ,คนขับ</div>
+      <div class="desc-group">แก้ไขเพิ่มเติม งาน,ลูกค้า,พาหนะ,คนขับ</div>
+
+      <div class="menu active">
+        <div class="menu-level1">
+          <div class="icon"><img src="/img/icon/client-01.svg" alt=""></div>
+          <div class="name">ลูกค้า</div>
+          <div class="other arrow"><img src="/img/icon/arrow-down.svg" alt=""></div>
+        </div>
+        
+        <ul class="submenu">
+          <a href=""><img src="/img/icon/client-01.svg" alt=""> <span>ดูลูกค้า</span></a>
+          <a href=""><img src="/img/icon/group-01.svg" alt=""> <span>ประเภทลูกค้า</span></a>
+        </ul>
+      </div>
+
+      <div class="menu">
+        <div class="menu-level1">
+          <div class="icon"><img src="/img/icon/job-01.svg" alt=""></div>
+          <div class="name">งาน</div>
+          <div class="other arrow"><img src="/img/icon/arrow-down.svg" alt=""></div>
+        </div>
+        
+        <ul class="submenu">
+          <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>ดูงาน</span></a>
+          <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>รหัสงาน</span></a>
+          <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>ประเภทงาน</span></a>
+          <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>สินค้า</span></a>
+        </ul>
+      </div>
+
+      <div class="menu">
+        <div class="menu-level1">
+          <div class="icon"><img src="/img/icon/driver-01.svg" alt=""></div>
+          <div class="name">คนขับ</div>
+          <div class="other arrow"><img src="/img/icon/arrow-down.svg" alt=""></div>
+        </div>
+        
+        <ul class="submenu">
+          <a href=""><img src="/img/icon/driver-01.svg" alt=""> <span>ดูคนขับ</span></a>
+          <a href=""><img src="/img/icon/award-01.svg" alt=""> <span>บทบาทผู้ใช้</span></a>
+          <a href=""><img src="/img/icon/group-01.svg" alt=""> <span>กลุ่ม</span></a>
+        </ul>
+      </div>
+      
+      <div class="menu">
+        <div class="menu-level1">
+          <div class="icon"><img src="/img/icon/vehicle-setting-01.svg" alt=""></div>
+          <div class="name">ยานพาหนะ</div>
+          <div class="other arrow"><img src="/img/icon/arrow-down.svg" alt=""></div>
+        </div>
+        
+        <ul class="submenu">
+          <a href=""><img src="/img/icon/vehicle-setting-01.svg" alt=""> <span>ดูยานพาหนะ</span></a>
+          <a href=""><img src="/img/icon/vehicle-setting-01.svg" alt=""> <span>ประเภทพาหนะ</span></a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="maintainance group-menu">
+      <div class="title-group">อุปกรณ์ตรารางซ่อมบำรุง</div>
+      <div class="desc-group">รายการกรอุปกรณ์และตรารางการซ่อมบำรุง</div>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/gadget-02.svg" alt=""></div>
+            <div class="name">อุปกรณ์</div>
+          </div>
+        </div>
+      </a>
+
+      <div class="menu">
+        <div class="menu-level1">
+          <div class="icon"><img src="/img/icon/maintenance-01.svg" alt=""></div>
+          <div class="name">ซ่อมบำรุง</div>
+          <div class="other arrow"><img src="/img/icon/arrow-down.svg" alt=""></div>
+        </div>
+        
+        <ul class="submenu">
+          <a href=""><img src="/img/icon/maintenance-01.svg" alt=""> <span>ตารางซ่อมบำรุง</span></a>
+          <a href=""><img src="/img/icon/maintenance-01.svg" alt=""> <span>ประเภทซ่อมบำรุง</span></a>
+        </ul>
+      </div>
+      
+    </div>
+      
+    <div class="report group-menu">
+      <div class="title-group">รายงาน</div>
+      <div class="desc-group">แก้ไขเพิ่มเติม งาน,ลูกค้า,พาหนะ,คนขับ</div>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/report-01.svg" alt=""></div>
+            <div class="name">รายงานที่ 1</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/report-01.svg" alt=""></div>
+            <div class="name">รายงานที่ 2</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/report-01.svg" alt=""></div>
+            <div class="name">รายงานที่ 2</div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/report-01.svg" alt=""></div>
+            <div class="name">รายงานที่ 2</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    </div>
+  </aside>
+
+  <script src="/plugin/multiselect.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="/js/setting.js"></script>
+
+  <script>
+    selectlang()
+  </script>
+
+</body>
+</html>

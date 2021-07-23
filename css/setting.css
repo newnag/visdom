@@ -1,0 +1,622 @@
+.head-page {
+  background: #F1F5F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+}
+
+.head-page .left {
+  margin-right: 4em;
+}
+
+.head-page .left p:first-child {
+  font-size: 1.2em;
+}
+
+.head-page .left p:last-child {
+  font-size: .8em;
+  color: #9A9A9A;
+}
+
+.general {
+  height: calc(100vh - 64px - 56px);
+  overflow-y: auto;
+  padding: 0 1em;
+}
+
+.general::-webkit-scrollbar {
+  width: 5px;
+}
+
+.general::-webkit-scrollbar-track {
+  background: #DCDCDC;
+}
+
+.general::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.general::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.general .more {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 47% 47%;
+      grid-template-columns: 47% 47%;
+  grid-column-gap: 6%;
+}
+
+.general .more .left, .general .more .right {
+  position: relative;
+}
+
+.general .more .left .group, .general .more .right .group {
+  margin-bottom: 3em;
+}
+
+.general .more .left .group .head-group, .general .more .right .group .head-group {
+  color: #FFBF2A;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+.general .more .left .group .row, .general .more .right .group .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  margin-bottom: 1em;
+}
+
+.general .more .left .group .row.half, .general .more .right .group .row.half {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+}
+
+.general .more .left .group .row.half .box, .general .more .right .group .row.half .box {
+  -ms-grid-columns: .7fr .3fr;
+      grid-template-columns: .7fr .3fr;
+}
+
+.general .more .left .group .row .box, .general .more .right .group .row .box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .8fr .2fr;
+      grid-template-columns: .8fr .2fr;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.general .more .left .group .row .box.full, .general .more .right .group .row .box.full {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.general .more .left .group .row .box .input-box, .general .more .right .group .row .box .input-box {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.general .more .left .group .row .box .input-box label, .general .more .right .group .row .box .input-box label {
+  color: #0F172A;
+}
+
+.general .more .left .group .row .box .input-box .input-group, .general .more .right .group .row .box .input-box .input-group {
+  position: relative;
+  margin-top: .25em;
+}
+
+.general .more .left .group .row .box .input-box .input-group input, .general .more .left .group .row .box .input-box .input-group select, .general .more .right .group .row .box .input-box .input-group input, .general .more .right .group .row .box .input-box .input-group select {
+  padding-left: 40px;
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  font-size: 1.2em;
+}
+
+.general .more .left .group .row .box .input-box .input-group textarea, .general .more .right .group .row .box .input-box .input-group textarea {
+  border: 1px solid #9A9A9A;
+}
+
+.general .more .left .group .row .box .input-box .input-group i, .general .more .right .group .row .box .input-box .input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.general .more .left .group .row .box .button-new button, .general .more .right .group .row .box .button-new button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #0F172A;
+}
+
+.general .more .left .group .row .box .add, .general .more .right .group .row .box .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+.general .more .left:after {
+  content: '';
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 0;
+  right: -2.5em;
+  height: 100%;
+  border-right: 2px solid #DCDCDC;
+}
+
+.general .more .full-group {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  margin-top: 2em;
+  padding: 1em;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.general .more .full-group.bg {
+  background: #F1F5F9;
+}
+
+.general .more .full-group .head-group {
+  color: #FFBF2A;
+  font-size: 1.1em;
+  margin-bottom: 2em;
+}
+
+.general .more .full-group .group .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 4em;
+          column-gap: 4em;
+  margin-bottom: 1em;
+}
+
+.general .more .full-group .group .row.full {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.general .more .full-group .group .row .input-box {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.general .more .full-group .group .row .input-box label {
+  color: #0F172A;
+}
+
+.general .more .full-group .group .row .input-box .input-group {
+  position: relative;
+  margin-top: .25em;
+}
+
+.general .more .full-group .group .row .input-box .input-group input, .general .more .full-group .group .row .input-box .input-group select {
+  padding-left: 40px;
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  font-size: 1.2em;
+}
+
+.general .more .full-group .group .row .input-box .input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.general .more .full-group .group .row .status {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+}
+
+.general .more .full-group .group .row .status p {
+  margin-right: 1em;
+  font-size: .8em;
+}
+
+.general .more .full-group .group .row .status label {
+  font-size: .6em;
+  font-weight: 300;
+  color: #9A9A9A;
+  margin-left: 2em;
+}
+
+.general .more .full-group .group .row .status .button {
+  width: 70px;
+  height: 20px;
+  background: #DCDCDC;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.general .more .full-group .group .row .status .button .circle {
+  width: 30px;
+  height: 30px;
+  background: #14D214;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.general .more .full-group .group .row .status .button .circle.close {
+  left: 65%;
+  background: #C80000;
+}
+
+.general .submit-zone {
+  margin-top: 2em;
+  padding: 1em;
+  background: #f9fafc;
+  height: 64px;
+  position: relative;
+}
+
+.general .submit-zone .group-button {
+  text-align: center;
+}
+
+.general .submit-zone .group-button button {
+  width: 150px;
+}
+
+.general .submit-zone .group-button button:nth-child(2) {
+  border: 1px solid #0F172A;
+}
+
+.general .submit-zone .delete {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #C80000;
+  cursor: pointer;
+}
+
+.status {
+  padding: 0 2em;
+}
+
+.status .more {
+  margin-top: 1em;
+}
+
+.status .more .group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+  row-gap: 2em;
+  margin-bottom: 2em;
+}
+
+.status .more .group .head-group {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  color: #FFBF2A;
+}
+
+.status .more .group .bg {
+  background: #F1F5F9;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.status .more .group .bg .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.status .more .group .bg .row.half {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+}
+
+.status .more .group .bg .row.half .box {
+  -ms-grid-columns: .7fr .3fr;
+      grid-template-columns: .7fr .3fr;
+}
+
+.status .more .group .bg .row .box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .8fr .2fr;
+      grid-template-columns: .8fr .2fr;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  row-gap: 1em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.status .more .group .bg .row .box.full {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.status .more .group .bg .row .box .input-box {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.status .more .group .bg .row .box .input-box label {
+  color: #0F172A;
+}
+
+.status .more .group .bg .row .box .input-box .input-group {
+  position: relative;
+  margin-top: .25em;
+}
+
+.status .more .group .bg .row .box .input-box .input-group input, .status .more .group .bg .row .box .input-box .input-group select {
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  font-size: 1.2em;
+}
+
+.status .more .group .bg .row .box .input-box .input-group textarea {
+  border: 1px solid #9A9A9A;
+}
+
+.status .more .group .bg .row .box .input-box .input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.status .more .group .bg .row .box .button-new button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #0F172A;
+}
+
+.status .more .group .bg .row .box .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+.status .submit-zone {
+  margin-top: 2em;
+  padding: 1em;
+  background: #f9fafc;
+  height: 64px;
+  position: relative;
+}
+
+.status .submit-zone .group-button {
+  text-align: center;
+}
+
+.status .submit-zone .group-button button {
+  width: 150px;
+}
+
+.status .submit-zone .group-button button:nth-child(2) {
+  border: 1px solid #0F172A;
+}
+
+.status .submit-zone .delete {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #C80000;
+  cursor: pointer;
+}
+
+.word {
+  padding: 0 2em;
+}
+
+.word .more {
+  margin-top: 1em;
+}
+
+.word .more .group {
+  margin-bottom: 4em;
+}
+
+.word .more .group .head-group {
+  color: #FFBF2A;
+  margin-bottom: 2em;
+}
+
+.word .more .group .box .head {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.word .more .group .box .head .td {
+  font-size: .9em;
+}
+
+.word .more .group .box .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+  margin-bottom: 1em;
+}
+
+.word .more .group .box .list .td input {
+  border-color: #9A9A9A;
+  height: 40px;
+}
+
+.word .submit-zone {
+  margin-top: 2em;
+  padding: 1em;
+  background: #f9fafc;
+  height: 64px;
+  position: relative;
+}
+
+.word .submit-zone .group-button {
+  text-align: center;
+}
+
+.word .submit-zone .group-button button {
+  width: 150px;
+}
+
+.word .submit-zone .group-button button:nth-child(2) {
+  border: 1px solid #0F172A;
+}
+
+.word .submit-zone .delete {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #C80000;
+  cursor: pointer;
+}
+
+.app {
+  padding: 0 2em;
+}
+
+.app .more {
+  margin-top: 1em;
+}
+
+.app .more .row {
+  margin-bottom: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 4em;
+          column-gap: 4em;
+}
+
+.app .more .row .input-box label {
+  color: #0F172A;
+}
+
+.app .more .row .input-box .group-input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .more .row .input-box .group-input input, .app .more .row .input-box .group-input select {
+  height: 50px;
+  border: 1px solid #9A9A9A;
+  padding-left: 40px;
+}
+
+.app .more .row .input-box .group-input i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.app .submit-zone {
+  margin-top: 2em;
+  padding: 1em;
+  background: #f9fafc;
+  height: 64px;
+  position: relative;
+}
+
+.app .submit-zone .group-button {
+  text-align: center;
+}
+
+.app .submit-zone .group-button button {
+  width: 150px;
+}
+
+.app .submit-zone .group-button button:nth-child(2) {
+  border: 1px solid #0F172A;
+}
+
+.app .submit-zone .delete {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #C80000;
+  cursor: pointer;
+}
+/*# sourceMappingURL=setting.css.map */
