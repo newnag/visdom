@@ -45,3 +45,7 @@ function header_lang(){
 function submenu(that){
   that.closest('.menu').querySelector('.submenu').classList.toggle('hide')
 }
+
+function open_setting(){
+  document.querySelector('.setting-menu').classList.toggle('show')
+}

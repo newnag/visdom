@@ -165,7 +165,15 @@
     <div class="aside-head">
       <div class="logo"><a href=""><img src="/img/logo/logo_wynntrack.svg" alt=""></a></div>
       <div class="group">
-        <div class="setting"><a href=""><img src="/img/icon/setting.svg" alt=""></a></div>
+        <div class="setting">
+          <a href="#" onclick="open_setting()"><img src="/img/icon/setting.svg" alt=""></a>
+          <ul class="setting-menu">
+            <li><a href="">ตั้งค่าทั่วไป</a></li>
+            <li><a href="">ตั้งค่าสถานะ</a></li>
+            <li><a href="">ตั้งค่าคำ</a></li>
+            <li><a href="">ตั้งค่าแอพพลิเคชั่น</a></li>
+          </ul>
+        </div>
         <div class="user"><a href=""><img src="/img/icon/user.svg" alt=""></a></div>
       </div>
     </div>
@@ -231,7 +239,9 @@
           <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>ดูงาน</span></a>
           <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>รหัสงาน</span></a>
           <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>ประเภทงาน</span></a>
-          <a href=""><img src="/img/icon/job-01.svg" alt=""> <span>สินค้า</span></a>
+          <a href=""><img src="/img/icon/box.svg" alt=""> <span>สินค้า</span></a>
+          <a href=""><img src="/img/icon/map-01.svg" alt=""> <span>สถานที่รับ-ส่ง</span></a>
+          <a href=""><img src="/img/icon/cancel.svg" alt=""> <span>เหตุผลยกเลิกงาน</span></a>
         </ul>
       </div>
 
@@ -244,7 +254,6 @@
         
         <ul class="submenu">
           <a href=""><img src="/img/icon/driver-01.svg" alt=""> <span>ดูคนขับ</span></a>
-          <a href=""><img src="/img/icon/award-01.svg" alt=""> <span>บทบาทผู้ใช้</span></a>
           <a href=""><img src="/img/icon/group-01.svg" alt=""> <span>กลุ่ม</span></a>
         </ul>
       </div>
@@ -261,6 +270,38 @@
           <a href=""><img src="/img/icon/vehicle-setting-01.svg" alt=""> <span>ประเภทพาหนะ</span></a>
         </ul>
       </div>
+
+      <div class="menu">
+        <div class="menu-level1" onclick="submenu(this)">
+          <div class="icon"><img src="/img/icon/tachometer-alt-fast-01.svg" alt=""></div>
+          <div class="name">เลขไมล์</div>
+          <div class="other arrow"><img src="/img/icon/arrow-down.svg" alt=""></div>
+        </div>
+        
+        <ul class="submenu">
+          <a href=""><img src="/img/icon/tachometer-alt-fast-01.svg" alt=""> <span>บันทึกเลขไมล์พาหนะ</span></a>
+          <a href=""><img src="/img/icon/tachometer-alt-fast-01.svg" alt=""> <span>จุดบันทึกเลขไมล์</span></a>
+          <a href=""><img src="/img/icon/tachometer-alt-fast-01.svg" alt=""> <span>รูปแบบจุดบันทึกเลขไมล์</span></a>
+        </ul>
+      </div>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/award-01.svg" alt=""></div>
+            <div class="name">บทบาทผู้ใช้</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="menu">
+          <div class="menu-level1">
+            <div class="icon"><img src="/img/icon/users.svg" alt=""></div>
+            <div class="name">รายการผู้ใช้</div>
+          </div>
+        </div>
+      </a>
     </div>
 
     <div class="maintainance group-menu">

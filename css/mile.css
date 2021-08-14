@@ -177,6 +177,10 @@
   padding: 0 5px;
 }
 
+.content .head-table .td:nth-child(1), .content-type .head-table .td:nth-child(1), .content-type-recode .head-table .td:nth-child(1) {
+  text-align: center;
+}
+
 .content .head-table .td:nth-child(1) input, .content-type .head-table .td:nth-child(1) input, .content-type-recode .head-table .td:nth-child(1) input {
   width: 15px;
   height: 15px;
@@ -207,7 +211,7 @@
 }
 
 .content .body-table .box-item .list:hover, .content-type .body-table .box-item .list:hover, .content-type-recode .body-table .box-item .list:hover {
-  background-color: #EEF2FF;
+  background-color: #F1F5F9;
 }
 
 .content .body-table .box-item .list .td, .content-type .body-table .box-item .list .td, .content-type-recode .body-table .box-item .list .td {
@@ -224,6 +228,10 @@
 .content .body-table .box-item .list .td i, .content-type .body-table .box-item .list .td i, .content-type-recode .body-table .box-item .list .td i {
   cursor: pointer;
   font-size: 1.4em;
+}
+
+.content .body-table .box-item .list .td:nth-child(1), .content-type .body-table .box-item .list .td:nth-child(1), .content-type-recode .body-table .box-item .list .td:nth-child(1) {
+  text-align: center;
 }
 
 .content .body-table .box-item .list .td:nth-child(11), .content-type .body-table .box-item .list .td:nth-child(11), .content-type-recode .body-table .box-item .list .td:nth-child(11) {
@@ -485,7 +493,7 @@
 
 .modal-add-type .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 

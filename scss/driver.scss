@@ -131,7 +131,7 @@
 .content,.content-role{
   .head-table{
     display: grid;
-    grid-template-columns: 3% 17% 12% 53% 10% 5%;
+    grid-template-columns: 3% 15% 12% 12% 12% 9% 9% 9% 9% 7% 3%;
     padding: .5em 0;
     border-bottom: 1px solid $gray;
 
@@ -139,13 +139,11 @@
       padding: 0 5px;
     
       &:nth-child(1){
+        text-align: center;
         input{
           width: 15px;
           height: 15px;
         }
-      }
-      &:nth-child(6){
-        text-align: center;
       }
     }
   }
@@ -170,7 +168,7 @@
 
     .list{
       display: grid;
-      grid-template-columns: 3% 17% 12% 53% 10% 5%;
+      grid-template-columns: 3% 15% 12% 12% 12% 9% 9% 9% 9% 7% 3%;
       padding: 1em 0;
       border-bottom: 1px solid $gray;
       transition: .1s ease-in-out;
@@ -185,6 +183,10 @@
         display: flex;
         align-items: center;
         padding: 0 5px;
+
+        &:nth-child(1){
+          justify-content: center;
+        }
 
         input{
           width: 15px;
@@ -1561,7 +1563,7 @@
   }
 }
 
-.detail{
+>.detail{
   margin-top: 64px;
   height: calc(100vh - 64px);
   overflow-y: auto;

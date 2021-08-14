@@ -179,7 +179,47 @@
   background: #555;
 }
 
-.content .user .list, .content-code .user .list, .content-type .user .list, .content-des .user .list, .content-cancel .user .list {
+.content .user .filter-user .group-input, .content-code .user .filter-user .group-input, .content-type .user .filter-user .group-input, .content-des .user .filter-user .group-input, .content-cancel .user .filter-user .group-input {
+  position: relative;
+  margin: .5em auto;
+  width: 80%;
+}
+
+.content .user .filter-user .group-input i, .content-code .user .filter-user .group-input i, .content-type .user .filter-user .group-input i, .content-des .user .filter-user .group-input i, .content-cancel .user .filter-user .group-input i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9A9A9A;
+}
+
+.content .user .filter-user .group-input input, .content-code .user .filter-user .group-input input, .content-type .user .filter-user .group-input input, .content-des .user .filter-user .group-input input, .content-cancel .user .filter-user .group-input input {
+  border-color: #9A9A9A;
+  padding-left: 3em;
+}
+
+.content .user .group .head-group, .content-code .user .group .head-group, .content-type .user .group .head-group, .content-des .user .group .head-group, .content-cancel .user .group .head-group {
+  background: #0F172A;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: .25em .5em;
+}
+
+.content .user .group .head-group p, .content-code .user .group .head-group p, .content-type .user .group .head-group p, .content-des .user .group .head-group p, .content-cancel .user .group .head-group p {
+  padding-left: .75em;
+}
+
+.content .user .group .list, .content-code .user .group .list, .content-type .user .group .list, .content-des .user .group .list, .content-cancel .user .group .list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 42px 1fr 30px;
@@ -196,17 +236,17 @@
   cursor: pointer;
 }
 
-.content .user .list.active, .content-code .user .list.active, .content-type .user .list.active, .content-des .user .list.active, .content-cancel .user .list.active {
+.content .user .group .list.active, .content-code .user .group .list.active, .content-type .user .group .list.active, .content-des .user .group .list.active, .content-cancel .user .group .list.active {
   background: #F1F5F9;
 }
 
-.content .user .list figure, .content-code .user .list figure, .content-type .user .list figure, .content-des .user .list figure, .content-cancel .user .list figure {
+.content .user .group .list figure, .content-code .user .group .list figure, .content-type .user .group .list figure, .content-des .user .group .list figure, .content-cancel .user .group .list figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content .user .list figure img, .content-code .user .list figure img, .content-type .user .list figure img, .content-des .user .list figure img, .content-cancel .user .list figure img {
+.content .user .group .list figure img, .content-code .user .group .list figure img, .content-type .user .group .list figure img, .content-des .user .group .list figure img, .content-cancel .user .group .list figure img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -214,12 +254,12 @@
      object-fit: cover;
 }
 
-.content .user .list .name, .content-code .user .list .name, .content-type .user .list .name, .content-des .user .list .name, .content-cancel .user .list .name {
+.content .user .group .list .name, .content-code .user .group .list .name, .content-type .user .group .list .name, .content-des .user .group .list .name, .content-cancel .user .group .list .name {
   position: relative;
   margin-left: .5em;
 }
 
-.content .user .list .name p:nth-child(2), .content-code .user .list .name p:nth-child(2), .content-type .user .list .name p:nth-child(2), .content-des .user .list .name p:nth-child(2), .content-cancel .user .list .name p:nth-child(2) {
+.content .user .group .list .name p:nth-child(2), .content-code .user .group .list .name p:nth-child(2), .content-type .user .group .list .name p:nth-child(2), .content-des .user .group .list .name p:nth-child(2), .content-cancel .user .group .list .name p:nth-child(2) {
   font-size: .8em;
   color: #9A9A9A;
   width: 90%;
@@ -227,14 +267,14 @@
   overflow: hidden;
 }
 
-.content .user .list .status-bar, .content-code .user .list .status-bar, .content-type .user .list .status-bar, .content-des .user .list .status-bar, .content-cancel .user .list .status-bar {
+.content .user .group .list .status-bar, .content-code .user .group .list .status-bar, .content-type .user .group .list .status-bar, .content-des .user .group .list .status-bar, .content-cancel .user .group .list .status-bar {
   background: #000;
   border-radius: 10px;
   padding: 1px;
   text-align: center;
 }
 
-.content .user .list .status-bar p, .content-code .user .list .status-bar p, .content-type .user .list .status-bar p, .content-des .user .list .status-bar p, .content-cancel .user .list .status-bar p {
+.content .user .group .list .status-bar p, .content-code .user .group .list .status-bar p, .content-type .user .group .list .status-bar p, .content-des .user .group .list .status-bar p, .content-cancel .user .group .list .status-bar p {
   color: #fff;
   font-size: .5em;
 }
@@ -289,6 +329,10 @@
   padding: 0 5px;
 }
 
+.content .data-table .head-table .td:nth-child(1), .content-code .data-table .head-table .td:nth-child(1), .content-type .data-table .head-table .td:nth-child(1), .content-des .data-table .head-table .td:nth-child(1), .content-cancel .data-table .head-table .td:nth-child(1) {
+  text-align: center;
+}
+
 .content .data-table .head-table .td:nth-child(1) input, .content-code .data-table .head-table .td:nth-child(1) input, .content-type .data-table .head-table .td:nth-child(1) input, .content-des .data-table .head-table .td:nth-child(1) input, .content-cancel .data-table .head-table .td:nth-child(1) input {
   width: 15px;
   height: 15px;
@@ -333,7 +377,7 @@
 }
 
 .content .data-table .body-table .box-item .list:hover, .content-code .data-table .body-table .box-item .list:hover, .content-type .data-table .body-table .box-item .list:hover, .content-des .data-table .body-table .box-item .list:hover, .content-cancel .data-table .body-table .box-item .list:hover {
-  background-color: #EEF2FF;
+  background-color: #F1F5F9;
 }
 
 .content .data-table .body-table .box-item .list .td, .content-code .data-table .body-table .box-item .list .td, .content-type .data-table .body-table .box-item .list .td, .content-des .data-table .body-table .box-item .list .td, .content-cancel .data-table .body-table .box-item .list .td {
@@ -353,6 +397,10 @@
 .content .data-table .body-table .box-item .list .td i, .content-code .data-table .body-table .box-item .list .td i, .content-type .data-table .body-table .box-item .list .td i, .content-des .data-table .body-table .box-item .list .td i, .content-cancel .data-table .body-table .box-item .list .td i {
   cursor: pointer;
   font-size: 1.4em;
+}
+
+.content .data-table .body-table .box-item .list .td:nth-child(1), .content-code .data-table .body-table .box-item .list .td:nth-child(1), .content-type .data-table .body-table .box-item .list .td:nth-child(1), .content-des .data-table .body-table .box-item .list .td:nth-child(1), .content-cancel .data-table .body-table .box-item .list .td:nth-child(1) {
+  text-align: center !important;
 }
 
 .content .data-table .body-table .box-item .list .td:nth-child(10), .content .data-table .body-table .box-item .list .td:nth-child(11), .content-code .data-table .body-table .box-item .list .td:nth-child(10), .content-code .data-table .body-table .box-item .list .td:nth-child(11), .content-type .data-table .body-table .box-item .list .td:nth-child(10), .content-type .data-table .body-table .box-item .list .td:nth-child(11), .content-des .data-table .body-table .box-item .list .td:nth-child(10), .content-des .data-table .body-table .box-item .list .td:nth-child(11), .content-cancel .data-table .body-table .box-item .list .td:nth-child(10), .content-cancel .data-table .body-table .box-item .list .td:nth-child(11) {
@@ -465,7 +513,7 @@
   padding-left: 40px;
   height: 50px;
   border: 1px solid #9A9A9A;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .content .data-table .body-table .box-item .more .left .input-box .input-group i, .content .data-table .body-table .box-item .more .right .input-box .input-group i, .content-code .data-table .body-table .box-item .more .left .input-box .input-group i, .content-code .data-table .body-table .box-item .more .right .input-box .input-group i, .content-type .data-table .body-table .box-item .more .left .input-box .input-group i, .content-type .data-table .body-table .box-item .more .right .input-box .input-group i, .content-des .data-table .body-table .box-item .more .left .input-box .input-group i, .content-des .data-table .body-table .box-item .more .right .input-box .input-group i, .content-cancel .data-table .body-table .box-item .more .left .input-box .input-group i, .content-cancel .data-table .body-table .box-item .more .right .input-box .input-group i {
@@ -518,7 +566,7 @@
   padding-left: 40px;
   height: 50px;
   border: 1px solid #9A9A9A;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .content .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-code .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-type .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-des .data-table .body-table .box-item .more .full-group .input-box .input-group i, .content-cancel .data-table .body-table .box-item .more .full-group .input-box .input-group i {
@@ -1117,8 +1165,8 @@
 .content-product .data-table .head-table {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3% 17% 8% 10% 6% 6% 6% 10% 10% 6% 6% 8% 4%;
-      grid-template-columns: 3% 17% 8% 10% 6% 6% 6% 10% 10% 6% 6% 8% 4%;
+  -ms-grid-columns: 3% 9% 15% 5% 5% 5% 6% 6% 10% 8% 8% 8% 8% 4%;
+      grid-template-columns: 3% 9% 15% 5% 5% 5% 6% 6% 10% 8% 8% 8% 8% 4%;
   padding: .5em 0;
   border-bottom: 1px solid #DCDCDC;
 }
@@ -1127,7 +1175,7 @@
   padding: 5px;
 }
 
-.content-product .data-table .head-table .td:nth-child(13) {
+.content-product .data-table .head-table .td:nth-child(9), .content-product .data-table .head-table .td:nth-child(14) {
   text-align: center;
 }
 
@@ -1139,8 +1187,8 @@
 .content-product .data-table .body-table .list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3% 17% 8% 10% 6% 6% 6% 10% 10% 6% 6% 8% 4%;
-      grid-template-columns: 3% 17% 8% 10% 6% 6% 6% 10% 10% 6% 6% 8% 4%;
+  -ms-grid-columns: 3% 9% 15% 5% 5% 5% 6% 6% 10% 8% 8% 8% 8% 4%;
+      grid-template-columns: 3% 9% 15% 5% 5% 5% 6% 6% 10% 8% 8% 8% 8% 4%;
   padding: 1em 0;
   border-bottom: 1px solid #DCDCDC;
 }
@@ -1155,7 +1203,7 @@
   overflow: hidden;
 }
 
-.content-product .data-table .body-table .list .td:nth-child(13) {
+.content-product .data-table .body-table .list .td:nth-child(14) {
   text-align: center;
 }
 
@@ -1176,6 +1224,9 @@
       -ms-flex-align: center;
           align-items: center;
   margin: unset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .content-product .data-table .body-table .list .status .button {
@@ -1437,7 +1488,7 @@
 
 .modal-add-member .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 
@@ -1827,7 +1878,7 @@
 
 .modal-add-type .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 
@@ -2113,7 +2164,7 @@
 
 .modal-add-product .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 
@@ -2169,6 +2220,52 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #9A9A9A;
+}
+
+.modal-add-product .form .row .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 22px;
+}
+
+.modal-add-product .form .row .status label {
+  margin-right: 15px;
+}
+
+.modal-add-product .form .row .status .button {
+  width: 50px;
+  height: 15px;
+  background: #DCDCDC;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.modal-add-product .form .row .status .button .circle {
+  width: 20px;
+  height: 20px;
+  background: #14D214;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.modal-add-product .form .row .status .button .circle.disable {
+  background: #C80000;
+  left: 60%;
+}
+
+.modal-add-product .form .row .status > p {
+  color: #9A9A9A;
+  font-size: .8em;
+  margin-left: 20px;
 }
 
 .modal-add-product .submit-zone {

@@ -139,6 +139,7 @@
       padding: 0 5px;
     
       &:nth-child(1){
+        text-align: center;
         input{
           width: 15px;
           height: 15px;
@@ -186,6 +187,9 @@
         align-items: center;
         padding: 0 5px;
 
+        &:nth-child(1){
+          justify-content: center;
+        }
         &:nth-child(8){
           justify-content: center;
         }

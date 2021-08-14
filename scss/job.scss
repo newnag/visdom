@@ -150,57 +150,95 @@
       background: #555;
     }
 
-    .list{
-      display: grid;
-      grid-template-columns: 42px 1fr 30px;
-      align-items: center;
-      border-top: 1px solid $gray;
-      border-bottom: 1px solid $gray;
-      padding-left: 1em;
-      padding-right: .5em;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      cursor: pointer;
-
-      &.active{
-        background: $littleblue;
-      }
-
-      figure{
-        display: flex;
-        img{
-          width: 42px;
-          height: 42px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
-      }
-      .name{
+    .filter-user{
+      .group-input{
         position: relative;
-        margin-left: .5em;
+        margin: .5em auto;
+        width: 80%;
 
-        p{
-          &:nth-child(2){
-            font-size: .8em;
-            color: $lightgray;
-            width: 90%;
-            height: 1.4em;
-            overflow: hidden;
-          }
+        i{
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          color: $lightgray;
         }
-      }
-      .status-bar{
-        background: $black;
-        border-radius: 10px;
-        padding: 1px;
-        text-align: center;
 
-        p{
-          color: $white;
-          font-size: .5em;
+        input{
+          border-color: $lightgray;
+          padding-left: 3em;
         }
       }
     }
+
+    .group{
+      .head-group{
+        background: $darkblue;
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: .25em .5em;
+
+        p{
+          padding-left: .75em;
+        }
+      }
+      
+      .list{
+        display: grid;
+        grid-template-columns: 42px 1fr 30px;
+        align-items: center;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        padding-left: 1em;
+        padding-right: .5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        cursor: pointer;
+  
+        &.active{
+          background: $littleblue;
+        }
+  
+        figure{
+          display: flex;
+          img{
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        .name{
+          position: relative;
+          margin-left: .5em;
+  
+          p{
+            &:nth-child(2){
+              font-size: .8em;
+              color: $lightgray;
+              width: 90%;
+              height: 1.4em;
+              overflow: hidden;
+            }
+          }
+        }
+        .status-bar{
+          background: $black;
+          border-radius: 10px;
+          padding: 1px;
+          text-align: center;
+  
+          p{
+            color: $white;
+            font-size: .5em;
+          }
+        }
+      }
+    }
+    
   }
 
   .data-table{
@@ -239,6 +277,7 @@
         padding: 0 5px;
       
         &:nth-child(1){
+          text-align: center;
           input{
             width: 15px;
             height: 15px;
@@ -291,6 +330,9 @@
               font-size: 1.4em;
             }
     
+            &:nth-child(1){
+              text-align: center!important;
+            }
             &:nth-child(10),&:nth-child(11){
               text-align: center;
             }
@@ -379,7 +421,7 @@
                   padding-left: 40px;
                   height: 50px;
                   border: 1px solid $lightgray;
-                  font-size: 1.2em;
+                  font-size: 1em;
                 }
   
                 i{
@@ -422,7 +464,7 @@
                   padding-left: 40px;
                   height: 50px;
                   border: 1px solid $lightgray;
-                  font-size: 1.2em;
+                  font-size: 1em;
                 }
   
                 i{
@@ -952,14 +994,14 @@
   .data-table{
     .head-table{
       display: grid;
-      grid-template-columns: 3% 17% 8% 10% 6% 6% 6% 10% 10% 6% 6% 8% 4%;
+      grid-template-columns: 3% 9% 15% 5% 5% 5% 6% 6% 10% 8% 8% 8% 8% 4%;
       padding: .5em 0;
       border-bottom: 1px solid $gray;
 
       .td{
         padding: 5px;
 
-        &:nth-child(13){
+        &:nth-child(9),&:nth-child(14){
           text-align: center;
         }
 
@@ -973,7 +1015,7 @@
     .body-table{
       .list{
         display: grid;
-        grid-template-columns: 3% 17% 8% 10% 6% 6% 6% 10% 10% 6% 6% 8% 4%;
+        grid-template-columns: 3% 9% 15% 5% 5% 5% 6% 6% 10% 8% 8% 8% 8% 4%;
         padding: 1em 0;
         border-bottom: 1px solid $gray;
 
@@ -986,7 +1028,7 @@
           height: 2em;
           overflow: hidden;
 
-          &:nth-child(13){
+          &:nth-child(14){
             text-align: center;
           }
 
@@ -1003,6 +1045,7 @@
           display: flex;
           align-items: center;
           margin: unset;
+          justify-content: center;
 
           .button{
             width: 50px;
@@ -1897,6 +1940,46 @@
             transform: translateY(-50%);
             color: $lightgray;
           }
+        }
+      }
+
+      .status{
+        display: flex;
+        align-items: center;
+        padding-top: 22px;
+
+        label{
+          margin-right: 15px;
+        }
+
+        .button{
+          width: 50px;
+          height: 15px;
+          background: $gray;
+          border-radius: 20px;
+          position: relative;
+          cursor: pointer;
+
+          .circle{
+            width: 20px;
+            height: 20px;
+            background: $green;
+            border-radius: 50%;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            transition: .3s ease-in-out;
+
+            &.disable{
+              background: $red;
+              left: 60%;
+            }
+          }
+        }
+        >p{
+          color: $lightgray;
+          font-size: .8em;
+          margin-left: 20px;
         }
       }
     }

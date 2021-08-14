@@ -324,7 +324,7 @@
 }
 
 .content .body-table .box-item .list:hover, .content-type .body-table .box-item .list:hover {
-  background-color: #EEF2FF;
+  background-color: #F1F5F9;
 }
 
 .content .body-table .box-item .list .td, .content-type .body-table .box-item .list .td {
@@ -404,7 +404,7 @@
   padding-left: 40px;
   height: 50px;
   border: 1px solid #9A9A9A;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .content .body-table .box-item .more .left .input-box .input-group i, .content-type .body-table .box-item .more .left .input-box .input-group i {
@@ -423,7 +423,7 @@
 }
 
 .content .body-table .box-item .more .right .contact, .content-type .body-table .box-item .more .right .contact {
-  background-color: #EEF2FF;
+  background-color: #F1F5F9;
   padding: 1em;
   display: -ms-grid;
   display: grid;
@@ -447,7 +447,7 @@
   padding-left: 40px;
   height: 50px;
   border: 1px solid #9A9A9A;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .content .body-table .box-item .more .right .contact .input-box .input-group i, .content-type .body-table .box-item .more .right .contact .input-box .input-group i {
@@ -691,7 +691,7 @@
 
 .modal-add-member .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 
@@ -775,7 +775,7 @@
 }
 
 .modal-add-member .form .left .sp-bg {
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
   border-radius: 10px;
   -ms-grid-column: 1;
@@ -873,7 +873,7 @@
 }
 
 .modal-add-member .form .right .contact, .modal-add-member .form .right .address {
-  background: #EEF2FF;
+  background: #F1F5F9;
   border-radius: 10px;
   padding: 1em;
 }
@@ -1016,7 +1016,7 @@
 
 .modal-add-type .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 
@@ -1763,7 +1763,7 @@
 
 .destination .modal-destination .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 
@@ -2099,7 +2099,7 @@
 
 .contact-page .modal-contact .head-modal {
   height: 64px;
-  background: #EEF2FF;
+  background: #F1F5F9;
   padding: 1em;
 }
 

@@ -63,37 +63,39 @@
       <div class="data-table">
         <div class="head-table">
           <div class="td"><input type="checkbox"></div>
-          <div class="td">สินค้า</div>
-          <div class="td">รหัส</div>
-          <div class="td">ลักษณะ</div>
+          <div class="td">รหัสสินค้า</div>
+          <div class="td">รายละเอียดสินค้า</div>
           <div class="td">กว้าง</div>
           <div class="td">ยาว</div>
           <div class="td">สูง</div>
           <div class="td">น้ำหนักสุทธิ</div>
           <div class="td">น้ำหนักรวม</div>
-          <div class="td">จำนวน</div>
-          <div class="td">หน่วย</div>
           <div class="td">Status</div>
+          <div class="td">ผู้สร้าง</div>
+          <div class="td">วันที่สร้าง</div>
+          <div class="td">ผู้แก้ไข</div>
+          <div class="td">วันที่แก้ไข</div>
           <div class="td">แก้ไข</div>
         </div>
   
         <div class="body-table">
           <div class="list" onclick="open_info(event)">
             <div class="td"><input type="checkbox" name="" id=""></div>
-            <div class="td">เลย์ มันฝรั่งทอดกรอบ รสชีสอบเนย</div>
             <div class="td">KS-0004</div>
-            <div class="td">แผ่นหยัก</div>
+            <div class="td">เลย์ มันฝรั่งทอดกรอบ รสชีสอบเนย</div>
             <div class="td">60</div>
             <div class="td">50</div>
             <div class="td">50</div>
             <div class="td">150</div>
             <div class="td">200</div>
-            <div class="td">10</div>
-            <div class="td">5</div>
             <div class="td status">
               <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
               <p>Enable</p>
             </div>
+            <div class="td">admin1</div>
+            <div class="td">20/02/2021</div>
+            <div class="td">admin2</div>
+            <div class="td">22/02/2021</div>
             <div class="td setting"><i class="far fa-edit"></i></div>
           </div>
         </div>
@@ -123,7 +125,7 @@
       </div>
     </div>
 
-    <div class="modal-add-product show">
+    <div class="modal-add-product">
       <div class="head-modal"><p>สร้างสินค้าใหม่</p></div>
 
       <div class="form">
@@ -213,6 +215,14 @@
             <div class="group-input">
               <input type="text" class="form-component input">
             </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="status">
+            <label>status</label>
+            <div class="button" onclick="toggle_status(this)"><div class="circle"></div></div>
+            <p>Enable</p>
           </div>
         </div>
       </div>
