@@ -922,7 +922,12 @@
   grid-column-gap: 6%;
 }
 
-.content .detail-more .detail-zone .picture figure, .content-code .detail-more .detail-zone .picture figure, .content-type .detail-more .detail-zone .picture figure, .content-des .detail-more .detail-zone .picture figure, .content-cancel .detail-more .detail-zone .picture figure {
+.content .detail-more .detail-zone .picture .pic-box p, .content-code .detail-more .detail-zone .picture .pic-box p, .content-type .detail-more .detail-zone .picture .pic-box p, .content-des .detail-more .detail-zone .picture .pic-box p, .content-cancel .detail-more .detail-zone .picture .pic-box p {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.content .detail-more .detail-zone .picture .pic-box figure, .content-code .detail-more .detail-zone .picture .pic-box figure, .content-type .detail-more .detail-zone .picture .pic-box figure, .content-des .detail-more .detail-zone .picture .pic-box figure, .content-cancel .detail-more .detail-zone .picture .pic-box figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -934,7 +939,7 @@
   padding: .25em;
 }
 
-.content .detail-more .detail-zone .picture figure img, .content-code .detail-more .detail-zone .picture figure img, .content-type .detail-more .detail-zone .picture figure img, .content-des .detail-more .detail-zone .picture figure img, .content-cancel .detail-more .detail-zone .picture figure img {
+.content .detail-more .detail-zone .picture .pic-box figure img, .content-code .detail-more .detail-zone .picture .pic-box figure img, .content-type .detail-more .detail-zone .picture .pic-box figure img, .content-des .detail-more .detail-zone .picture .pic-box figure img, .content-cancel .detail-more .detail-zone .picture .pic-box figure img {
   width: 150px;
   height: 150px;
   -o-object-fit: cover;

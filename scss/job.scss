@@ -782,19 +782,26 @@
         grid-template-columns: repeat(2,47%);
         grid-column-gap: 6%;
 
-        figure{
-          display: flex;
-          justify-content: center;
-          border: 1px solid $darkblue;
-          border-radius: 5px;
-          padding: .25em;
-
-          img{
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
+        .pic-box{
+          p{
+            text-align: center;
+            margin-bottom: .5em;
           }
-        }
+
+          figure{
+            display: flex;
+            justify-content: center;
+            border: 1px solid $darkblue;
+            border-radius: 5px;
+            padding: .25em;
+  
+            img{
+              width: 150px;
+              height: 150px;
+              object-fit: cover;
+            }
+          }
+        } 
       }
     }
 
